@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.Resource;
 import io.pulumi.example.inputs.ConfigMapArgs;
@@ -20,24 +20,24 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ObjectArgs Empty = new ObjectArgs();
 
     @InputImport(name="bar")
-      private final @Nullable Input<String> bar;
+      private final @Nullable Output<String> bar;
 
-    public Input<String> getBar() {
-        return this.bar == null ? Input.empty() : this.bar;
+    public Output<String> getBar() {
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
     @InputImport(name="configs")
-      private final @Nullable Input<List<ConfigMapArgs>> configs;
+      private final @Nullable Output<List<ConfigMapArgs>> configs;
 
-    public Input<List<ConfigMapArgs>> getConfigs() {
-        return this.configs == null ? Input.empty() : this.configs;
+    public Output<List<ConfigMapArgs>> getConfigs() {
+        return this.configs == null ? Output.empty() : this.configs;
     }
 
     @InputImport(name="foo")
-      private final @Nullable Input<Resource> foo;
+      private final @Nullable Output<Resource> foo;
 
-    public Input<Resource> getFoo() {
-        return this.foo == null ? Input.empty() : this.foo;
+    public Output<Resource> getFoo() {
+        return this.foo == null ? Output.empty() : this.foo;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="others")
-      private final @Nullable Input<List<List<SomeOtherObjectArgs>>> others;
+      private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
-    public Input<List<List<SomeOtherObjectArgs>>> getOthers() {
-        return this.others == null ? Input.empty() : this.others;
+    public Output<List<List<SomeOtherObjectArgs>>> getOthers() {
+        return this.others == null ? Output.empty() : this.others;
     }
 
     /**
@@ -56,18 +56,18 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stillOthers")
-      private final @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
+      private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
-    public Input<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {
-        return this.stillOthers == null ? Input.empty() : this.stillOthers;
+    public Output<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {
+        return this.stillOthers == null ? Output.empty() : this.stillOthers;
     }
 
     public ObjectArgs(
-        @Nullable Input<String> bar,
-        @Nullable Input<List<ConfigMapArgs>> configs,
-        @Nullable Input<Resource> foo,
-        @Nullable Input<List<List<SomeOtherObjectArgs>>> others,
-        @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
+        @Nullable Output<String> bar,
+        @Nullable Output<List<ConfigMapArgs>> configs,
+        @Nullable Output<Resource> foo,
+        @Nullable Output<List<List<SomeOtherObjectArgs>>> others,
+        @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
         this.bar = bar;
         this.configs = configs;
         this.foo = foo;
@@ -76,11 +76,11 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectArgs() {
-        this.bar = Input.empty();
-        this.configs = Input.empty();
-        this.foo = Input.empty();
-        this.others = Input.empty();
-        this.stillOthers = Input.empty();
+        this.bar = Output.empty();
+        this.configs = Output.empty();
+        this.foo = Output.empty();
+        this.others = Output.empty();
+        this.stillOthers = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bar;
-        private @Nullable Input<List<ConfigMapArgs>> configs;
-        private @Nullable Input<Resource> foo;
-        private @Nullable Input<List<List<SomeOtherObjectArgs>>> others;
-        private @Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
+        private @Nullable Output<String> bar;
+        private @Nullable Output<List<ConfigMapArgs>> configs;
+        private @Nullable Output<Resource> foo;
+        private @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
+        private @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stillOthers = defaults.stillOthers;
         }
 
-        public Builder bar(@Nullable Input<String> bar) {
+        public Builder bar(@Nullable Output<String> bar) {
             this.bar = bar;
             return this;
         }
 
         public Builder bar(@Nullable String bar) {
-            this.bar = Input.ofNullable(bar);
+            this.bar = Output.ofNullable(bar);
             return this;
         }
 
-        public Builder configs(@Nullable Input<List<ConfigMapArgs>> configs) {
+        public Builder configs(@Nullable Output<List<ConfigMapArgs>> configs) {
             this.configs = configs;
             return this;
         }
 
         public Builder configs(@Nullable List<ConfigMapArgs> configs) {
-            this.configs = Input.ofNullable(configs);
+            this.configs = Output.ofNullable(configs);
             return this;
         }
 
-        public Builder foo(@Nullable Input<Resource> foo) {
+        public Builder foo(@Nullable Output<Resource> foo) {
             this.foo = foo;
             return this;
         }
 
         public Builder foo(@Nullable Resource foo) {
-            this.foo = Input.ofNullable(foo);
+            this.foo = Output.ofNullable(foo);
             return this;
         }
 
-        public Builder others(@Nullable Input<List<List<SomeOtherObjectArgs>>> others) {
+        public Builder others(@Nullable Output<List<List<SomeOtherObjectArgs>>> others) {
             this.others = others;
             return this;
         }
 
         public Builder others(@Nullable List<List<SomeOtherObjectArgs>> others) {
-            this.others = Input.ofNullable(others);
+            this.others = Output.ofNullable(others);
             return this;
         }
 
-        public Builder stillOthers(@Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
+        public Builder stillOthers(@Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
         }
 
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
-            this.stillOthers = Input.ofNullable(stillOthers);
+            this.stillOthers = Output.ofNullable(stillOthers);
             return this;
         }
         public ObjectArgs build() {

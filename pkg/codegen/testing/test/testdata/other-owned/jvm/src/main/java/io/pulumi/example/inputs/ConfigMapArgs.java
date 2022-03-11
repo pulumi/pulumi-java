@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 
     @InputImport(name="config")
-      private final @Nullable Input<String> config;
+      private final @Nullable Output<String> config;
 
-    public Input<String> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<String> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
-    public ConfigMapArgs(@Nullable Input<String> config) {
+    public ConfigMapArgs(@Nullable Output<String> config) {
         this.config = config;
     }
 
     private ConfigMapArgs() {
-        this.config = Input.empty();
+        this.config = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> config;
+        private @Nullable Output<String> config;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.config = defaults.config;
         }
 
-        public Builder config(@Nullable Input<String> config) {
+        public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable String config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
         public ConfigMapArgs build() {

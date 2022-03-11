@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="bar")
-      private final @Nullable Input<String> bar;
+      private final @Nullable Output<String> bar;
 
-    public Input<String> getBar() {
-        return this.bar == null ? Input.empty() : this.bar;
+    public Output<String> getBar() {
+        return this.bar == null ? Output.empty() : this.bar;
     }
 
-    public ResourceArgs(@Nullable Input<String> bar) {
+    public ResourceArgs(@Nullable Output<String> bar) {
         this.bar = bar;
     }
 
     private ResourceArgs() {
-        this.bar = Input.empty();
+        this.bar = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bar;
+        private @Nullable Output<String> bar;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bar = defaults.bar;
         }
 
-        public Builder bar(@Nullable Input<String> bar) {
-            this.bar = Input.ofNullable(bar).asSecret();
+        public Builder bar(@Nullable Output<String> bar) {
+            this.bar = Output.ofNullable(bar).asSecret();
             return this;
         }
 
         public Builder bar(@Nullable String bar) {
-            this.bar = Input.ofNullable(bar).asSecret();
+            this.bar = Output.ofNullable(bar).asSecret();
             return this;
         }
         public ResourceArgs build() {

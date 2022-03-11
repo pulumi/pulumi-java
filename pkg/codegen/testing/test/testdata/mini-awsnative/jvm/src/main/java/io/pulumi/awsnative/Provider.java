@@ -5,7 +5,7 @@ package io.pulumi.awsnative;
 
 import io.pulumi.awsnative.ProviderArgs;
 import io.pulumi.awsnative.Utilities;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
@@ -49,10 +49,10 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();

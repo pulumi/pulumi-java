@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     public static final WebAppRelayServiceConnectionArgs Empty = new WebAppRelayServiceConnectionArgs();
 
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
-    public WebAppRelayServiceConnectionArgs(@Nullable Input<String> resourceType) {
+    public WebAppRelayServiceConnectionArgs(@Nullable Output<String> resourceType) {
         this.resourceType = resourceType;
     }
 
     private WebAppRelayServiceConnectionArgs() {
-        this.resourceType = Input.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public WebAppRelayServiceConnectionArgs build() {

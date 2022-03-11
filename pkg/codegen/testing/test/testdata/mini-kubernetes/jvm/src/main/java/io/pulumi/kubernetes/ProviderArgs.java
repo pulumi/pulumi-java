@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
@@ -21,10 +21,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<String> cluster;
+      private final @Nullable Output<String> cluster;
 
-    public Input<String> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<String> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<String> context;
+      private final @Nullable Output<String> context;
 
-    public Input<String> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<String> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeClientSettings", json=true)
-      private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
+      private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
-    public Input<KubeClientSettingsArgs> getKubeClientSettings() {
-        return this.kubeClientSettings == null ? Input.empty() : this.kubeClientSettings;
+    public Output<KubeClientSettingsArgs> getKubeClientSettings() {
+        return this.kubeClientSettings == null ? Output.empty() : this.kubeClientSettings;
     }
 
     /**
@@ -54,28 +54,28 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeconfig")
-      private final @Nullable Input<String> kubeconfig;
+      private final @Nullable Output<String> kubeconfig;
 
-    public Input<String> getKubeconfig() {
-        return this.kubeconfig == null ? Input.empty() : this.kubeconfig;
+    public Output<String> getKubeconfig() {
+        return this.kubeconfig == null ? Output.empty() : this.kubeconfig;
     }
 
     public ProviderArgs(
-        @Nullable Input<String> cluster,
-        @Nullable Input<String> context,
-        @Nullable Input<KubeClientSettingsArgs> kubeClientSettings,
-        @Nullable Input<String> kubeconfig) {
+        @Nullable Output<String> cluster,
+        @Nullable Output<String> context,
+        @Nullable Output<KubeClientSettingsArgs> kubeClientSettings,
+        @Nullable Output<String> kubeconfig) {
         this.cluster = cluster;
         this.context = context;
         this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = kubeconfig == null ? Input.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
+        this.kubeconfig = kubeconfig == null ? Output.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
     }
 
     private ProviderArgs() {
-        this.cluster = Input.empty();
-        this.context = Input.empty();
-        this.kubeClientSettings = Input.empty();
-        this.kubeconfig = Input.empty();
+        this.cluster = Output.empty();
+        this.context = Output.empty();
+        this.kubeClientSettings = Output.empty();
+        this.kubeconfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cluster;
-        private @Nullable Input<String> context;
-        private @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
-        private @Nullable Input<String> kubeconfig;
+        private @Nullable Output<String> cluster;
+        private @Nullable Output<String> context;
+        private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
+        private @Nullable Output<String> kubeconfig;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kubeconfig = defaults.kubeconfig;
         }
 
-        public Builder cluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
 
-        public Builder context(@Nullable Input<String> context) {
+        public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable String context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder kubeClientSettings(@Nullable Input<KubeClientSettingsArgs> kubeClientSettings) {
+        public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
             this.kubeClientSettings = kubeClientSettings;
             return this;
         }
 
         public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
-            this.kubeClientSettings = Input.ofNullable(kubeClientSettings);
+            this.kubeClientSettings = Output.ofNullable(kubeClientSettings);
             return this;
         }
 
-        public Builder kubeconfig(@Nullable Input<String> kubeconfig) {
+        public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
 
         public Builder kubeconfig(@Nullable String kubeconfig) {
-            this.kubeconfig = Input.ofNullable(kubeconfig);
+            this.kubeconfig = Output.ofNullable(kubeconfig);
             return this;
         }
         public ProviderArgs build() {

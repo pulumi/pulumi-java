@@ -3,7 +3,6 @@
 
 package io.pulumi.plant.tree_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -88,14 +87,14 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RubberTree(String name, RubberTreeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RubberTree(String name, Input<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("plant:tree/v1:RubberTree", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -111,7 +110,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RubberTree get(String name, Input<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RubberTree get(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RubberTree(name, id, state, options);
     }
 }
