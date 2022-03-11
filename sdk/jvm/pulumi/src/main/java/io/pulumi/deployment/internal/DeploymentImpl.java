@@ -8,8 +8,11 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
 import io.pulumi.Stack;
-import io.pulumi.core.*;
+import io.pulumi.core.Output;
+import io.pulumi.core.OutputDefault;
+import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
+import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.*;
@@ -899,7 +902,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     });
         }
 
-        private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Input<List<Resource>> resources) {
+        private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Output<List<Resource>> resources) {
             return Internal.of(resources).getValueOrDefault(List.of());
         }
 

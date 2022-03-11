@@ -21,7 +21,7 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Input.empty(), false, null,
+                        null, null, Output.empty(), false, null,
                         null, null, null, null, null, null, null
                 )),
                 arguments(new TestResourceOptions(
@@ -41,7 +41,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Input.empty(),
+                                Output.empty(),
                                 true,
                                 List.of("b"),
                                 "test",
@@ -55,7 +55,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Input.empty(),
+                                Output.empty(),
                                 true,
                                 List.of("a", "b"),
                                 "test",
@@ -66,7 +66,7 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of()
                         )
-                ) // FIXME
+                ) // FIXME: more test cases
         );
     }
 
@@ -100,7 +100,7 @@ class ResourceOptionsTest {
         public TestResourceOptions(
                 @Nullable Output<String> id,
                 @Nullable Resource parent,
-                @Nullable Input<List<Resource>> dependsOn,
+                @Nullable Output<List<Resource>> dependsOn,
                 boolean protect,
                 @Nullable List<String> ignoreChanges,
                 @Nullable String version,

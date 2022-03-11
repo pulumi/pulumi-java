@@ -21,7 +21,7 @@ public abstract class ResourceOptions {
     @Nullable
     protected Resource parent;
     @Nullable
-    protected Input<List<Resource>> dependsOn;
+    protected Output<List<Resource>> dependsOn;
     protected boolean protect;
     @Nullable
     protected List<String> ignoreChanges;
@@ -45,7 +45,7 @@ public abstract class ResourceOptions {
     protected ResourceOptions(
             @Nullable Output<String> id,
             @Nullable Resource parent,
-            @Nullable Input<List<Resource>> dependsOn,
+            @Nullable Output<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
@@ -92,13 +92,13 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
-        public B setDependsOn(@Nullable Input<List<Resource>> dependsOn) {
+        public B setDependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
             return (B) this;
         }
 
         public B setDependsOn(@Nullable List<Resource> dependsOn) {
-            options.dependsOn = Input.ofNullable(dependsOn);
+            options.dependsOn = Output.ofNullable(dependsOn);
             return (B) this;
         }
 
@@ -165,8 +165,8 @@ public abstract class ResourceOptions {
     /**
      * Optional additional explicit dependencies on other resources.
      */
-    public Input<List<Resource>> getDependsOn() {
-        return this.dependsOn == null ? Input.ofList() : this.dependsOn;
+    public Output<List<Resource>> getDependsOn() {
+        return this.dependsOn == null ? Output.ofList() : this.dependsOn;
     }
 
     /**
@@ -265,7 +265,7 @@ public abstract class ResourceOptions {
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
 
-        options1.dependsOn = Input.concatList(options1.dependsOn, options2.dependsOn);
+        options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
 
         // Override the ID if one was specified for consistency with other language SDKs.
         options1.id = id == null ? options1.id : id;

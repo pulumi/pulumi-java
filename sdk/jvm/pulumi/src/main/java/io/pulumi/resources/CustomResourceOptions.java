@@ -29,7 +29,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
     private CustomResourceOptions(
             @Nullable Output<String> id,
             @Nullable Resource parent,
-            @Nullable Input<List<Resource>> dependsOn,
+            @Nullable Output<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,

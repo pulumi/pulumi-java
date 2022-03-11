@@ -26,7 +26,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     public ComponentResourceOptions(
             @Nullable Output<String> id,
             @Nullable Resource parent,
-            @Nullable Input<List<Resource>> dependsOn,
+            @Nullable Output<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,

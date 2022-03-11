@@ -9,14 +9,12 @@ import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,13 +49,14 @@ public class DeploymentResourceDependencyGatheringTest {
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
         public DeploysResourcesWithUnknownDependsOnStack() {
             var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
-                    .setDependsOn(InputOutputTests.<List<Resource>>unknown().toInput())
+                    .setDependsOn(InputOutputTests.unknown())
                     .build()
             );
         }
     }
 
-    public static final class MyArgs extends ResourceArgs {}
+    public static final class MyArgs extends ResourceArgs {
+    }
 
     @ResourceType(type = "test:DeploymentResourceDependencyGatheringTests:resource")
     private static class MyCustomResource extends CustomResource {
