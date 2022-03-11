@@ -23,6 +23,7 @@ import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
 
+@Deprecated
 public interface Input<T> extends InputOutput<T, Input<T>> {
 
     /**

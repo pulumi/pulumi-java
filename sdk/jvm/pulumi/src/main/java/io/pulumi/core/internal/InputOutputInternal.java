@@ -21,6 +21,7 @@ public abstract class InputOutputInternal<T, IO extends InputOutput<T, IO> & Cop
         implements InputOutput<T, IO> {
 
     @InternalUse
+    @Deprecated
     public static final Input<Tuples.Tuple0> TupleZeroIn = Input.of(Tuples.Tuple0.Empty);
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);

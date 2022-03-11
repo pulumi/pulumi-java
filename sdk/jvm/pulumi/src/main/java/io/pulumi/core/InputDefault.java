@@ -11,6 +11,7 @@ import java.util.function.Function;
 
 @ParametersAreNonnullByDefault
 @InternalUse
+@Deprecated
 public final class InputDefault<T> extends InputOutputInternal<T, Input<T>> implements Input<T> {
 
     InputDefault(T value) {

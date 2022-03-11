@@ -25,6 +25,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      *
      * @return an {@link Input<T>} , converted from {@link Output<T>}
      */
+    @Deprecated
     Input<T> toInput();
 
     /**
@@ -82,6 +83,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#apply(Function) for more details.
      */
+    @Deprecated
     default <U> Output<U> applyInput(Function<T, Input<U>> func) {
         return apply(t -> func.apply(t).toOutput());
     }
@@ -142,6 +144,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * If any of the {@link io.pulumi.core.Input<T>}s are not known, the final result will be not known.
      * Similarly, if any of the {@link io.pulumi.core.Input<T>}s are secrets, then the final result will be a secret.
      */
+    @Deprecated
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
     static <T> Output<List<T>> allInputs(Input<T>... inputs) {
         return allInputs(List.of(inputs));
@@ -150,6 +153,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#allInputs(Input[]) for more details.
      */
+    @Deprecated
     static <T> Output<List<T>> allInputs(Iterable<Input<T>> inputs) {
         return allInputs(Lists.newArrayList(inputs));
     }
@@ -163,17 +167,40 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
      */
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
+    static <T> Output<List<T>> all(Output<T>... outputs) {
+        return all(List.of(outputs));
+    }
+
+    /**
+     * Combines all the @see {@link Output<T>} values in {@code outputs}
+     * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
+     * containing all their underlying values.
+     * <p/>
+     * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
+     * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
+     */
+    @Deprecated
+    @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
     static <T> Output<List<T>> allOutputs(Output<T>... outputs) {
-        return allOutputs(List.of(outputs));
+        return all(List.of(outputs));
     }
 
     /**
      * @see Output#allOutputs(Output[])  for more details.
      */
-    static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
-        return allOutputs(Lists.newArrayList(outputs));
+    static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
+        return all(Lists.newArrayList(outputs));
     }
 
+    /**
+     * @see Output#allOutputs(Output[])  for more details.
+     */
+    @Deprecated
+    static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
+        return all(Lists.newArrayList(outputs));
+    }
+
+    @Deprecated
     private static <T> Output<List<T>> allInputs(List<Input<T>> inputs) {
         return new OutputDefault<>(
                 allHelperAsync(inputs
@@ -183,7 +210,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         );
     }
 
-    private static <T> Output<List<T>> allOutputs(List<Output<T>> outputs) {
+    private static <T> Output<List<T>> all(List<Output<T>> outputs) {
         return new OutputDefault<>(
                 allHelperAsync(outputs
                         .stream()
@@ -196,6 +223,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2> Output<Tuples.Tuple2<T1, T2>> tuple(Input<T1> item1, Input<T2> item2) {
         return tuple(item1, item2, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
                 .applyValue(v -> Tuples.of(v.t1, v.t2));
@@ -204,6 +232,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2, T3> Output<Tuples.Tuple3<T1, T2, T3>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3
     ) {
@@ -214,6 +243,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2, T3, T4> Output<Tuples.Tuple4<T1, T2, T3, T4>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4
     ) {
@@ -224,6 +254,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2, T3, T4, T5> Output<Tuples.Tuple5<T1, T2, T3, T4, T5>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4, Input<T5> item5
     ) {
@@ -234,6 +265,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2, T3, T4, T5, T6> Output<Tuples.Tuple6<T1, T2, T3, T4, T5, T6>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
             Input<T5> item5, Input<T6> item6
@@ -245,6 +277,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
      */
+    @Deprecated
     static <T1, T2, T3, T4, T5, T6, T7> Output<Tuples.Tuple7<T1, T2, T3, T4, T5, T6, T7>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
             Input<T5> item5, Input<T6> item6, Input<T7> item7
@@ -259,6 +292,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * If any of the @see {@link Input}s are not known, the final result will be not known.  Similarly,
      * if any of the @see {@link Input}s are secrets, then the final result will be a secret.
      */
+    @Deprecated
     static <T1, T2, T3, T4, T5, T6, T7, T8> Output<Tuples.Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>> tuple(
             Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
             Input<T5> item5, Input<T6> item6, Input<T7> item7, Input<T8> item8

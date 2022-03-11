@@ -42,6 +42,7 @@ public final class OutputDefault<T> extends InputOutputInternal<T, Output<T>> im
         return new OutputDefault<>(dataFuture);
     }
 
+    @Deprecated
     public Input<T> toInput() {
         return new InputDefault<>(dataFuture.copy());
     }
