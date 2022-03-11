@@ -118,7 +118,7 @@ jobs:
       - name: run example aws-java-webserver
         run: |
           make install_sdk
-          make provider.aws.build && make provider.aws.install
+          make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-java-webserver &&
@@ -172,7 +172,8 @@ jobs:
       - name: run example azure-java-appservice-sql
         run: |
           make install_sdk
-          make provider.azure-native.build && make provider.azure-native.install
+          make provider.azure-native.build
+          make provider.azure-native.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
@@ -225,8 +226,8 @@ jobs:
       - name: run example gcp-java-gke-hello-world
         run: |
           make install_sdk
-          make provider.gcp.build && make provider.gcp.install &&
-          make provider.kubernetes.build && make provider.kubernetes.install
+          make provider.gcp.build provider.gcp.install
+          make provider.kubernetes.build make provider.kubernetes.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
@@ -339,9 +340,9 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: run example aws-native-java-s3-folder
         run: |
-          make install_sdk &&
-          make provider.aws.build && make provider.aws.install &&
-          make provider.aws-native.build && make provider.aws-native.install
+          make install_sdk
+          make provider.aws.build provider.aws.install
+          make provider.aws-native.build provider.aws-native.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
@@ -392,8 +393,8 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example azure-java-static-website
         run: |
-          make install_sdk &&
-          make provider.azure-native.build && make provider.azure-native.install
+          make install_sdk
+          make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
@@ -444,8 +445,8 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example random
         run: |
-          make install_sdk &&
-          make provider.random.build && make provider.random.install
+          make install_sdk
+          make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
