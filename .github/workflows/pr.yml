@@ -105,6 +105,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Fetch Tags
+        run: |
+          git fetch --quiet --prune --unshallow --tags
       - name: Set up Go 1.17.x
         uses: actions/setup-go@v2
         with:
