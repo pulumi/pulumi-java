@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.helm.sh_v3;
 
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.helm.sh_v3.inputs.RepositoryOptsArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomic")
-      private final @Nullable Input<Boolean> atomic;
+      private final @Nullable Output<Boolean> atomic;
 
-    public Input<Boolean> getAtomic() {
-        return this.atomic == null ? Input.empty() : this.atomic;
+    public Output<Boolean> getAtomic() {
+        return this.atomic == null ? Output.empty() : this.atomic;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chart", required=true)
-      private final Input<String> chart;
+      private final Output<String> chart;
 
-    public Input<String> getChart() {
+    public Output<String> getChart() {
         return this.chart;
     }
 
@@ -48,17 +48,17 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cleanupOnFail")
-      private final @Nullable Input<Boolean> cleanupOnFail;
+      private final @Nullable Output<Boolean> cleanupOnFail;
 
-    public Input<Boolean> getCleanupOnFail() {
-        return this.cleanupOnFail == null ? Input.empty() : this.cleanupOnFail;
+    public Output<Boolean> getCleanupOnFail() {
+        return this.cleanupOnFail == null ? Output.empty() : this.cleanupOnFail;
     }
 
     @InputImport(name="compat")
-      private final @Nullable Input<String> compat;
+      private final @Nullable Output<String> compat;
 
-    public Input<String> getCompat() {
-        return this.compat == null ? Input.empty() : this.compat;
+    public Output<String> getCompat() {
+        return this.compat == null ? Output.empty() : this.compat;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createNamespace")
-      private final @Nullable Input<Boolean> createNamespace;
+      private final @Nullable Output<Boolean> createNamespace;
 
-    public Input<Boolean> getCreateNamespace() {
-        return this.createNamespace == null ? Input.empty() : this.createNamespace;
+    public Output<Boolean> getCreateNamespace() {
+        return this.createNamespace == null ? Output.empty() : this.createNamespace;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependencyUpdate")
-      private final @Nullable Input<Boolean> dependencyUpdate;
+      private final @Nullable Output<Boolean> dependencyUpdate;
 
-    public Input<Boolean> getDependencyUpdate() {
-        return this.dependencyUpdate == null ? Input.empty() : this.dependencyUpdate;
+    public Output<Boolean> getDependencyUpdate() {
+        return this.dependencyUpdate == null ? Output.empty() : this.dependencyUpdate;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devel")
-      private final @Nullable Input<Boolean> devel;
+      private final @Nullable Output<Boolean> devel;
 
-    public Input<Boolean> getDevel() {
-        return this.devel == null ? Input.empty() : this.devel;
+    public Output<Boolean> getDevel() {
+        return this.devel == null ? Output.empty() : this.devel;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableCRDHooks")
-      private final @Nullable Input<Boolean> disableCRDHooks;
+      private final @Nullable Output<Boolean> disableCRDHooks;
 
-    public Input<Boolean> getDisableCRDHooks() {
-        return this.disableCRDHooks == null ? Input.empty() : this.disableCRDHooks;
+    public Output<Boolean> getDisableCRDHooks() {
+        return this.disableCRDHooks == null ? Output.empty() : this.disableCRDHooks;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableOpenapiValidation")
-      private final @Nullable Input<Boolean> disableOpenapiValidation;
+      private final @Nullable Output<Boolean> disableOpenapiValidation;
 
-    public Input<Boolean> getDisableOpenapiValidation() {
-        return this.disableOpenapiValidation == null ? Input.empty() : this.disableOpenapiValidation;
+    public Output<Boolean> getDisableOpenapiValidation() {
+        return this.disableOpenapiValidation == null ? Output.empty() : this.disableOpenapiValidation;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableWebhooks")
-      private final @Nullable Input<Boolean> disableWebhooks;
+      private final @Nullable Output<Boolean> disableWebhooks;
 
-    public Input<Boolean> getDisableWebhooks() {
-        return this.disableWebhooks == null ? Input.empty() : this.disableWebhooks;
+    public Output<Boolean> getDisableWebhooks() {
+        return this.disableWebhooks == null ? Output.empty() : this.disableWebhooks;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdate")
-      private final @Nullable Input<Boolean> forceUpdate;
+      private final @Nullable Output<Boolean> forceUpdate;
 
-    public Input<Boolean> getForceUpdate() {
-        return this.forceUpdate == null ? Input.empty() : this.forceUpdate;
+    public Output<Boolean> getForceUpdate() {
+        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyring")
-      private final @Nullable Input<String> keyring;
+      private final @Nullable Output<String> keyring;
 
-    public Input<String> getKeyring() {
-        return this.keyring == null ? Input.empty() : this.keyring;
+    public Output<String> getKeyring() {
+        return this.keyring == null ? Output.empty() : this.keyring;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lint")
-      private final @Nullable Input<Boolean> lint;
+      private final @Nullable Output<Boolean> lint;
 
-    public Input<Boolean> getLint() {
-        return this.lint == null ? Input.empty() : this.lint;
+    public Output<Boolean> getLint() {
+        return this.lint == null ? Output.empty() : this.lint;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifest")
-      private final @Nullable Input<Map<String,Object>> manifest;
+      private final @Nullable Output<Map<String,Object>> manifest;
 
-    public Input<Map<String,Object>> getManifest() {
-        return this.manifest == null ? Input.empty() : this.manifest;
+    public Output<Map<String,Object>> getManifest() {
+        return this.manifest == null ? Output.empty() : this.manifest;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxHistory")
-      private final @Nullable Input<Integer> maxHistory;
+      private final @Nullable Output<Integer> maxHistory;
 
-    public Input<Integer> getMaxHistory() {
-        return this.maxHistory == null ? Input.empty() : this.maxHistory;
+    public Output<Integer> getMaxHistory() {
+        return this.maxHistory == null ? Output.empty() : this.maxHistory;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -209,10 +209,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postrender")
-      private final @Nullable Input<String> postrender;
+      private final @Nullable Output<String> postrender;
 
-    public Input<String> getPostrender() {
-        return this.postrender == null ? Input.empty() : this.postrender;
+    public Output<String> getPostrender() {
+        return this.postrender == null ? Output.empty() : this.postrender;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recreatePods")
-      private final @Nullable Input<Boolean> recreatePods;
+      private final @Nullable Output<Boolean> recreatePods;
 
-    public Input<Boolean> getRecreatePods() {
-        return this.recreatePods == null ? Input.empty() : this.recreatePods;
+    public Output<Boolean> getRecreatePods() {
+        return this.recreatePods == null ? Output.empty() : this.recreatePods;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="renderSubchartNotes")
-      private final @Nullable Input<Boolean> renderSubchartNotes;
+      private final @Nullable Output<Boolean> renderSubchartNotes;
 
-    public Input<Boolean> getRenderSubchartNotes() {
-        return this.renderSubchartNotes == null ? Input.empty() : this.renderSubchartNotes;
+    public Output<Boolean> getRenderSubchartNotes() {
+        return this.renderSubchartNotes == null ? Output.empty() : this.renderSubchartNotes;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replace")
-      private final @Nullable Input<Boolean> replace;
+      private final @Nullable Output<Boolean> replace;
 
-    public Input<Boolean> getReplace() {
-        return this.replace == null ? Input.empty() : this.replace;
+    public Output<Boolean> getReplace() {
+        return this.replace == null ? Output.empty() : this.replace;
     }
 
     /**
@@ -264,10 +264,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryOpts")
-      private final @Nullable Input<RepositoryOptsArgs> repositoryOpts;
+      private final @Nullable Output<RepositoryOptsArgs> repositoryOpts;
 
-    public Input<RepositoryOptsArgs> getRepositoryOpts() {
-        return this.repositoryOpts == null ? Input.empty() : this.repositoryOpts;
+    public Output<RepositoryOptsArgs> getRepositoryOpts() {
+        return this.repositoryOpts == null ? Output.empty() : this.repositoryOpts;
     }
 
     /**
@@ -275,10 +275,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resetValues")
-      private final @Nullable Input<Boolean> resetValues;
+      private final @Nullable Output<Boolean> resetValues;
 
-    public Input<Boolean> getResetValues() {
-        return this.resetValues == null ? Input.empty() : this.resetValues;
+    public Output<Boolean> getResetValues() {
+        return this.resetValues == null ? Output.empty() : this.resetValues;
     }
 
     /**
@@ -286,10 +286,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-      private final @Nullable Input<Map<String,List<String>>> resourceNames;
+      private final @Nullable Output<Map<String,List<String>>> resourceNames;
 
-    public Input<Map<String,List<String>>> getResourceNames() {
-        return this.resourceNames == null ? Input.empty() : this.resourceNames;
+    public Output<Map<String,List<String>>> getResourceNames() {
+        return this.resourceNames == null ? Output.empty() : this.resourceNames;
     }
 
     /**
@@ -297,10 +297,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reuseValues")
-      private final @Nullable Input<Boolean> reuseValues;
+      private final @Nullable Output<Boolean> reuseValues;
 
-    public Input<Boolean> getReuseValues() {
-        return this.reuseValues == null ? Input.empty() : this.reuseValues;
+    public Output<Boolean> getReuseValues() {
+        return this.reuseValues == null ? Output.empty() : this.reuseValues;
     }
 
     /**
@@ -308,10 +308,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipAwait")
-      private final @Nullable Input<Boolean> skipAwait;
+      private final @Nullable Output<Boolean> skipAwait;
 
-    public Input<Boolean> getSkipAwait() {
-        return this.skipAwait == null ? Input.empty() : this.skipAwait;
+    public Output<Boolean> getSkipAwait() {
+        return this.skipAwait == null ? Output.empty() : this.skipAwait;
     }
 
     /**
@@ -319,10 +319,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipCrds")
-      private final @Nullable Input<Boolean> skipCrds;
+      private final @Nullable Output<Boolean> skipCrds;
 
-    public Input<Boolean> getSkipCrds() {
-        return this.skipCrds == null ? Input.empty() : this.skipCrds;
+    public Output<Boolean> getSkipCrds() {
+        return this.skipCrds == null ? Output.empty() : this.skipCrds;
     }
 
     /**
@@ -330,10 +330,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -341,10 +341,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueYamlFiles")
-      private final @Nullable Input<List<AssetOrArchive>> valueYamlFiles;
+      private final @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
 
-    public Input<List<AssetOrArchive>> getValueYamlFiles() {
-        return this.valueYamlFiles == null ? Input.empty() : this.valueYamlFiles;
+    public Output<List<AssetOrArchive>> getValueYamlFiles() {
+        return this.valueYamlFiles == null ? Output.empty() : this.valueYamlFiles;
     }
 
     /**
@@ -352,10 +352,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<Map<String,Object>> values;
+      private final @Nullable Output<Map<String,Object>> values;
 
-    public Input<Map<String,Object>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<Map<String,Object>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     /**
@@ -363,10 +363,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verify")
-      private final @Nullable Input<Boolean> verify;
+      private final @Nullable Output<Boolean> verify;
 
-    public Input<Boolean> getVerify() {
-        return this.verify == null ? Input.empty() : this.verify;
+    public Output<Boolean> getVerify() {
+        return this.verify == null ? Output.empty() : this.verify;
     }
 
     /**
@@ -374,10 +374,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -385,47 +385,47 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForJobs")
-      private final @Nullable Input<Boolean> waitForJobs;
+      private final @Nullable Output<Boolean> waitForJobs;
 
-    public Input<Boolean> getWaitForJobs() {
-        return this.waitForJobs == null ? Input.empty() : this.waitForJobs;
+    public Output<Boolean> getWaitForJobs() {
+        return this.waitForJobs == null ? Output.empty() : this.waitForJobs;
     }
 
     public ReleaseArgs(
-        @Nullable Input<Boolean> atomic,
-        Input<String> chart,
-        @Nullable Input<Boolean> cleanupOnFail,
-        @Nullable Input<String> compat,
-        @Nullable Input<Boolean> createNamespace,
-        @Nullable Input<Boolean> dependencyUpdate,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> devel,
-        @Nullable Input<Boolean> disableCRDHooks,
-        @Nullable Input<Boolean> disableOpenapiValidation,
-        @Nullable Input<Boolean> disableWebhooks,
-        @Nullable Input<Boolean> forceUpdate,
-        @Nullable Input<String> keyring,
-        @Nullable Input<Boolean> lint,
-        @Nullable Input<Map<String,Object>> manifest,
-        @Nullable Input<Integer> maxHistory,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> postrender,
-        @Nullable Input<Boolean> recreatePods,
-        @Nullable Input<Boolean> renderSubchartNotes,
-        @Nullable Input<Boolean> replace,
-        @Nullable Input<RepositoryOptsArgs> repositoryOpts,
-        @Nullable Input<Boolean> resetValues,
-        @Nullable Input<Map<String,List<String>>> resourceNames,
-        @Nullable Input<Boolean> reuseValues,
-        @Nullable Input<Boolean> skipAwait,
-        @Nullable Input<Boolean> skipCrds,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<List<AssetOrArchive>> valueYamlFiles,
-        @Nullable Input<Map<String,Object>> values,
-        @Nullable Input<Boolean> verify,
-        @Nullable Input<String> version,
-        @Nullable Input<Boolean> waitForJobs) {
+        @Nullable Output<Boolean> atomic,
+        Output<String> chart,
+        @Nullable Output<Boolean> cleanupOnFail,
+        @Nullable Output<String> compat,
+        @Nullable Output<Boolean> createNamespace,
+        @Nullable Output<Boolean> dependencyUpdate,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> devel,
+        @Nullable Output<Boolean> disableCRDHooks,
+        @Nullable Output<Boolean> disableOpenapiValidation,
+        @Nullable Output<Boolean> disableWebhooks,
+        @Nullable Output<Boolean> forceUpdate,
+        @Nullable Output<String> keyring,
+        @Nullable Output<Boolean> lint,
+        @Nullable Output<Map<String,Object>> manifest,
+        @Nullable Output<Integer> maxHistory,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> postrender,
+        @Nullable Output<Boolean> recreatePods,
+        @Nullable Output<Boolean> renderSubchartNotes,
+        @Nullable Output<Boolean> replace,
+        @Nullable Output<RepositoryOptsArgs> repositoryOpts,
+        @Nullable Output<Boolean> resetValues,
+        @Nullable Output<Map<String,List<String>>> resourceNames,
+        @Nullable Output<Boolean> reuseValues,
+        @Nullable Output<Boolean> skipAwait,
+        @Nullable Output<Boolean> skipCrds,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<List<AssetOrArchive>> valueYamlFiles,
+        @Nullable Output<Map<String,Object>> values,
+        @Nullable Output<Boolean> verify,
+        @Nullable Output<String> version,
+        @Nullable Output<Boolean> waitForJobs) {
         this.atomic = atomic;
         this.chart = Objects.requireNonNull(chart, "expected parameter 'chart' to be non-null");
         this.cleanupOnFail = cleanupOnFail;
@@ -463,40 +463,40 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReleaseArgs() {
-        this.atomic = Input.empty();
-        this.chart = Input.empty();
-        this.cleanupOnFail = Input.empty();
-        this.compat = Input.empty();
-        this.createNamespace = Input.empty();
-        this.dependencyUpdate = Input.empty();
-        this.description = Input.empty();
-        this.devel = Input.empty();
-        this.disableCRDHooks = Input.empty();
-        this.disableOpenapiValidation = Input.empty();
-        this.disableWebhooks = Input.empty();
-        this.forceUpdate = Input.empty();
-        this.keyring = Input.empty();
-        this.lint = Input.empty();
-        this.manifest = Input.empty();
-        this.maxHistory = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.postrender = Input.empty();
-        this.recreatePods = Input.empty();
-        this.renderSubchartNotes = Input.empty();
-        this.replace = Input.empty();
-        this.repositoryOpts = Input.empty();
-        this.resetValues = Input.empty();
-        this.resourceNames = Input.empty();
-        this.reuseValues = Input.empty();
-        this.skipAwait = Input.empty();
-        this.skipCrds = Input.empty();
-        this.timeout = Input.empty();
-        this.valueYamlFiles = Input.empty();
-        this.values = Input.empty();
-        this.verify = Input.empty();
-        this.version = Input.empty();
-        this.waitForJobs = Input.empty();
+        this.atomic = Output.empty();
+        this.chart = Output.empty();
+        this.cleanupOnFail = Output.empty();
+        this.compat = Output.empty();
+        this.createNamespace = Output.empty();
+        this.dependencyUpdate = Output.empty();
+        this.description = Output.empty();
+        this.devel = Output.empty();
+        this.disableCRDHooks = Output.empty();
+        this.disableOpenapiValidation = Output.empty();
+        this.disableWebhooks = Output.empty();
+        this.forceUpdate = Output.empty();
+        this.keyring = Output.empty();
+        this.lint = Output.empty();
+        this.manifest = Output.empty();
+        this.maxHistory = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.postrender = Output.empty();
+        this.recreatePods = Output.empty();
+        this.renderSubchartNotes = Output.empty();
+        this.replace = Output.empty();
+        this.repositoryOpts = Output.empty();
+        this.resetValues = Output.empty();
+        this.resourceNames = Output.empty();
+        this.reuseValues = Output.empty();
+        this.skipAwait = Output.empty();
+        this.skipCrds = Output.empty();
+        this.timeout = Output.empty();
+        this.valueYamlFiles = Output.empty();
+        this.values = Output.empty();
+        this.verify = Output.empty();
+        this.version = Output.empty();
+        this.waitForJobs = Output.empty();
     }
 
     public static Builder builder() {
@@ -508,40 +508,40 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> atomic;
-        private Input<String> chart;
-        private @Nullable Input<Boolean> cleanupOnFail;
-        private @Nullable Input<String> compat;
-        private @Nullable Input<Boolean> createNamespace;
-        private @Nullable Input<Boolean> dependencyUpdate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> devel;
-        private @Nullable Input<Boolean> disableCRDHooks;
-        private @Nullable Input<Boolean> disableOpenapiValidation;
-        private @Nullable Input<Boolean> disableWebhooks;
-        private @Nullable Input<Boolean> forceUpdate;
-        private @Nullable Input<String> keyring;
-        private @Nullable Input<Boolean> lint;
-        private @Nullable Input<Map<String,Object>> manifest;
-        private @Nullable Input<Integer> maxHistory;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> postrender;
-        private @Nullable Input<Boolean> recreatePods;
-        private @Nullable Input<Boolean> renderSubchartNotes;
-        private @Nullable Input<Boolean> replace;
-        private @Nullable Input<RepositoryOptsArgs> repositoryOpts;
-        private @Nullable Input<Boolean> resetValues;
-        private @Nullable Input<Map<String,List<String>>> resourceNames;
-        private @Nullable Input<Boolean> reuseValues;
-        private @Nullable Input<Boolean> skipAwait;
-        private @Nullable Input<Boolean> skipCrds;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<List<AssetOrArchive>> valueYamlFiles;
-        private @Nullable Input<Map<String,Object>> values;
-        private @Nullable Input<Boolean> verify;
-        private @Nullable Input<String> version;
-        private @Nullable Input<Boolean> waitForJobs;
+        private @Nullable Output<Boolean> atomic;
+        private Output<String> chart;
+        private @Nullable Output<Boolean> cleanupOnFail;
+        private @Nullable Output<String> compat;
+        private @Nullable Output<Boolean> createNamespace;
+        private @Nullable Output<Boolean> dependencyUpdate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> devel;
+        private @Nullable Output<Boolean> disableCRDHooks;
+        private @Nullable Output<Boolean> disableOpenapiValidation;
+        private @Nullable Output<Boolean> disableWebhooks;
+        private @Nullable Output<Boolean> forceUpdate;
+        private @Nullable Output<String> keyring;
+        private @Nullable Output<Boolean> lint;
+        private @Nullable Output<Map<String,Object>> manifest;
+        private @Nullable Output<Integer> maxHistory;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> postrender;
+        private @Nullable Output<Boolean> recreatePods;
+        private @Nullable Output<Boolean> renderSubchartNotes;
+        private @Nullable Output<Boolean> replace;
+        private @Nullable Output<RepositoryOptsArgs> repositoryOpts;
+        private @Nullable Output<Boolean> resetValues;
+        private @Nullable Output<Map<String,List<String>>> resourceNames;
+        private @Nullable Output<Boolean> reuseValues;
+        private @Nullable Output<Boolean> skipAwait;
+        private @Nullable Output<Boolean> skipCrds;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
+        private @Nullable Output<Map<String,Object>> values;
+        private @Nullable Output<Boolean> verify;
+        private @Nullable Output<String> version;
+        private @Nullable Output<Boolean> waitForJobs;
 
         public Builder() {
     	      // Empty
@@ -585,343 +585,343 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForJobs = defaults.waitForJobs;
         }
 
-        public Builder atomic(@Nullable Input<Boolean> atomic) {
+        public Builder atomic(@Nullable Output<Boolean> atomic) {
             this.atomic = atomic;
             return this;
         }
 
         public Builder atomic(@Nullable Boolean atomic) {
-            this.atomic = Input.ofNullable(atomic);
+            this.atomic = Output.ofNullable(atomic);
             return this;
         }
 
-        public Builder chart(Input<String> chart) {
+        public Builder chart(Output<String> chart) {
             this.chart = Objects.requireNonNull(chart);
             return this;
         }
 
         public Builder chart(String chart) {
-            this.chart = Input.of(Objects.requireNonNull(chart));
+            this.chart = Output.of(Objects.requireNonNull(chart));
             return this;
         }
 
-        public Builder cleanupOnFail(@Nullable Input<Boolean> cleanupOnFail) {
+        public Builder cleanupOnFail(@Nullable Output<Boolean> cleanupOnFail) {
             this.cleanupOnFail = cleanupOnFail;
             return this;
         }
 
         public Builder cleanupOnFail(@Nullable Boolean cleanupOnFail) {
-            this.cleanupOnFail = Input.ofNullable(cleanupOnFail);
+            this.cleanupOnFail = Output.ofNullable(cleanupOnFail);
             return this;
         }
 
-        public Builder compat(@Nullable Input<String> compat) {
+        public Builder compat(@Nullable Output<String> compat) {
             this.compat = compat;
             return this;
         }
 
         public Builder compat(@Nullable String compat) {
-            this.compat = Input.ofNullable(compat);
+            this.compat = Output.ofNullable(compat);
             return this;
         }
 
-        public Builder createNamespace(@Nullable Input<Boolean> createNamespace) {
+        public Builder createNamespace(@Nullable Output<Boolean> createNamespace) {
             this.createNamespace = createNamespace;
             return this;
         }
 
         public Builder createNamespace(@Nullable Boolean createNamespace) {
-            this.createNamespace = Input.ofNullable(createNamespace);
+            this.createNamespace = Output.ofNullable(createNamespace);
             return this;
         }
 
-        public Builder dependencyUpdate(@Nullable Input<Boolean> dependencyUpdate) {
+        public Builder dependencyUpdate(@Nullable Output<Boolean> dependencyUpdate) {
             this.dependencyUpdate = dependencyUpdate;
             return this;
         }
 
         public Builder dependencyUpdate(@Nullable Boolean dependencyUpdate) {
-            this.dependencyUpdate = Input.ofNullable(dependencyUpdate);
+            this.dependencyUpdate = Output.ofNullable(dependencyUpdate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder devel(@Nullable Input<Boolean> devel) {
+        public Builder devel(@Nullable Output<Boolean> devel) {
             this.devel = devel;
             return this;
         }
 
         public Builder devel(@Nullable Boolean devel) {
-            this.devel = Input.ofNullable(devel);
+            this.devel = Output.ofNullable(devel);
             return this;
         }
 
-        public Builder disableCRDHooks(@Nullable Input<Boolean> disableCRDHooks) {
+        public Builder disableCRDHooks(@Nullable Output<Boolean> disableCRDHooks) {
             this.disableCRDHooks = disableCRDHooks;
             return this;
         }
 
         public Builder disableCRDHooks(@Nullable Boolean disableCRDHooks) {
-            this.disableCRDHooks = Input.ofNullable(disableCRDHooks);
+            this.disableCRDHooks = Output.ofNullable(disableCRDHooks);
             return this;
         }
 
-        public Builder disableOpenapiValidation(@Nullable Input<Boolean> disableOpenapiValidation) {
+        public Builder disableOpenapiValidation(@Nullable Output<Boolean> disableOpenapiValidation) {
             this.disableOpenapiValidation = disableOpenapiValidation;
             return this;
         }
 
         public Builder disableOpenapiValidation(@Nullable Boolean disableOpenapiValidation) {
-            this.disableOpenapiValidation = Input.ofNullable(disableOpenapiValidation);
+            this.disableOpenapiValidation = Output.ofNullable(disableOpenapiValidation);
             return this;
         }
 
-        public Builder disableWebhooks(@Nullable Input<Boolean> disableWebhooks) {
+        public Builder disableWebhooks(@Nullable Output<Boolean> disableWebhooks) {
             this.disableWebhooks = disableWebhooks;
             return this;
         }
 
         public Builder disableWebhooks(@Nullable Boolean disableWebhooks) {
-            this.disableWebhooks = Input.ofNullable(disableWebhooks);
+            this.disableWebhooks = Output.ofNullable(disableWebhooks);
             return this;
         }
 
-        public Builder forceUpdate(@Nullable Input<Boolean> forceUpdate) {
+        public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Input.ofNullable(forceUpdate);
+            this.forceUpdate = Output.ofNullable(forceUpdate);
             return this;
         }
 
-        public Builder keyring(@Nullable Input<String> keyring) {
+        public Builder keyring(@Nullable Output<String> keyring) {
             this.keyring = keyring;
             return this;
         }
 
         public Builder keyring(@Nullable String keyring) {
-            this.keyring = Input.ofNullable(keyring);
+            this.keyring = Output.ofNullable(keyring);
             return this;
         }
 
-        public Builder lint(@Nullable Input<Boolean> lint) {
+        public Builder lint(@Nullable Output<Boolean> lint) {
             this.lint = lint;
             return this;
         }
 
         public Builder lint(@Nullable Boolean lint) {
-            this.lint = Input.ofNullable(lint);
+            this.lint = Output.ofNullable(lint);
             return this;
         }
 
-        public Builder manifest(@Nullable Input<Map<String,Object>> manifest) {
+        public Builder manifest(@Nullable Output<Map<String,Object>> manifest) {
             this.manifest = manifest;
             return this;
         }
 
         public Builder manifest(@Nullable Map<String,Object> manifest) {
-            this.manifest = Input.ofNullable(manifest);
+            this.manifest = Output.ofNullable(manifest);
             return this;
         }
 
-        public Builder maxHistory(@Nullable Input<Integer> maxHistory) {
+        public Builder maxHistory(@Nullable Output<Integer> maxHistory) {
             this.maxHistory = maxHistory;
             return this;
         }
 
         public Builder maxHistory(@Nullable Integer maxHistory) {
-            this.maxHistory = Input.ofNullable(maxHistory);
+            this.maxHistory = Output.ofNullable(maxHistory);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder postrender(@Nullable Input<String> postrender) {
+        public Builder postrender(@Nullable Output<String> postrender) {
             this.postrender = postrender;
             return this;
         }
 
         public Builder postrender(@Nullable String postrender) {
-            this.postrender = Input.ofNullable(postrender);
+            this.postrender = Output.ofNullable(postrender);
             return this;
         }
 
-        public Builder recreatePods(@Nullable Input<Boolean> recreatePods) {
+        public Builder recreatePods(@Nullable Output<Boolean> recreatePods) {
             this.recreatePods = recreatePods;
             return this;
         }
 
         public Builder recreatePods(@Nullable Boolean recreatePods) {
-            this.recreatePods = Input.ofNullable(recreatePods);
+            this.recreatePods = Output.ofNullable(recreatePods);
             return this;
         }
 
-        public Builder renderSubchartNotes(@Nullable Input<Boolean> renderSubchartNotes) {
+        public Builder renderSubchartNotes(@Nullable Output<Boolean> renderSubchartNotes) {
             this.renderSubchartNotes = renderSubchartNotes;
             return this;
         }
 
         public Builder renderSubchartNotes(@Nullable Boolean renderSubchartNotes) {
-            this.renderSubchartNotes = Input.ofNullable(renderSubchartNotes);
+            this.renderSubchartNotes = Output.ofNullable(renderSubchartNotes);
             return this;
         }
 
-        public Builder replace(@Nullable Input<Boolean> replace) {
+        public Builder replace(@Nullable Output<Boolean> replace) {
             this.replace = replace;
             return this;
         }
 
         public Builder replace(@Nullable Boolean replace) {
-            this.replace = Input.ofNullable(replace);
+            this.replace = Output.ofNullable(replace);
             return this;
         }
 
-        public Builder repositoryOpts(@Nullable Input<RepositoryOptsArgs> repositoryOpts) {
+        public Builder repositoryOpts(@Nullable Output<RepositoryOptsArgs> repositoryOpts) {
             this.repositoryOpts = repositoryOpts;
             return this;
         }
 
         public Builder repositoryOpts(@Nullable RepositoryOptsArgs repositoryOpts) {
-            this.repositoryOpts = Input.ofNullable(repositoryOpts);
+            this.repositoryOpts = Output.ofNullable(repositoryOpts);
             return this;
         }
 
-        public Builder resetValues(@Nullable Input<Boolean> resetValues) {
+        public Builder resetValues(@Nullable Output<Boolean> resetValues) {
             this.resetValues = resetValues;
             return this;
         }
 
         public Builder resetValues(@Nullable Boolean resetValues) {
-            this.resetValues = Input.ofNullable(resetValues);
+            this.resetValues = Output.ofNullable(resetValues);
             return this;
         }
 
-        public Builder resourceNames(@Nullable Input<Map<String,List<String>>> resourceNames) {
+        public Builder resourceNames(@Nullable Output<Map<String,List<String>>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
         public Builder resourceNames(@Nullable Map<String,List<String>> resourceNames) {
-            this.resourceNames = Input.ofNullable(resourceNames);
+            this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
 
-        public Builder reuseValues(@Nullable Input<Boolean> reuseValues) {
+        public Builder reuseValues(@Nullable Output<Boolean> reuseValues) {
             this.reuseValues = reuseValues;
             return this;
         }
 
         public Builder reuseValues(@Nullable Boolean reuseValues) {
-            this.reuseValues = Input.ofNullable(reuseValues);
+            this.reuseValues = Output.ofNullable(reuseValues);
             return this;
         }
 
-        public Builder skipAwait(@Nullable Input<Boolean> skipAwait) {
+        public Builder skipAwait(@Nullable Output<Boolean> skipAwait) {
             this.skipAwait = skipAwait;
             return this;
         }
 
         public Builder skipAwait(@Nullable Boolean skipAwait) {
-            this.skipAwait = Input.ofNullable(skipAwait);
+            this.skipAwait = Output.ofNullable(skipAwait);
             return this;
         }
 
-        public Builder skipCrds(@Nullable Input<Boolean> skipCrds) {
+        public Builder skipCrds(@Nullable Output<Boolean> skipCrds) {
             this.skipCrds = skipCrds;
             return this;
         }
 
         public Builder skipCrds(@Nullable Boolean skipCrds) {
-            this.skipCrds = Input.ofNullable(skipCrds);
+            this.skipCrds = Output.ofNullable(skipCrds);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder valueYamlFiles(@Nullable Input<List<AssetOrArchive>> valueYamlFiles) {
+        public Builder valueYamlFiles(@Nullable Output<List<AssetOrArchive>> valueYamlFiles) {
             this.valueYamlFiles = valueYamlFiles;
             return this;
         }
 
         public Builder valueYamlFiles(@Nullable List<AssetOrArchive> valueYamlFiles) {
-            this.valueYamlFiles = Input.ofNullable(valueYamlFiles);
+            this.valueYamlFiles = Output.ofNullable(valueYamlFiles);
             return this;
         }
 
-        public Builder values(@Nullable Input<Map<String,Object>> values) {
+        public Builder values(@Nullable Output<Map<String,Object>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable Map<String,Object> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
 
-        public Builder verify(@Nullable Input<Boolean> verify) {
+        public Builder verify(@Nullable Output<Boolean> verify) {
             this.verify = verify;
             return this;
         }
 
         public Builder verify(@Nullable Boolean verify) {
-            this.verify = Input.ofNullable(verify);
+            this.verify = Output.ofNullable(verify);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder waitForJobs(@Nullable Input<Boolean> waitForJobs) {
+        public Builder waitForJobs(@Nullable Output<Boolean> waitForJobs) {
             this.waitForJobs = waitForJobs;
             return this;
         }
 
         public Builder waitForJobs(@Nullable Boolean waitForJobs) {
-            this.waitForJobs = Input.ofNullable(waitForJobs);
+            this.waitForJobs = Output.ofNullable(waitForJobs);
             return this;
         }
         public ReleaseArgs build() {

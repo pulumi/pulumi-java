@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="burst")
-      private final @Nullable Input<Integer> burst;
+      private final @Nullable Output<Integer> burst;
 
-    public Input<Integer> getBurst() {
-        return this.burst == null ? Input.empty() : this.burst;
+    public Output<Integer> getBurst() {
+        return this.burst == null ? Output.empty() : this.burst;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="qps")
-      private final @Nullable Input<Integer> qps;
+      private final @Nullable Output<Integer> qps;
 
-    public Input<Integer> getQps() {
-        return this.qps == null ? Input.empty() : this.qps;
+    public Output<Integer> getQps() {
+        return this.qps == null ? Output.empty() : this.qps;
     }
 
     public WebhookThrottleConfigArgs(
-        @Nullable Input<Integer> burst,
-        @Nullable Input<Integer> qps) {
+        @Nullable Output<Integer> burst,
+        @Nullable Output<Integer> qps) {
         this.burst = burst;
         this.qps = qps;
     }
 
     private WebhookThrottleConfigArgs() {
-        this.burst = Input.empty();
-        this.qps = Input.empty();
+        this.burst = Output.empty();
+        this.qps = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> burst;
-        private @Nullable Input<Integer> qps;
+        private @Nullable Output<Integer> burst;
+        private @Nullable Output<Integer> qps;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
     	      this.qps = defaults.qps;
         }
 
-        public Builder burst(@Nullable Input<Integer> burst) {
+        public Builder burst(@Nullable Output<Integer> burst) {
             this.burst = burst;
             return this;
         }
 
         public Builder burst(@Nullable Integer burst) {
-            this.burst = Input.ofNullable(burst);
+            this.burst = Output.ofNullable(burst);
             return this;
         }
 
-        public Builder qps(@Nullable Input<Integer> qps) {
+        public Builder qps(@Nullable Output<Integer> qps) {
             this.qps = qps;
             return this;
         }
 
         public Builder qps(@Nullable Integer qps) {
-            this.qps = Input.ofNullable(qps);
+            this.qps = Output.ofNullable(qps);
             return this;
         }
         public WebhookThrottleConfigArgs build() {

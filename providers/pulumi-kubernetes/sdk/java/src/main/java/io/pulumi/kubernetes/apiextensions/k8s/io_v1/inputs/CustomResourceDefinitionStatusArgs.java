@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionConditionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
@@ -26,9 +26,9 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="acceptedNames", required=true)
-      private final Input<CustomResourceDefinitionNamesArgs> acceptedNames;
+      private final Output<CustomResourceDefinitionNamesArgs> acceptedNames;
 
-    public Input<CustomResourceDefinitionNamesArgs> getAcceptedNames() {
+    public Output<CustomResourceDefinitionNamesArgs> getAcceptedNames() {
         return this.acceptedNames;
     }
 
@@ -37,10 +37,10 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions;
+      private final @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
 
-    public Input<List<CustomResourceDefinitionConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<CustomResourceDefinitionConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storedVersions", required=true)
-      private final Input<List<String>> storedVersions;
+      private final Output<List<String>> storedVersions;
 
-    public Input<List<String>> getStoredVersions() {
+    public Output<List<String>> getStoredVersions() {
         return this.storedVersions;
     }
 
     public CustomResourceDefinitionStatusArgs(
-        Input<CustomResourceDefinitionNamesArgs> acceptedNames,
-        @Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions,
-        Input<List<String>> storedVersions) {
+        Output<CustomResourceDefinitionNamesArgs> acceptedNames,
+        @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions,
+        Output<List<String>> storedVersions) {
         this.acceptedNames = Objects.requireNonNull(acceptedNames, "expected parameter 'acceptedNames' to be non-null");
         this.conditions = conditions;
         this.storedVersions = Objects.requireNonNull(storedVersions, "expected parameter 'storedVersions' to be non-null");
     }
 
     private CustomResourceDefinitionStatusArgs() {
-        this.acceptedNames = Input.empty();
-        this.conditions = Input.empty();
-        this.storedVersions = Input.empty();
+        this.acceptedNames = Output.empty();
+        this.conditions = Output.empty();
+        this.storedVersions = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<CustomResourceDefinitionNamesArgs> acceptedNames;
-        private @Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions;
-        private Input<List<String>> storedVersions;
+        private Output<CustomResourceDefinitionNamesArgs> acceptedNames;
+        private @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
+        private Output<List<String>> storedVersions;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     	      this.storedVersions = defaults.storedVersions;
         }
 
-        public Builder acceptedNames(Input<CustomResourceDefinitionNamesArgs> acceptedNames) {
+        public Builder acceptedNames(Output<CustomResourceDefinitionNamesArgs> acceptedNames) {
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
 
         public Builder acceptedNames(CustomResourceDefinitionNamesArgs acceptedNames) {
-            this.acceptedNames = Input.of(Objects.requireNonNull(acceptedNames));
+            this.acceptedNames = Output.of(Objects.requireNonNull(acceptedNames));
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<CustomResourceDefinitionConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder storedVersions(Input<List<String>> storedVersions) {
+        public Builder storedVersions(Output<List<String>> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
 
         public Builder storedVersions(List<String> storedVersions) {
-            this.storedVersions = Input.of(Objects.requireNonNull(storedVersions));
+            this.storedVersions = Output.of(Objects.requireNonNull(storedVersions));
             return this;
         }
         public CustomResourceDefinitionStatusArgs build() {

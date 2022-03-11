@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.JSONSchemaPropsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="openAPIV3Schema")
-      private final @Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema;
+      private final @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
-    public Input<JSONSchemaPropsArgs> getOpenAPIV3Schema() {
-        return this.openAPIV3Schema == null ? Input.empty() : this.openAPIV3Schema;
+    public Output<JSONSchemaPropsArgs> getOpenAPIV3Schema() {
+        return this.openAPIV3Schema == null ? Output.empty() : this.openAPIV3Schema;
     }
 
-    public CustomResourceValidationArgs(@Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema) {
+    public CustomResourceValidationArgs(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
         this.openAPIV3Schema = openAPIV3Schema;
     }
 
     private CustomResourceValidationArgs() {
-        this.openAPIV3Schema = Input.empty();
+        this.openAPIV3Schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema;
+        private @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
     	      this.openAPIV3Schema = defaults.openAPIV3Schema;
         }
 
-        public Builder openAPIV3Schema(@Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema) {
+        public Builder openAPIV3Schema(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
             this.openAPIV3Schema = openAPIV3Schema;
             return this;
         }
 
         public Builder openAPIV3Schema(@Nullable JSONSchemaPropsArgs openAPIV3Schema) {
-            this.openAPIV3Schema = Input.ofNullable(openAPIV3Schema);
+            this.openAPIV3Schema = Output.ofNullable(openAPIV3Schema);
             return this;
         }
         public CustomResourceValidationArgs build() {

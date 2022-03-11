@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
@@ -27,10 +27,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessModes")
-      private final @Nullable Input<List<String>> accessModes;
+      private final @Nullable Output<List<String>> accessModes;
 
-    public Input<List<String>> getAccessModes() {
-        return this.accessModes == null ? Input.empty() : this.accessModes;
+    public Output<List<String>> getAccessModes() {
+        return this.accessModes == null ? Output.empty() : this.accessModes;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSource;
+      private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
 
-    public Input<TypedLocalObjectReferenceArgs> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<TypedLocalObjectReferenceArgs> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSourceRef")
-      private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef;
+      private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
 
-    public Input<TypedLocalObjectReferenceArgs> getDataSourceRef() {
-        return this.dataSourceRef == null ? Input.empty() : this.dataSourceRef;
+    public Output<TypedLocalObjectReferenceArgs> getDataSourceRef() {
+        return this.dataSourceRef == null ? Output.empty() : this.dataSourceRef;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<ResourceRequirementsArgs> resources;
+      private final @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Input<ResourceRequirementsArgs> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<ResourceRequirementsArgs> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageClassName")
-      private final @Nullable Input<String> storageClassName;
+      private final @Nullable Output<String> storageClassName;
 
-    public Input<String> getStorageClassName() {
-        return this.storageClassName == null ? Input.empty() : this.storageClassName;
+    public Output<String> getStorageClassName() {
+        return this.storageClassName == null ? Output.empty() : this.storageClassName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeMode")
-      private final @Nullable Input<String> volumeMode;
+      private final @Nullable Output<String> volumeMode;
 
-    public Input<String> getVolumeMode() {
-        return this.volumeMode == null ? Input.empty() : this.volumeMode;
+    public Output<String> getVolumeMode() {
+        return this.volumeMode == null ? Output.empty() : this.volumeMode;
     }
 
     /**
@@ -109,21 +109,21 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeName")
-      private final @Nullable Input<String> volumeName;
+      private final @Nullable Output<String> volumeName;
 
-    public Input<String> getVolumeName() {
-        return this.volumeName == null ? Input.empty() : this.volumeName;
+    public Output<String> getVolumeName() {
+        return this.volumeName == null ? Output.empty() : this.volumeName;
     }
 
     public PersistentVolumeClaimSpecArgs(
-        @Nullable Input<List<String>> accessModes,
-        @Nullable Input<TypedLocalObjectReferenceArgs> dataSource,
-        @Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef,
-        @Nullable Input<ResourceRequirementsArgs> resources,
-        @Nullable Input<LabelSelectorArgs> selector,
-        @Nullable Input<String> storageClassName,
-        @Nullable Input<String> volumeMode,
-        @Nullable Input<String> volumeName) {
+        @Nullable Output<List<String>> accessModes,
+        @Nullable Output<TypedLocalObjectReferenceArgs> dataSource,
+        @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef,
+        @Nullable Output<ResourceRequirementsArgs> resources,
+        @Nullable Output<LabelSelectorArgs> selector,
+        @Nullable Output<String> storageClassName,
+        @Nullable Output<String> volumeMode,
+        @Nullable Output<String> volumeName) {
         this.accessModes = accessModes;
         this.dataSource = dataSource;
         this.dataSourceRef = dataSourceRef;
@@ -135,14 +135,14 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     }
 
     private PersistentVolumeClaimSpecArgs() {
-        this.accessModes = Input.empty();
-        this.dataSource = Input.empty();
-        this.dataSourceRef = Input.empty();
-        this.resources = Input.empty();
-        this.selector = Input.empty();
-        this.storageClassName = Input.empty();
-        this.volumeMode = Input.empty();
-        this.volumeName = Input.empty();
+        this.accessModes = Output.empty();
+        this.dataSource = Output.empty();
+        this.dataSourceRef = Output.empty();
+        this.resources = Output.empty();
+        this.selector = Output.empty();
+        this.storageClassName = Output.empty();
+        this.volumeMode = Output.empty();
+        this.volumeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,14 +154,14 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accessModes;
-        private @Nullable Input<TypedLocalObjectReferenceArgs> dataSource;
-        private @Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef;
-        private @Nullable Input<ResourceRequirementsArgs> resources;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private @Nullable Input<String> storageClassName;
-        private @Nullable Input<String> volumeMode;
-        private @Nullable Input<String> volumeName;
+        private @Nullable Output<List<String>> accessModes;
+        private @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
+        private @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
+        private @Nullable Output<ResourceRequirementsArgs> resources;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private @Nullable Output<String> storageClassName;
+        private @Nullable Output<String> volumeMode;
+        private @Nullable Output<String> volumeName;
 
         public Builder() {
     	      // Empty
@@ -179,83 +179,83 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder accessModes(@Nullable Input<List<String>> accessModes) {
+        public Builder accessModes(@Nullable Output<List<String>> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
         public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Input.ofNullable(accessModes);
+            this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
 
-        public Builder dataSource(@Nullable Input<TypedLocalObjectReferenceArgs> dataSource) {
+        public Builder dataSource(@Nullable Output<TypedLocalObjectReferenceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable TypedLocalObjectReferenceArgs dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder dataSourceRef(@Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef) {
+        public Builder dataSourceRef(@Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef) {
             this.dataSourceRef = dataSourceRef;
             return this;
         }
 
         public Builder dataSourceRef(@Nullable TypedLocalObjectReferenceArgs dataSourceRef) {
-            this.dataSourceRef = Input.ofNullable(dataSourceRef);
+            this.dataSourceRef = Output.ofNullable(dataSourceRef);
             return this;
         }
 
-        public Builder resources(@Nullable Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable ResourceRequirementsArgs resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder storageClassName(@Nullable Input<String> storageClassName) {
+        public Builder storageClassName(@Nullable Output<String> storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
 
         public Builder storageClassName(@Nullable String storageClassName) {
-            this.storageClassName = Input.ofNullable(storageClassName);
+            this.storageClassName = Output.ofNullable(storageClassName);
             return this;
         }
 
-        public Builder volumeMode(@Nullable Input<String> volumeMode) {
+        public Builder volumeMode(@Nullable Output<String> volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
 
         public Builder volumeMode(@Nullable String volumeMode) {
-            this.volumeMode = Input.ofNullable(volumeMode);
+            this.volumeMode = Output.ofNullable(volumeMode);
             return this;
         }
 
-        public Builder volumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Input.ofNullable(volumeName);
+            this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
         public PersistentVolumeClaimSpecArgs build() {

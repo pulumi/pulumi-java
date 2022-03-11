@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateRunningArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateTerminatedArgs;
@@ -25,10 +25,10 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="running")
-      private final @Nullable Input<ContainerStateRunningArgs> running;
+      private final @Nullable Output<ContainerStateRunningArgs> running;
 
-    public Input<ContainerStateRunningArgs> getRunning() {
-        return this.running == null ? Input.empty() : this.running;
+    public Output<ContainerStateRunningArgs> getRunning() {
+        return this.running == null ? Output.empty() : this.running;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminated")
-      private final @Nullable Input<ContainerStateTerminatedArgs> terminated;
+      private final @Nullable Output<ContainerStateTerminatedArgs> terminated;
 
-    public Input<ContainerStateTerminatedArgs> getTerminated() {
-        return this.terminated == null ? Input.empty() : this.terminated;
+    public Output<ContainerStateTerminatedArgs> getTerminated() {
+        return this.terminated == null ? Output.empty() : this.terminated;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waiting")
-      private final @Nullable Input<ContainerStateWaitingArgs> waiting;
+      private final @Nullable Output<ContainerStateWaitingArgs> waiting;
 
-    public Input<ContainerStateWaitingArgs> getWaiting() {
-        return this.waiting == null ? Input.empty() : this.waiting;
+    public Output<ContainerStateWaitingArgs> getWaiting() {
+        return this.waiting == null ? Output.empty() : this.waiting;
     }
 
     public ContainerStateArgs(
-        @Nullable Input<ContainerStateRunningArgs> running,
-        @Nullable Input<ContainerStateTerminatedArgs> terminated,
-        @Nullable Input<ContainerStateWaitingArgs> waiting) {
+        @Nullable Output<ContainerStateRunningArgs> running,
+        @Nullable Output<ContainerStateTerminatedArgs> terminated,
+        @Nullable Output<ContainerStateWaitingArgs> waiting) {
         this.running = running;
         this.terminated = terminated;
         this.waiting = waiting;
     }
 
     private ContainerStateArgs() {
-        this.running = Input.empty();
-        this.terminated = Input.empty();
-        this.waiting = Input.empty();
+        this.running = Output.empty();
+        this.terminated = Output.empty();
+        this.waiting = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerStateRunningArgs> running;
-        private @Nullable Input<ContainerStateTerminatedArgs> terminated;
-        private @Nullable Input<ContainerStateWaitingArgs> waiting;
+        private @Nullable Output<ContainerStateRunningArgs> running;
+        private @Nullable Output<ContainerStateTerminatedArgs> terminated;
+        private @Nullable Output<ContainerStateWaitingArgs> waiting;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waiting = defaults.waiting;
         }
 
-        public Builder running(@Nullable Input<ContainerStateRunningArgs> running) {
+        public Builder running(@Nullable Output<ContainerStateRunningArgs> running) {
             this.running = running;
             return this;
         }
 
         public Builder running(@Nullable ContainerStateRunningArgs running) {
-            this.running = Input.ofNullable(running);
+            this.running = Output.ofNullable(running);
             return this;
         }
 
-        public Builder terminated(@Nullable Input<ContainerStateTerminatedArgs> terminated) {
+        public Builder terminated(@Nullable Output<ContainerStateTerminatedArgs> terminated) {
             this.terminated = terminated;
             return this;
         }
 
         public Builder terminated(@Nullable ContainerStateTerminatedArgs terminated) {
-            this.terminated = Input.ofNullable(terminated);
+            this.terminated = Output.ofNullable(terminated);
             return this;
         }
 
-        public Builder waiting(@Nullable Input<ContainerStateWaitingArgs> waiting) {
+        public Builder waiting(@Nullable Output<ContainerStateWaitingArgs> waiting) {
             this.waiting = waiting;
             return this;
         }
 
         public Builder waiting(@Nullable ContainerStateWaitingArgs waiting) {
-            this.waiting = Input.ofNullable(waiting);
+            this.waiting = Output.ofNullable(waiting);
             return this;
         }
         public ContainerStateArgs build() {

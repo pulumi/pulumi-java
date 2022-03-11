@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentConditionArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availableReplicas")
-      private final @Nullable Input<Integer> availableReplicas;
+      private final @Nullable Output<Integer> availableReplicas;
 
-    public Input<Integer> getAvailableReplicas() {
-        return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
+    public Output<Integer> getAvailableReplicas() {
+        return this.availableReplicas == null ? Output.empty() : this.availableReplicas;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collisionCount")
-      private final @Nullable Input<Integer> collisionCount;
+      private final @Nullable Output<Integer> collisionCount;
 
-    public Input<Integer> getCollisionCount() {
-        return this.collisionCount == null ? Input.empty() : this.collisionCount;
+    public Output<Integer> getCollisionCount() {
+        return this.collisionCount == null ? Output.empty() : this.collisionCount;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<DeploymentConditionArgs>> conditions;
+      private final @Nullable Output<List<DeploymentConditionArgs>> conditions;
 
-    public Input<List<DeploymentConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<DeploymentConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="readyReplicas")
-      private final @Nullable Input<Integer> readyReplicas;
+      private final @Nullable Output<Integer> readyReplicas;
 
-    public Input<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
+    public Output<Integer> getReadyReplicas() {
+        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<Integer> replicas;
+      private final @Nullable Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<Integer> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unavailableReplicas")
-      private final @Nullable Input<Integer> unavailableReplicas;
+      private final @Nullable Output<Integer> unavailableReplicas;
 
-    public Input<Integer> getUnavailableReplicas() {
-        return this.unavailableReplicas == null ? Input.empty() : this.unavailableReplicas;
+    public Output<Integer> getUnavailableReplicas() {
+        return this.unavailableReplicas == null ? Output.empty() : this.unavailableReplicas;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updatedReplicas")
-      private final @Nullable Input<Integer> updatedReplicas;
+      private final @Nullable Output<Integer> updatedReplicas;
 
-    public Input<Integer> getUpdatedReplicas() {
-        return this.updatedReplicas == null ? Input.empty() : this.updatedReplicas;
+    public Output<Integer> getUpdatedReplicas() {
+        return this.updatedReplicas == null ? Output.empty() : this.updatedReplicas;
     }
 
     public DeploymentStatusArgs(
-        @Nullable Input<Integer> availableReplicas,
-        @Nullable Input<Integer> collisionCount,
-        @Nullable Input<List<DeploymentConditionArgs>> conditions,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<Integer> readyReplicas,
-        @Nullable Input<Integer> replicas,
-        @Nullable Input<Integer> unavailableReplicas,
-        @Nullable Input<Integer> updatedReplicas) {
+        @Nullable Output<Integer> availableReplicas,
+        @Nullable Output<Integer> collisionCount,
+        @Nullable Output<List<DeploymentConditionArgs>> conditions,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<Integer> readyReplicas,
+        @Nullable Output<Integer> replicas,
+        @Nullable Output<Integer> unavailableReplicas,
+        @Nullable Output<Integer> updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;
@@ -128,14 +128,14 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentStatusArgs() {
-        this.availableReplicas = Input.empty();
-        this.collisionCount = Input.empty();
-        this.conditions = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.readyReplicas = Input.empty();
-        this.replicas = Input.empty();
-        this.unavailableReplicas = Input.empty();
-        this.updatedReplicas = Input.empty();
+        this.availableReplicas = Output.empty();
+        this.collisionCount = Output.empty();
+        this.conditions = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.readyReplicas = Output.empty();
+        this.replicas = Output.empty();
+        this.unavailableReplicas = Output.empty();
+        this.updatedReplicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> availableReplicas;
-        private @Nullable Input<Integer> collisionCount;
-        private @Nullable Input<List<DeploymentConditionArgs>> conditions;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<Integer> readyReplicas;
-        private @Nullable Input<Integer> replicas;
-        private @Nullable Input<Integer> unavailableReplicas;
-        private @Nullable Input<Integer> updatedReplicas;
+        private @Nullable Output<Integer> availableReplicas;
+        private @Nullable Output<Integer> collisionCount;
+        private @Nullable Output<List<DeploymentConditionArgs>> conditions;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<Integer> readyReplicas;
+        private @Nullable Output<Integer> replicas;
+        private @Nullable Output<Integer> unavailableReplicas;
+        private @Nullable Output<Integer> updatedReplicas;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder availableReplicas(@Nullable Input<Integer> availableReplicas) {
+        public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Input.ofNullable(availableReplicas);
+            this.availableReplicas = Output.ofNullable(availableReplicas);
             return this;
         }
 
-        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
         public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Input.ofNullable(collisionCount);
+            this.collisionCount = Output.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<DeploymentConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<DeploymentConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<DeploymentConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder readyReplicas(@Nullable Input<Integer> readyReplicas) {
+        public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Input.ofNullable(readyReplicas);
+            this.readyReplicas = Output.ofNullable(readyReplicas);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
 
-        public Builder unavailableReplicas(@Nullable Input<Integer> unavailableReplicas) {
+        public Builder unavailableReplicas(@Nullable Output<Integer> unavailableReplicas) {
             this.unavailableReplicas = unavailableReplicas;
             return this;
         }
 
         public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
-            this.unavailableReplicas = Input.ofNullable(unavailableReplicas);
+            this.unavailableReplicas = Output.ofNullable(unavailableReplicas);
             return this;
         }
 
-        public Builder updatedReplicas(@Nullable Input<Integer> updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
 
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Input.ofNullable(updatedReplicas);
+            this.updatedReplicas = Output.ofNullable(updatedReplicas);
             return this;
         }
         public DeploymentStatusArgs build() {

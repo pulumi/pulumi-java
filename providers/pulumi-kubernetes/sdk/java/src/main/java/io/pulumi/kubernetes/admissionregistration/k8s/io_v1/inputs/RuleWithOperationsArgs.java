@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiGroups")
-      private final @Nullable Input<List<String>> apiGroups;
+      private final @Nullable Output<List<String>> apiGroups;
 
-    public Input<List<String>> getApiGroups() {
-        return this.apiGroups == null ? Input.empty() : this.apiGroups;
+    public Output<List<String>> getApiGroups() {
+        return this.apiGroups == null ? Output.empty() : this.apiGroups;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersions")
-      private final @Nullable Input<List<String>> apiVersions;
+      private final @Nullable Output<List<String>> apiVersions;
 
-    public Input<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Input.empty() : this.apiVersions;
+    public Output<List<String>> getApiVersions() {
+        return this.apiVersions == null ? Output.empty() : this.apiVersions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="operations")
-      private final @Nullable Input<List<String>> operations;
+      private final @Nullable Output<List<String>> operations;
 
-    public Input<List<String>> getOperations() {
-        return this.operations == null ? Input.empty() : this.operations;
+    public Output<List<String>> getOperations() {
+        return this.operations == null ? Output.empty() : this.operations;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -74,18 +74,18 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public RuleWithOperationsArgs(
-        @Nullable Input<List<String>> apiGroups,
-        @Nullable Input<List<String>> apiVersions,
-        @Nullable Input<List<String>> operations,
-        @Nullable Input<List<String>> resources,
-        @Nullable Input<String> scope) {
+        @Nullable Output<List<String>> apiGroups,
+        @Nullable Output<List<String>> apiVersions,
+        @Nullable Output<List<String>> operations,
+        @Nullable Output<List<String>> resources,
+        @Nullable Output<String> scope) {
         this.apiGroups = apiGroups;
         this.apiVersions = apiVersions;
         this.operations = operations;
@@ -94,11 +94,11 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RuleWithOperationsArgs() {
-        this.apiGroups = Input.empty();
-        this.apiVersions = Input.empty();
-        this.operations = Input.empty();
-        this.resources = Input.empty();
-        this.scope = Input.empty();
+        this.apiGroups = Output.empty();
+        this.apiVersions = Output.empty();
+        this.operations = Output.empty();
+        this.resources = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,11 +110,11 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiGroups;
-        private @Nullable Input<List<String>> apiVersions;
-        private @Nullable Input<List<String>> operations;
-        private @Nullable Input<List<String>> resources;
-        private @Nullable Input<String> scope;
+        private @Nullable Output<List<String>> apiGroups;
+        private @Nullable Output<List<String>> apiVersions;
+        private @Nullable Output<List<String>> operations;
+        private @Nullable Output<List<String>> resources;
+        private @Nullable Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -129,53 +129,53 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     	      this.scope = defaults.scope;
         }
 
-        public Builder apiGroups(@Nullable Input<List<String>> apiGroups) {
+        public Builder apiGroups(@Nullable Output<List<String>> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
         public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Input.ofNullable(apiGroups);
+            this.apiGroups = Output.ofNullable(apiGroups);
             return this;
         }
 
-        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Input.ofNullable(apiVersions);
+            this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder operations(@Nullable Input<List<String>> operations) {
+        public Builder operations(@Nullable Output<List<String>> operations) {
             this.operations = operations;
             return this;
         }
 
         public Builder operations(@Nullable List<String> operations) {
-            this.operations = Input.ofNullable(operations);
+            this.operations = Output.ofNullable(operations);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public RuleWithOperationsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="names", required=true)
-      private final Input<List<String>> names;
+      private final Output<List<String>> names;
 
-    public Input<List<String>> getNames() {
+    public Output<List<String>> getNames() {
         return this.names;
     }
 
@@ -36,22 +36,22 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-      private final @Nullable Input<Integer> sizeBytes;
+      private final @Nullable Output<Integer> sizeBytes;
 
-    public Input<Integer> getSizeBytes() {
-        return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
+    public Output<Integer> getSizeBytes() {
+        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
     }
 
     public ContainerImageArgs(
-        Input<List<String>> names,
-        @Nullable Input<Integer> sizeBytes) {
+        Output<List<String>> names,
+        @Nullable Output<Integer> sizeBytes) {
         this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
         this.sizeBytes = sizeBytes;
     }
 
     private ContainerImageArgs() {
-        this.names = Input.empty();
-        this.sizeBytes = Input.empty();
+        this.names = Output.empty();
+        this.sizeBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> names;
-        private @Nullable Input<Integer> sizeBytes;
+        private Output<List<String>> names;
+        private @Nullable Output<Integer> sizeBytes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder names(Input<List<String>> names) {
+        public Builder names(Output<List<String>> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
         public Builder names(List<String> names) {
-            this.names = Input.of(Objects.requireNonNull(names));
+            this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder sizeBytes(@Nullable Input<Integer> sizeBytes) {
+        public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Input.ofNullable(sizeBytes);
+            this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
         }
         public ContainerImageArgs build() {

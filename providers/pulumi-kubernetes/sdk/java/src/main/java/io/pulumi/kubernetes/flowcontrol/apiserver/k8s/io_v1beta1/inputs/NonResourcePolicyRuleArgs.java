@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,9 +29,9 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nonResourceURLs", required=true)
-      private final Input<List<String>> nonResourceURLs;
+      private final Output<List<String>> nonResourceURLs;
 
-    public Input<List<String>> getNonResourceURLs() {
+    public Output<List<String>> getNonResourceURLs() {
         return this.nonResourceURLs;
     }
 
@@ -40,22 +40,22 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="verbs", required=true)
-      private final Input<List<String>> verbs;
+      private final Output<List<String>> verbs;
 
-    public Input<List<String>> getVerbs() {
+    public Output<List<String>> getVerbs() {
         return this.verbs;
     }
 
     public NonResourcePolicyRuleArgs(
-        Input<List<String>> nonResourceURLs,
-        Input<List<String>> verbs) {
+        Output<List<String>> nonResourceURLs,
+        Output<List<String>> verbs) {
         this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs, "expected parameter 'nonResourceURLs' to be non-null");
         this.verbs = Objects.requireNonNull(verbs, "expected parameter 'verbs' to be non-null");
     }
 
     private NonResourcePolicyRuleArgs() {
-        this.nonResourceURLs = Input.empty();
-        this.verbs = Input.empty();
+        this.nonResourceURLs = Output.empty();
+        this.verbs = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<String>> nonResourceURLs;
-        private Input<List<String>> verbs;
+        private Output<List<String>> nonResourceURLs;
+        private Output<List<String>> verbs;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder nonResourceURLs(Input<List<String>> nonResourceURLs) {
+        public Builder nonResourceURLs(Output<List<String>> nonResourceURLs) {
             this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
             return this;
         }
 
         public Builder nonResourceURLs(List<String> nonResourceURLs) {
-            this.nonResourceURLs = Input.of(Objects.requireNonNull(nonResourceURLs));
+            this.nonResourceURLs = Output.of(Objects.requireNonNull(nonResourceURLs));
             return this;
         }
 
-        public Builder verbs(Input<List<String>> verbs) {
+        public Builder verbs(Output<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
         public Builder verbs(List<String> verbs) {
-            this.verbs = Input.of(Objects.requireNonNull(verbs));
+            this.verbs = Output.of(Objects.requireNonNull(verbs));
             return this;
         }
         public NonResourcePolicyRuleArgs build() {

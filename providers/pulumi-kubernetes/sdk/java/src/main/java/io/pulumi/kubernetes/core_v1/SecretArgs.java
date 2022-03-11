@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<Map<String,String>> data;
+      private final @Nullable Output<Map<String,String>> data;
 
-    public Input<Map<String,String>> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<Map<String,String>> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immutable")
-      private final @Nullable Input<Boolean> immutable;
+      private final @Nullable Output<Boolean> immutable;
 
-    public Input<Boolean> getImmutable() {
-        return this.immutable == null ? Input.empty() : this.immutable;
+    public Output<Boolean> getImmutable() {
+        return this.immutable == null ? Output.empty() : this.immutable;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringData")
-      private final @Nullable Input<Map<String,String>> stringData;
+      private final @Nullable Output<Map<String,String>> stringData;
 
-    public Input<Map<String,String>> getStringData() {
-        return this.stringData == null ? Input.empty() : this.stringData;
+    public Output<Map<String,String>> getStringData() {
+        return this.stringData == null ? Output.empty() : this.stringData;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SecretArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<Map<String,String>> data,
-        @Nullable Input<Boolean> immutable,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<Map<String,String>> stringData,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<Map<String,String>> data,
+        @Nullable Output<Boolean> immutable,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<Map<String,String>> stringData,
+        @Nullable Output<String> type) {
         this.apiVersion = apiVersion;
         this.data = data;
         this.immutable = immutable;
@@ -112,13 +112,13 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.apiVersion = Input.empty();
-        this.data = Input.empty();
-        this.immutable = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.stringData = Input.empty();
-        this.type = Input.empty();
+        this.apiVersion = Output.empty();
+        this.data = Output.empty();
+        this.immutable = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.stringData = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<Map<String,String>> data;
-        private @Nullable Input<Boolean> immutable;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<Map<String,String>> stringData;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<Map<String,String>> data;
+        private @Nullable Output<Boolean> immutable;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<Map<String,String>> stringData;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder data(@Nullable Input<Map<String,String>> data) {
-            this.data = Input.ofNullable(data).asSecret();
+        public Builder data(@Nullable Output<Map<String,String>> data) {
+            this.data = Output.ofNullable(data).asSecret();
             return this;
         }
 
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Input.ofNullable(data).asSecret();
+            this.data = Output.ofNullable(data).asSecret();
             return this;
         }
 
-        public Builder immutable(@Nullable Input<Boolean> immutable) {
+        public Builder immutable(@Nullable Output<Boolean> immutable) {
             this.immutable = immutable;
             return this;
         }
 
         public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Input.ofNullable(immutable);
+            this.immutable = Output.ofNullable(immutable);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder stringData(@Nullable Input<Map<String,String>> stringData) {
-            this.stringData = Input.ofNullable(stringData).asSecret();
+        public Builder stringData(@Nullable Output<Map<String,String>> stringData) {
+            this.stringData = Output.ofNullable(stringData).asSecret();
             return this;
         }
 
         public Builder stringData(@Nullable Map<String,String> stringData) {
-            this.stringData = Input.ofNullable(stringData).asSecret();
+            this.stringData = Output.ofNullable(stringData).asSecret();
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SecretArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointConditionsArgs;
@@ -28,9 +28,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses", required=true)
-      private final Input<List<String>> addresses;
+      private final Output<List<String>> addresses;
 
-    public Input<List<String>> getAddresses() {
+    public Output<List<String>> getAddresses() {
         return this.addresses;
     }
 
@@ -39,10 +39,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<EndpointConditionsArgs> conditions;
+      private final @Nullable Output<EndpointConditionsArgs> conditions;
 
-    public Input<EndpointConditionsArgs> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<EndpointConditionsArgs> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hints")
-      private final @Nullable Input<EndpointHintsArgs> hints;
+      private final @Nullable Output<EndpointHintsArgs> hints;
 
-    public Input<EndpointHintsArgs> getHints() {
-        return this.hints == null ? Input.empty() : this.hints;
+    public Output<EndpointHintsArgs> getHints() {
+        return this.hints == null ? Output.empty() : this.hints;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName")
-      private final @Nullable Input<String> nodeName;
+      private final @Nullable Output<String> nodeName;
 
-    public Input<String> getNodeName() {
-        return this.nodeName == null ? Input.empty() : this.nodeName;
+    public Output<String> getNodeName() {
+        return this.nodeName == null ? Output.empty() : this.nodeName;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetRef")
-      private final @Nullable Input<ObjectReferenceArgs> targetRef;
+      private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Input<ObjectReferenceArgs> getTargetRef() {
-        return this.targetRef == null ? Input.empty() : this.targetRef;
+    public Output<ObjectReferenceArgs> getTargetRef() {
+        return this.targetRef == null ? Output.empty() : this.targetRef;
     }
 
     /**
@@ -101,20 +101,20 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topology")
-      private final @Nullable Input<Map<String,String>> topology;
+      private final @Nullable Output<Map<String,String>> topology;
 
-    public Input<Map<String,String>> getTopology() {
-        return this.topology == null ? Input.empty() : this.topology;
+    public Output<Map<String,String>> getTopology() {
+        return this.topology == null ? Output.empty() : this.topology;
     }
 
     public EndpointArgs(
-        Input<List<String>> addresses,
-        @Nullable Input<EndpointConditionsArgs> conditions,
-        @Nullable Input<EndpointHintsArgs> hints,
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> nodeName,
-        @Nullable Input<ObjectReferenceArgs> targetRef,
-        @Nullable Input<Map<String,String>> topology) {
+        Output<List<String>> addresses,
+        @Nullable Output<EndpointConditionsArgs> conditions,
+        @Nullable Output<EndpointHintsArgs> hints,
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> nodeName,
+        @Nullable Output<ObjectReferenceArgs> targetRef,
+        @Nullable Output<Map<String,String>> topology) {
         this.addresses = Objects.requireNonNull(addresses, "expected parameter 'addresses' to be non-null");
         this.conditions = conditions;
         this.hints = hints;
@@ -125,13 +125,13 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.addresses = Input.empty();
-        this.conditions = Input.empty();
-        this.hints = Input.empty();
-        this.hostname = Input.empty();
-        this.nodeName = Input.empty();
-        this.targetRef = Input.empty();
-        this.topology = Input.empty();
+        this.addresses = Output.empty();
+        this.conditions = Output.empty();
+        this.hints = Output.empty();
+        this.hostname = Output.empty();
+        this.nodeName = Output.empty();
+        this.targetRef = Output.empty();
+        this.topology = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,13 +143,13 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> addresses;
-        private @Nullable Input<EndpointConditionsArgs> conditions;
-        private @Nullable Input<EndpointHintsArgs> hints;
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> nodeName;
-        private @Nullable Input<ObjectReferenceArgs> targetRef;
-        private @Nullable Input<Map<String,String>> topology;
+        private Output<List<String>> addresses;
+        private @Nullable Output<EndpointConditionsArgs> conditions;
+        private @Nullable Output<EndpointHintsArgs> hints;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> nodeName;
+        private @Nullable Output<ObjectReferenceArgs> targetRef;
+        private @Nullable Output<Map<String,String>> topology;
 
         public Builder() {
     	      // Empty
@@ -166,73 +166,73 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topology = defaults.topology;
         }
 
-        public Builder addresses(Input<List<String>> addresses) {
+        public Builder addresses(Output<List<String>> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
         public Builder addresses(List<String> addresses) {
-            this.addresses = Input.of(Objects.requireNonNull(addresses));
+            this.addresses = Output.of(Objects.requireNonNull(addresses));
             return this;
         }
 
-        public Builder conditions(@Nullable Input<EndpointConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Output<EndpointConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder hints(@Nullable Input<EndpointHintsArgs> hints) {
+        public Builder hints(@Nullable Output<EndpointHintsArgs> hints) {
             this.hints = hints;
             return this;
         }
 
         public Builder hints(@Nullable EndpointHintsArgs hints) {
-            this.hints = Input.ofNullable(hints);
+            this.hints = Output.ofNullable(hints);
             return this;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder nodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Input.ofNullable(nodeName);
+            this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
 
-        public Builder targetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
+        public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Input.ofNullable(targetRef);
+            this.targetRef = Output.ofNullable(targetRef);
             return this;
         }
 
-        public Builder topology(@Nullable Input<Map<String,String>> topology) {
+        public Builder topology(@Nullable Output<Map<String,String>> topology) {
             this.topology = topology;
             return this;
         }
 
         public Builder topology(@Nullable Map<String,String> topology) {
-            this.topology = Input.ofNullable(topology);
+            this.topology = Output.ofNullable(topology);
             return this;
         }
         public EndpointArgs build() {

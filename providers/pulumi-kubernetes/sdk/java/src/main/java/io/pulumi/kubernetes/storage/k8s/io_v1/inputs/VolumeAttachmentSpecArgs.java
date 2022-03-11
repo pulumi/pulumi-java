@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.VolumeAttachmentSourceArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attacher", required=true)
-      private final Input<String> attacher;
+      private final Output<String> attacher;
 
-    public Input<String> getAttacher() {
+    public Output<String> getAttacher() {
         return this.attacher;
     }
 
@@ -34,9 +34,9 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeName", required=true)
-      private final Input<String> nodeName;
+      private final Output<String> nodeName;
 
-    public Input<String> getNodeName() {
+    public Output<String> getNodeName() {
         return this.nodeName;
     }
 
@@ -45,25 +45,25 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<VolumeAttachmentSourceArgs> source;
+      private final Output<VolumeAttachmentSourceArgs> source;
 
-    public Input<VolumeAttachmentSourceArgs> getSource() {
+    public Output<VolumeAttachmentSourceArgs> getSource() {
         return this.source;
     }
 
     public VolumeAttachmentSpecArgs(
-        Input<String> attacher,
-        Input<String> nodeName,
-        Input<VolumeAttachmentSourceArgs> source) {
+        Output<String> attacher,
+        Output<String> nodeName,
+        Output<VolumeAttachmentSourceArgs> source) {
         this.attacher = Objects.requireNonNull(attacher, "expected parameter 'attacher' to be non-null");
         this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private VolumeAttachmentSpecArgs() {
-        this.attacher = Input.empty();
-        this.nodeName = Input.empty();
-        this.source = Input.empty();
+        this.attacher = Output.empty();
+        this.nodeName = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> attacher;
-        private Input<String> nodeName;
-        private Input<VolumeAttachmentSourceArgs> source;
+        private Output<String> attacher;
+        private Output<String> nodeName;
+        private Output<VolumeAttachmentSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
     	      this.source = defaults.source;
         }
 
-        public Builder attacher(Input<String> attacher) {
+        public Builder attacher(Output<String> attacher) {
             this.attacher = Objects.requireNonNull(attacher);
             return this;
         }
 
         public Builder attacher(String attacher) {
-            this.attacher = Input.of(Objects.requireNonNull(attacher));
+            this.attacher = Output.of(Objects.requireNonNull(attacher));
             return this;
         }
 
-        public Builder nodeName(Input<String> nodeName) {
+        public Builder nodeName(Output<String> nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
         public Builder nodeName(String nodeName) {
-            this.nodeName = Input.of(Objects.requireNonNull(nodeName));
+            this.nodeName = Output.of(Objects.requireNonNull(nodeName));
             return this;
         }
 
-        public Builder source(Input<VolumeAttachmentSourceArgs> source) {
+        public Builder source(Output<VolumeAttachmentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(VolumeAttachmentSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public VolumeAttachmentSpecArgs build() {

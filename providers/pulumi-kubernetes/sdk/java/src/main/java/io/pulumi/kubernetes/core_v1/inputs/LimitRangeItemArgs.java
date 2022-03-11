@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<Map<String,String>> $default;
+      private final @Nullable Output<Map<String,String>> $default;
 
-    public Input<Map<String,String>> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<Map<String,String>> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRequest")
-      private final @Nullable Input<Map<String,String>> defaultRequest;
+      private final @Nullable Output<Map<String,String>> defaultRequest;
 
-    public Input<Map<String,String>> getDefaultRequest() {
-        return this.defaultRequest == null ? Input.empty() : this.defaultRequest;
+    public Output<Map<String,String>> getDefaultRequest() {
+        return this.defaultRequest == null ? Output.empty() : this.defaultRequest;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max")
-      private final @Nullable Input<Map<String,String>> max;
+      private final @Nullable Output<Map<String,String>> max;
 
-    public Input<Map<String,String>> getMax() {
-        return this.max == null ? Input.empty() : this.max;
+    public Output<Map<String,String>> getMax() {
+        return this.max == null ? Output.empty() : this.max;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLimitRequestRatio")
-      private final @Nullable Input<Map<String,String>> maxLimitRequestRatio;
+      private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
-    public Input<Map<String,String>> getMaxLimitRequestRatio() {
-        return this.maxLimitRequestRatio == null ? Input.empty() : this.maxLimitRequestRatio;
+    public Output<Map<String,String>> getMaxLimitRequestRatio() {
+        return this.maxLimitRequestRatio == null ? Output.empty() : this.maxLimitRequestRatio;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min")
-      private final @Nullable Input<Map<String,String>> min;
+      private final @Nullable Output<Map<String,String>> min;
 
-    public Input<Map<String,String>> getMin() {
-        return this.min == null ? Input.empty() : this.min;
+    public Output<Map<String,String>> getMin() {
+        return this.min == null ? Output.empty() : this.min;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public LimitRangeItemArgs(
-        @Nullable Input<Map<String,String>> $default,
-        @Nullable Input<Map<String,String>> defaultRequest,
-        @Nullable Input<Map<String,String>> max,
-        @Nullable Input<Map<String,String>> maxLimitRequestRatio,
-        @Nullable Input<Map<String,String>> min,
-        Input<String> type) {
+        @Nullable Output<Map<String,String>> $default,
+        @Nullable Output<Map<String,String>> defaultRequest,
+        @Nullable Output<Map<String,String>> max,
+        @Nullable Output<Map<String,String>> maxLimitRequestRatio,
+        @Nullable Output<Map<String,String>> min,
+        Output<String> type) {
         this.$default = $default;
         this.defaultRequest = defaultRequest;
         this.max = max;
@@ -106,12 +106,12 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LimitRangeItemArgs() {
-        this.$default = Input.empty();
-        this.defaultRequest = Input.empty();
-        this.max = Input.empty();
-        this.maxLimitRequestRatio = Input.empty();
-        this.min = Input.empty();
-        this.type = Input.empty();
+        this.$default = Output.empty();
+        this.defaultRequest = Output.empty();
+        this.max = Output.empty();
+        this.maxLimitRequestRatio = Output.empty();
+        this.min = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> $default;
-        private @Nullable Input<Map<String,String>> defaultRequest;
-        private @Nullable Input<Map<String,String>> max;
-        private @Nullable Input<Map<String,String>> maxLimitRequestRatio;
-        private @Nullable Input<Map<String,String>> min;
-        private Input<String> type;
+        private @Nullable Output<Map<String,String>> $default;
+        private @Nullable Output<Map<String,String>> defaultRequest;
+        private @Nullable Output<Map<String,String>> max;
+        private @Nullable Output<Map<String,String>> maxLimitRequestRatio;
+        private @Nullable Output<Map<String,String>> min;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable Input<Map<String,String>> $default) {
+        public Builder $default(@Nullable Output<Map<String,String>> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable Map<String,String> $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder defaultRequest(@Nullable Input<Map<String,String>> defaultRequest) {
+        public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
             this.defaultRequest = defaultRequest;
             return this;
         }
 
         public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
-            this.defaultRequest = Input.ofNullable(defaultRequest);
+            this.defaultRequest = Output.ofNullable(defaultRequest);
             return this;
         }
 
-        public Builder max(@Nullable Input<Map<String,String>> max) {
+        public Builder max(@Nullable Output<Map<String,String>> max) {
             this.max = max;
             return this;
         }
 
         public Builder max(@Nullable Map<String,String> max) {
-            this.max = Input.ofNullable(max);
+            this.max = Output.ofNullable(max);
             return this;
         }
 
-        public Builder maxLimitRequestRatio(@Nullable Input<Map<String,String>> maxLimitRequestRatio) {
+        public Builder maxLimitRequestRatio(@Nullable Output<Map<String,String>> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
 
         public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
-            this.maxLimitRequestRatio = Input.ofNullable(maxLimitRequestRatio);
+            this.maxLimitRequestRatio = Output.ofNullable(maxLimitRequestRatio);
             return this;
         }
 
-        public Builder min(@Nullable Input<Map<String,String>> min) {
+        public Builder min(@Nullable Output<Map<String,String>> min) {
             this.min = min;
             return this;
         }
 
         public Builder min(@Nullable Map<String,String> min) {
-            this.min = Input.ofNullable(min);
+            this.min = Output.ofNullable(min);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public LimitRangeItemArgs build() {

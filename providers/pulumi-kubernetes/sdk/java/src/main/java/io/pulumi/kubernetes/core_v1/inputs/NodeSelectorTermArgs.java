@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchExpressions")
-      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
 
-    public Input<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
-        return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
+    public Output<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
+        return this.matchExpressions == null ? Output.empty() : this.matchExpressions;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchFields")
-      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
+      private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
-    public Input<List<NodeSelectorRequirementArgs>> getMatchFields() {
-        return this.matchFields == null ? Input.empty() : this.matchFields;
+    public Output<List<NodeSelectorRequirementArgs>> getMatchFields() {
+        return this.matchFields == null ? Output.empty() : this.matchFields;
     }
 
     public NodeSelectorTermArgs(
-        @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions,
-        @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields) {
+        @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions,
+        @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields) {
         this.matchExpressions = matchExpressions;
         this.matchFields = matchFields;
     }
 
     private NodeSelectorTermArgs() {
-        this.matchExpressions = Input.empty();
-        this.matchFields = Input.empty();
+        this.matchExpressions = Output.empty();
+        this.matchFields = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
-        private @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
+        private @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
+        private @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
     	      this.matchFields = defaults.matchFields;
         }
 
-        public Builder matchExpressions(@Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions) {
+        public Builder matchExpressions(@Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
         public Builder matchExpressions(@Nullable List<NodeSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Input.ofNullable(matchExpressions);
+            this.matchExpressions = Output.ofNullable(matchExpressions);
             return this;
         }
 
-        public Builder matchFields(@Nullable Input<List<NodeSelectorRequirementArgs>> matchFields) {
+        public Builder matchFields(@Nullable Output<List<NodeSelectorRequirementArgs>> matchFields) {
             this.matchFields = matchFields;
             return this;
         }
 
         public Builder matchFields(@Nullable List<NodeSelectorRequirementArgs> matchFields) {
-            this.matchFields = Input.ofNullable(matchFields);
+            this.matchFields = Output.ofNullable(matchFields);
             return this;
         }
         public NodeSelectorTermArgs build() {

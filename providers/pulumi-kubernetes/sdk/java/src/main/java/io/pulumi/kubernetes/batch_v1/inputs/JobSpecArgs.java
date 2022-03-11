@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -27,10 +27,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDeadlineSeconds")
-      private final @Nullable Input<Integer> activeDeadlineSeconds;
+      private final @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Input<Integer> getActiveDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Input.empty() : this.activeDeadlineSeconds;
+    public Output<Integer> getActiveDeadlineSeconds() {
+        return this.activeDeadlineSeconds == null ? Output.empty() : this.activeDeadlineSeconds;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backoffLimit")
-      private final @Nullable Input<Integer> backoffLimit;
+      private final @Nullable Output<Integer> backoffLimit;
 
-    public Input<Integer> getBackoffLimit() {
-        return this.backoffLimit == null ? Input.empty() : this.backoffLimit;
+    public Output<Integer> getBackoffLimit() {
+        return this.backoffLimit == null ? Output.empty() : this.backoffLimit;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionMode")
-      private final @Nullable Input<String> completionMode;
+      private final @Nullable Output<String> completionMode;
 
-    public Input<String> getCompletionMode() {
-        return this.completionMode == null ? Input.empty() : this.completionMode;
+    public Output<String> getCompletionMode() {
+        return this.completionMode == null ? Output.empty() : this.completionMode;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completions")
-      private final @Nullable Input<Integer> completions;
+      private final @Nullable Output<Integer> completions;
 
-    public Input<Integer> getCompletions() {
-        return this.completions == null ? Input.empty() : this.completions;
+    public Output<Integer> getCompletions() {
+        return this.completions == null ? Output.empty() : this.completions;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualSelector")
-      private final @Nullable Input<Boolean> manualSelector;
+      private final @Nullable Output<Boolean> manualSelector;
 
-    public Input<Boolean> getManualSelector() {
-        return this.manualSelector == null ? Input.empty() : this.manualSelector;
+    public Output<Boolean> getManualSelector() {
+        return this.manualSelector == null ? Output.empty() : this.manualSelector;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parallelism")
-      private final @Nullable Input<Integer> parallelism;
+      private final @Nullable Output<Integer> parallelism;
 
-    public Input<Integer> getParallelism() {
-        return this.parallelism == null ? Input.empty() : this.parallelism;
+    public Output<Integer> getParallelism() {
+        return this.parallelism == null ? Output.empty() : this.parallelism;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspend")
-      private final @Nullable Input<Boolean> suspend;
+      private final @Nullable Output<Boolean> suspend;
 
-    public Input<Boolean> getSuspend() {
-        return this.suspend == null ? Input.empty() : this.suspend;
+    public Output<Boolean> getSuspend() {
+        return this.suspend == null ? Output.empty() : this.suspend;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<PodTemplateSpecArgs> template;
+      private final Output<PodTemplateSpecArgs> template;
 
-    public Input<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> getTemplate() {
         return this.template;
     }
 
@@ -134,23 +134,23 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttlSecondsAfterFinished")
-      private final @Nullable Input<Integer> ttlSecondsAfterFinished;
+      private final @Nullable Output<Integer> ttlSecondsAfterFinished;
 
-    public Input<Integer> getTtlSecondsAfterFinished() {
-        return this.ttlSecondsAfterFinished == null ? Input.empty() : this.ttlSecondsAfterFinished;
+    public Output<Integer> getTtlSecondsAfterFinished() {
+        return this.ttlSecondsAfterFinished == null ? Output.empty() : this.ttlSecondsAfterFinished;
     }
 
     public JobSpecArgs(
-        @Nullable Input<Integer> activeDeadlineSeconds,
-        @Nullable Input<Integer> backoffLimit,
-        @Nullable Input<String> completionMode,
-        @Nullable Input<Integer> completions,
-        @Nullable Input<Boolean> manualSelector,
-        @Nullable Input<Integer> parallelism,
-        @Nullable Input<LabelSelectorArgs> selector,
-        @Nullable Input<Boolean> suspend,
-        Input<PodTemplateSpecArgs> template,
-        @Nullable Input<Integer> ttlSecondsAfterFinished) {
+        @Nullable Output<Integer> activeDeadlineSeconds,
+        @Nullable Output<Integer> backoffLimit,
+        @Nullable Output<String> completionMode,
+        @Nullable Output<Integer> completions,
+        @Nullable Output<Boolean> manualSelector,
+        @Nullable Output<Integer> parallelism,
+        @Nullable Output<LabelSelectorArgs> selector,
+        @Nullable Output<Boolean> suspend,
+        Output<PodTemplateSpecArgs> template,
+        @Nullable Output<Integer> ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completionMode = completionMode;
@@ -164,16 +164,16 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobSpecArgs() {
-        this.activeDeadlineSeconds = Input.empty();
-        this.backoffLimit = Input.empty();
-        this.completionMode = Input.empty();
-        this.completions = Input.empty();
-        this.manualSelector = Input.empty();
-        this.parallelism = Input.empty();
-        this.selector = Input.empty();
-        this.suspend = Input.empty();
-        this.template = Input.empty();
-        this.ttlSecondsAfterFinished = Input.empty();
+        this.activeDeadlineSeconds = Output.empty();
+        this.backoffLimit = Output.empty();
+        this.completionMode = Output.empty();
+        this.completions = Output.empty();
+        this.manualSelector = Output.empty();
+        this.parallelism = Output.empty();
+        this.selector = Output.empty();
+        this.suspend = Output.empty();
+        this.template = Output.empty();
+        this.ttlSecondsAfterFinished = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,16 +185,16 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> activeDeadlineSeconds;
-        private @Nullable Input<Integer> backoffLimit;
-        private @Nullable Input<String> completionMode;
-        private @Nullable Input<Integer> completions;
-        private @Nullable Input<Boolean> manualSelector;
-        private @Nullable Input<Integer> parallelism;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private @Nullable Input<Boolean> suspend;
-        private Input<PodTemplateSpecArgs> template;
-        private @Nullable Input<Integer> ttlSecondsAfterFinished;
+        private @Nullable Output<Integer> activeDeadlineSeconds;
+        private @Nullable Output<Integer> backoffLimit;
+        private @Nullable Output<String> completionMode;
+        private @Nullable Output<Integer> completions;
+        private @Nullable Output<Boolean> manualSelector;
+        private @Nullable Output<Integer> parallelism;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private @Nullable Output<Boolean> suspend;
+        private Output<PodTemplateSpecArgs> template;
+        private @Nullable Output<Integer> ttlSecondsAfterFinished;
 
         public Builder() {
     	      // Empty
@@ -214,103 +214,103 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder activeDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Output<Integer> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
         public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
+            this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder backoffLimit(@Nullable Input<Integer> backoffLimit) {
+        public Builder backoffLimit(@Nullable Output<Integer> backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
 
         public Builder backoffLimit(@Nullable Integer backoffLimit) {
-            this.backoffLimit = Input.ofNullable(backoffLimit);
+            this.backoffLimit = Output.ofNullable(backoffLimit);
             return this;
         }
 
-        public Builder completionMode(@Nullable Input<String> completionMode) {
+        public Builder completionMode(@Nullable Output<String> completionMode) {
             this.completionMode = completionMode;
             return this;
         }
 
         public Builder completionMode(@Nullable String completionMode) {
-            this.completionMode = Input.ofNullable(completionMode);
+            this.completionMode = Output.ofNullable(completionMode);
             return this;
         }
 
-        public Builder completions(@Nullable Input<Integer> completions) {
+        public Builder completions(@Nullable Output<Integer> completions) {
             this.completions = completions;
             return this;
         }
 
         public Builder completions(@Nullable Integer completions) {
-            this.completions = Input.ofNullable(completions);
+            this.completions = Output.ofNullable(completions);
             return this;
         }
 
-        public Builder manualSelector(@Nullable Input<Boolean> manualSelector) {
+        public Builder manualSelector(@Nullable Output<Boolean> manualSelector) {
             this.manualSelector = manualSelector;
             return this;
         }
 
         public Builder manualSelector(@Nullable Boolean manualSelector) {
-            this.manualSelector = Input.ofNullable(manualSelector);
+            this.manualSelector = Output.ofNullable(manualSelector);
             return this;
         }
 
-        public Builder parallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Output<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
         public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Input.ofNullable(parallelism);
+            this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder suspend(@Nullable Input<Boolean> suspend) {
+        public Builder suspend(@Nullable Output<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
 
         public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Input.ofNullable(suspend);
+            this.suspend = Output.ofNullable(suspend);
             return this;
         }
 
-        public Builder template(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(PodTemplateSpecArgs template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder ttlSecondsAfterFinished(@Nullable Input<Integer> ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Output<Integer> ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
 
         public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
-            this.ttlSecondsAfterFinished = Input.ofNullable(ttlSecondsAfterFinished);
+            this.ttlSecondsAfterFinished = Output.ofNullable(ttlSecondsAfterFinished);
             return this;
         }
         public JobSpecArgs build() {

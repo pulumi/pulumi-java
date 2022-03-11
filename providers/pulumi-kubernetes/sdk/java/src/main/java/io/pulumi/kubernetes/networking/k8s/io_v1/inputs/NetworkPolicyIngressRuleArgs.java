@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
@@ -25,10 +25,10 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="from")
-      private final @Nullable Input<List<NetworkPolicyPeerArgs>> from;
+      private final @Nullable Output<List<NetworkPolicyPeerArgs>> from;
 
-    public Input<List<NetworkPolicyPeerArgs>> getFrom() {
-        return this.from == null ? Input.empty() : this.from;
+    public Output<List<NetworkPolicyPeerArgs>> getFrom() {
+        return this.from == null ? Output.empty() : this.from;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<NetworkPolicyPortArgs>> ports;
+      private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Input<List<NetworkPolicyPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<NetworkPolicyPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public NetworkPolicyIngressRuleArgs(
-        @Nullable Input<List<NetworkPolicyPeerArgs>> from,
-        @Nullable Input<List<NetworkPolicyPortArgs>> ports) {
+        @Nullable Output<List<NetworkPolicyPeerArgs>> from,
+        @Nullable Output<List<NetworkPolicyPortArgs>> ports) {
         this.from = from;
         this.ports = ports;
     }
 
     private NetworkPolicyIngressRuleArgs() {
-        this.from = Input.empty();
-        this.ports = Input.empty();
+        this.from = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkPolicyPeerArgs>> from;
-        private @Nullable Input<List<NetworkPolicyPortArgs>> ports;
+        private @Nullable Output<List<NetworkPolicyPeerArgs>> from;
+        private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
     	      this.ports = defaults.ports;
         }
 
-        public Builder from(@Nullable Input<List<NetworkPolicyPeerArgs>> from) {
+        public Builder from(@Nullable Output<List<NetworkPolicyPeerArgs>> from) {
             this.from = from;
             return this;
         }
 
         public Builder from(@Nullable List<NetworkPolicyPeerArgs> from) {
-            this.from = Input.ofNullable(from);
+            this.from = Output.ofNullable(from);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<NetworkPolicyPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<NetworkPolicyPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public NetworkPolicyIngressRuleArgs build() {

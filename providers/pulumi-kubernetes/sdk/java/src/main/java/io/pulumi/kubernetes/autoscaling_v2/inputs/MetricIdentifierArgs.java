@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public MetricIdentifierArgs(
-        Input<String> name,
-        @Nullable Input<LabelSelectorArgs> selector) {
+        Output<String> name,
+        @Nullable Output<LabelSelectorArgs> selector) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.selector = selector;
     }
 
     private MetricIdentifierArgs() {
-        this.name = Input.empty();
-        this.selector = Input.empty();
+        this.name = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<LabelSelectorArgs> selector;
+        private Output<String> name;
+        private @Nullable Output<LabelSelectorArgs> selector;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
     	      this.selector = defaults.selector;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public MetricIdentifierArgs build() {

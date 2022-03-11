@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience", required=true)
-      private final Input<String> audience;
+      private final Output<String> audience;
 
-    public Input<String> getAudience() {
+    public Output<String> getAudience() {
         return this.audience;
     }
 
@@ -35,22 +35,22 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationSeconds")
-      private final @Nullable Input<Integer> expirationSeconds;
+      private final @Nullable Output<Integer> expirationSeconds;
 
-    public Input<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
+    public Output<Integer> getExpirationSeconds() {
+        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
     }
 
     public TokenRequestArgs(
-        Input<String> audience,
-        @Nullable Input<Integer> expirationSeconds) {
+        Output<String> audience,
+        @Nullable Output<Integer> expirationSeconds) {
         this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
         this.expirationSeconds = expirationSeconds;
     }
 
     private TokenRequestArgs() {
-        this.audience = Input.empty();
-        this.expirationSeconds = Input.empty();
+        this.audience = Output.empty();
+        this.expirationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> audience;
-        private @Nullable Input<Integer> expirationSeconds;
+        private Output<String> audience;
+        private @Nullable Output<Integer> expirationSeconds;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expirationSeconds = defaults.expirationSeconds;
         }
 
-        public Builder audience(Input<String> audience) {
+        public Builder audience(Output<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
         public Builder audience(String audience) {
-            this.audience = Input.of(Objects.requireNonNull(audience));
+            this.audience = Output.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder expirationSeconds(@Nullable Input<Integer> expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Input.ofNullable(expirationSeconds);
+            this.expirationSeconds = Output.ofNullable(expirationSeconds);
             return this;
         }
         public TokenRequestArgs build() {

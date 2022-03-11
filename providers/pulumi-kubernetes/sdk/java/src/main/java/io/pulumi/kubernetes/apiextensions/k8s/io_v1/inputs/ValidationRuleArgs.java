@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -58,22 +58,22 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule", required=true)
-      private final Input<String> rule;
+      private final Output<String> rule;
 
-    public Input<String> getRule() {
+    public Output<String> getRule() {
         return this.rule;
     }
 
     public ValidationRuleArgs(
-        @Nullable Input<String> message,
-        Input<String> rule) {
+        @Nullable Output<String> message,
+        Output<String> rule) {
         this.message = message;
         this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
     }
 
     private ValidationRuleArgs() {
-        this.message = Input.empty();
-        this.rule = Input.empty();
+        this.message = Output.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,8 +85,8 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private Input<String> rule;
+        private @Nullable Output<String> message;
+        private Output<String> rule;
 
         public Builder() {
     	      // Empty
@@ -98,23 +98,23 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rule = defaults.rule;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder rule(Input<String> rule) {
+        public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
         public Builder rule(String rule) {
-            this.rule = Input.of(Objects.requireNonNull(rule));
+            this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
         public ValidationRuleArgs build() {

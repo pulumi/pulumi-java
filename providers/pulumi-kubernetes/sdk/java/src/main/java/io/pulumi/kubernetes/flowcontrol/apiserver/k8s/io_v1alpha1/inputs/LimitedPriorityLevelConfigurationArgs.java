@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.LimitResponseArgs;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="assuredConcurrencyShares")
-      private final @Nullable Input<Integer> assuredConcurrencyShares;
+      private final @Nullable Output<Integer> assuredConcurrencyShares;
 
-    public Input<Integer> getAssuredConcurrencyShares() {
-        return this.assuredConcurrencyShares == null ? Input.empty() : this.assuredConcurrencyShares;
+    public Output<Integer> getAssuredConcurrencyShares() {
+        return this.assuredConcurrencyShares == null ? Output.empty() : this.assuredConcurrencyShares;
     }
 
     /**
@@ -41,22 +41,22 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="limitResponse")
-      private final @Nullable Input<LimitResponseArgs> limitResponse;
+      private final @Nullable Output<LimitResponseArgs> limitResponse;
 
-    public Input<LimitResponseArgs> getLimitResponse() {
-        return this.limitResponse == null ? Input.empty() : this.limitResponse;
+    public Output<LimitResponseArgs> getLimitResponse() {
+        return this.limitResponse == null ? Output.empty() : this.limitResponse;
     }
 
     public LimitedPriorityLevelConfigurationArgs(
-        @Nullable Input<Integer> assuredConcurrencyShares,
-        @Nullable Input<LimitResponseArgs> limitResponse) {
+        @Nullable Output<Integer> assuredConcurrencyShares,
+        @Nullable Output<LimitResponseArgs> limitResponse) {
         this.assuredConcurrencyShares = assuredConcurrencyShares;
         this.limitResponse = limitResponse;
     }
 
     private LimitedPriorityLevelConfigurationArgs() {
-        this.assuredConcurrencyShares = Input.empty();
-        this.limitResponse = Input.empty();
+        this.assuredConcurrencyShares = Output.empty();
+        this.limitResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> assuredConcurrencyShares;
-        private @Nullable Input<LimitResponseArgs> limitResponse;
+        private @Nullable Output<Integer> assuredConcurrencyShares;
+        private @Nullable Output<LimitResponseArgs> limitResponse;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     	      this.limitResponse = defaults.limitResponse;
         }
 
-        public Builder assuredConcurrencyShares(@Nullable Input<Integer> assuredConcurrencyShares) {
+        public Builder assuredConcurrencyShares(@Nullable Output<Integer> assuredConcurrencyShares) {
             this.assuredConcurrencyShares = assuredConcurrencyShares;
             return this;
         }
 
         public Builder assuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
-            this.assuredConcurrencyShares = Input.ofNullable(assuredConcurrencyShares);
+            this.assuredConcurrencyShares = Output.ofNullable(assuredConcurrencyShares);
             return this;
         }
 
-        public Builder limitResponse(@Nullable Input<LimitResponseArgs> limitResponse) {
+        public Builder limitResponse(@Nullable Output<LimitResponseArgs> limitResponse) {
             this.limitResponse = limitResponse;
             return this;
         }
 
         public Builder limitResponse(@Nullable LimitResponseArgs limitResponse) {
-            this.limitResponse = Input.ofNullable(limitResponse);
+            this.limitResponse = Output.ofNullable(limitResponse);
             return this;
         }
         public LimitedPriorityLevelConfigurationArgs build() {

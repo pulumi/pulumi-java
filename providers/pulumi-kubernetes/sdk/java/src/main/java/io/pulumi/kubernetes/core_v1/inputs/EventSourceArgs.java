@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="component")
-      private final @Nullable Input<String> component;
+      private final @Nullable Output<String> component;
 
-    public Input<String> getComponent() {
-        return this.component == null ? Input.empty() : this.component;
+    public Output<String> getComponent() {
+        return this.component == null ? Output.empty() : this.component;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     public EventSourceArgs(
-        @Nullable Input<String> component,
-        @Nullable Input<String> host) {
+        @Nullable Output<String> component,
+        @Nullable Output<String> host) {
         this.component = component;
         this.host = host;
     }
 
     private EventSourceArgs() {
-        this.component = Input.empty();
-        this.host = Input.empty();
+        this.component = Output.empty();
+        this.host = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> component;
-        private @Nullable Input<String> host;
+        private @Nullable Output<String> component;
+        private @Nullable Output<String> host;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.host = defaults.host;
         }
 
-        public Builder component(@Nullable Input<String> component) {
+        public Builder component(@Nullable Output<String> component) {
             this.component = component;
             return this;
         }
 
         public Builder component(@Nullable String component) {
-            this.component = Input.ofNullable(component);
+            this.component = Output.ofNullable(component);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
         public EventSourceArgs build() {

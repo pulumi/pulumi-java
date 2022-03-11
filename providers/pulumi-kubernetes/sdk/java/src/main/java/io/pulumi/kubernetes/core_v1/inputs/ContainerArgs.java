@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
@@ -34,10 +34,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<List<EnvVarArgs>> env;
+      private final @Nullable Output<List<EnvVarArgs>> env;
 
-    public Input<List<EnvVarArgs>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<List<EnvVarArgs>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envFrom")
-      private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
+      private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Input<List<EnvFromSourceArgs>> getEnvFrom() {
-        return this.envFrom == null ? Input.empty() : this.envFrom;
+    public Output<List<EnvFromSourceArgs>> getEnvFrom() {
+        return this.envFrom == null ? Output.empty() : this.envFrom;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullPolicy")
-      private final @Nullable Input<String> imagePullPolicy;
+      private final @Nullable Output<String> imagePullPolicy;
 
-    public Input<String> getImagePullPolicy() {
-        return this.imagePullPolicy == null ? Input.empty() : this.imagePullPolicy;
+    public Output<String> getImagePullPolicy() {
+        return this.imagePullPolicy == null ? Output.empty() : this.imagePullPolicy;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycle")
-      private final @Nullable Input<LifecycleArgs> lifecycle;
+      private final @Nullable Output<LifecycleArgs> lifecycle;
 
-    public Input<LifecycleArgs> getLifecycle() {
-        return this.lifecycle == null ? Input.empty() : this.lifecycle;
+    public Output<LifecycleArgs> getLifecycle() {
+        return this.lifecycle == null ? Output.empty() : this.lifecycle;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livenessProbe")
-      private final @Nullable Input<ProbeArgs> livenessProbe;
+      private final @Nullable Output<ProbeArgs> livenessProbe;
 
-    public Input<ProbeArgs> getLivenessProbe() {
-        return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
+    public Output<ProbeArgs> getLivenessProbe() {
+        return this.livenessProbe == null ? Output.empty() : this.livenessProbe;
     }
 
     /**
@@ -127,9 +127,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -138,10 +138,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<ContainerPortArgs>> ports;
+      private final @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Input<List<ContainerPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ContainerPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessProbe")
-      private final @Nullable Input<ProbeArgs> readinessProbe;
+      private final @Nullable Output<ProbeArgs> readinessProbe;
 
-    public Input<ProbeArgs> getReadinessProbe() {
-        return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
+    public Output<ProbeArgs> getReadinessProbe() {
+        return this.readinessProbe == null ? Output.empty() : this.readinessProbe;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<ResourceRequirementsArgs> resources;
+      private final @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Input<ResourceRequirementsArgs> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<ResourceRequirementsArgs> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityContext")
-      private final @Nullable Input<SecurityContextArgs> securityContext;
+      private final @Nullable Output<SecurityContextArgs> securityContext;
 
-    public Input<SecurityContextArgs> getSecurityContext() {
-        return this.securityContext == null ? Input.empty() : this.securityContext;
+    public Output<SecurityContextArgs> getSecurityContext() {
+        return this.securityContext == null ? Output.empty() : this.securityContext;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startupProbe")
-      private final @Nullable Input<ProbeArgs> startupProbe;
+      private final @Nullable Output<ProbeArgs> startupProbe;
 
-    public Input<ProbeArgs> getStartupProbe() {
-        return this.startupProbe == null ? Input.empty() : this.startupProbe;
+    public Output<ProbeArgs> getStartupProbe() {
+        return this.startupProbe == null ? Output.empty() : this.startupProbe;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stdin")
-      private final @Nullable Input<Boolean> stdin;
+      private final @Nullable Output<Boolean> stdin;
 
-    public Input<Boolean> getStdin() {
-        return this.stdin == null ? Input.empty() : this.stdin;
+    public Output<Boolean> getStdin() {
+        return this.stdin == null ? Output.empty() : this.stdin;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stdinOnce")
-      private final @Nullable Input<Boolean> stdinOnce;
+      private final @Nullable Output<Boolean> stdinOnce;
 
-    public Input<Boolean> getStdinOnce() {
-        return this.stdinOnce == null ? Input.empty() : this.stdinOnce;
+    public Output<Boolean> getStdinOnce() {
+        return this.stdinOnce == null ? Output.empty() : this.stdinOnce;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationMessagePath")
-      private final @Nullable Input<String> terminationMessagePath;
+      private final @Nullable Output<String> terminationMessagePath;
 
-    public Input<String> getTerminationMessagePath() {
-        return this.terminationMessagePath == null ? Input.empty() : this.terminationMessagePath;
+    public Output<String> getTerminationMessagePath() {
+        return this.terminationMessagePath == null ? Output.empty() : this.terminationMessagePath;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationMessagePolicy")
-      private final @Nullable Input<String> terminationMessagePolicy;
+      private final @Nullable Output<String> terminationMessagePolicy;
 
-    public Input<String> getTerminationMessagePolicy() {
-        return this.terminationMessagePolicy == null ? Input.empty() : this.terminationMessagePolicy;
+    public Output<String> getTerminationMessagePolicy() {
+        return this.terminationMessagePolicy == null ? Output.empty() : this.terminationMessagePolicy;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tty")
-      private final @Nullable Input<Boolean> tty;
+      private final @Nullable Output<Boolean> tty;
 
-    public Input<Boolean> getTty() {
-        return this.tty == null ? Input.empty() : this.tty;
+    public Output<Boolean> getTty() {
+        return this.tty == null ? Output.empty() : this.tty;
     }
 
     /**
@@ -252,10 +252,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeDevices")
-      private final @Nullable Input<List<VolumeDeviceArgs>> volumeDevices;
+      private final @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
 
-    public Input<List<VolumeDeviceArgs>> getVolumeDevices() {
-        return this.volumeDevices == null ? Input.empty() : this.volumeDevices;
+    public Output<List<VolumeDeviceArgs>> getVolumeDevices() {
+        return this.volumeDevices == null ? Output.empty() : this.volumeDevices;
     }
 
     /**
@@ -263,10 +263,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Input<List<VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
+    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
     }
 
     /**
@@ -274,35 +274,35 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDir")
-      private final @Nullable Input<String> workingDir;
+      private final @Nullable Output<String> workingDir;
 
-    public Input<String> getWorkingDir() {
-        return this.workingDir == null ? Input.empty() : this.workingDir;
+    public Output<String> getWorkingDir() {
+        return this.workingDir == null ? Output.empty() : this.workingDir;
     }
 
     public ContainerArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> command,
-        @Nullable Input<List<EnvVarArgs>> env,
-        @Nullable Input<List<EnvFromSourceArgs>> envFrom,
-        @Nullable Input<String> image,
-        @Nullable Input<String> imagePullPolicy,
-        @Nullable Input<LifecycleArgs> lifecycle,
-        @Nullable Input<ProbeArgs> livenessProbe,
-        Input<String> name,
-        @Nullable Input<List<ContainerPortArgs>> ports,
-        @Nullable Input<ProbeArgs> readinessProbe,
-        @Nullable Input<ResourceRequirementsArgs> resources,
-        @Nullable Input<SecurityContextArgs> securityContext,
-        @Nullable Input<ProbeArgs> startupProbe,
-        @Nullable Input<Boolean> stdin,
-        @Nullable Input<Boolean> stdinOnce,
-        @Nullable Input<String> terminationMessagePath,
-        @Nullable Input<String> terminationMessagePolicy,
-        @Nullable Input<Boolean> tty,
-        @Nullable Input<List<VolumeDeviceArgs>> volumeDevices,
-        @Nullable Input<List<VolumeMountArgs>> volumeMounts,
-        @Nullable Input<String> workingDir) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> command,
+        @Nullable Output<List<EnvVarArgs>> env,
+        @Nullable Output<List<EnvFromSourceArgs>> envFrom,
+        @Nullable Output<String> image,
+        @Nullable Output<String> imagePullPolicy,
+        @Nullable Output<LifecycleArgs> lifecycle,
+        @Nullable Output<ProbeArgs> livenessProbe,
+        Output<String> name,
+        @Nullable Output<List<ContainerPortArgs>> ports,
+        @Nullable Output<ProbeArgs> readinessProbe,
+        @Nullable Output<ResourceRequirementsArgs> resources,
+        @Nullable Output<SecurityContextArgs> securityContext,
+        @Nullable Output<ProbeArgs> startupProbe,
+        @Nullable Output<Boolean> stdin,
+        @Nullable Output<Boolean> stdinOnce,
+        @Nullable Output<String> terminationMessagePath,
+        @Nullable Output<String> terminationMessagePolicy,
+        @Nullable Output<Boolean> tty,
+        @Nullable Output<List<VolumeDeviceArgs>> volumeDevices,
+        @Nullable Output<List<VolumeMountArgs>> volumeMounts,
+        @Nullable Output<String> workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -328,28 +328,28 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.args = Input.empty();
-        this.command = Input.empty();
-        this.env = Input.empty();
-        this.envFrom = Input.empty();
-        this.image = Input.empty();
-        this.imagePullPolicy = Input.empty();
-        this.lifecycle = Input.empty();
-        this.livenessProbe = Input.empty();
-        this.name = Input.empty();
-        this.ports = Input.empty();
-        this.readinessProbe = Input.empty();
-        this.resources = Input.empty();
-        this.securityContext = Input.empty();
-        this.startupProbe = Input.empty();
-        this.stdin = Input.empty();
-        this.stdinOnce = Input.empty();
-        this.terminationMessagePath = Input.empty();
-        this.terminationMessagePolicy = Input.empty();
-        this.tty = Input.empty();
-        this.volumeDevices = Input.empty();
-        this.volumeMounts = Input.empty();
-        this.workingDir = Input.empty();
+        this.args = Output.empty();
+        this.command = Output.empty();
+        this.env = Output.empty();
+        this.envFrom = Output.empty();
+        this.image = Output.empty();
+        this.imagePullPolicy = Output.empty();
+        this.lifecycle = Output.empty();
+        this.livenessProbe = Output.empty();
+        this.name = Output.empty();
+        this.ports = Output.empty();
+        this.readinessProbe = Output.empty();
+        this.resources = Output.empty();
+        this.securityContext = Output.empty();
+        this.startupProbe = Output.empty();
+        this.stdin = Output.empty();
+        this.stdinOnce = Output.empty();
+        this.terminationMessagePath = Output.empty();
+        this.terminationMessagePolicy = Output.empty();
+        this.tty = Output.empty();
+        this.volumeDevices = Output.empty();
+        this.volumeMounts = Output.empty();
+        this.workingDir = Output.empty();
     }
 
     public static Builder builder() {
@@ -361,28 +361,28 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<List<EnvVarArgs>> env;
-        private @Nullable Input<List<EnvFromSourceArgs>> envFrom;
-        private @Nullable Input<String> image;
-        private @Nullable Input<String> imagePullPolicy;
-        private @Nullable Input<LifecycleArgs> lifecycle;
-        private @Nullable Input<ProbeArgs> livenessProbe;
-        private Input<String> name;
-        private @Nullable Input<List<ContainerPortArgs>> ports;
-        private @Nullable Input<ProbeArgs> readinessProbe;
-        private @Nullable Input<ResourceRequirementsArgs> resources;
-        private @Nullable Input<SecurityContextArgs> securityContext;
-        private @Nullable Input<ProbeArgs> startupProbe;
-        private @Nullable Input<Boolean> stdin;
-        private @Nullable Input<Boolean> stdinOnce;
-        private @Nullable Input<String> terminationMessagePath;
-        private @Nullable Input<String> terminationMessagePolicy;
-        private @Nullable Input<Boolean> tty;
-        private @Nullable Input<List<VolumeDeviceArgs>> volumeDevices;
-        private @Nullable Input<List<VolumeMountArgs>> volumeMounts;
-        private @Nullable Input<String> workingDir;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<List<EnvVarArgs>> env;
+        private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
+        private @Nullable Output<String> image;
+        private @Nullable Output<String> imagePullPolicy;
+        private @Nullable Output<LifecycleArgs> lifecycle;
+        private @Nullable Output<ProbeArgs> livenessProbe;
+        private Output<String> name;
+        private @Nullable Output<List<ContainerPortArgs>> ports;
+        private @Nullable Output<ProbeArgs> readinessProbe;
+        private @Nullable Output<ResourceRequirementsArgs> resources;
+        private @Nullable Output<SecurityContextArgs> securityContext;
+        private @Nullable Output<ProbeArgs> startupProbe;
+        private @Nullable Output<Boolean> stdin;
+        private @Nullable Output<Boolean> stdinOnce;
+        private @Nullable Output<String> terminationMessagePath;
+        private @Nullable Output<String> terminationMessagePolicy;
+        private @Nullable Output<Boolean> tty;
+        private @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
+        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+        private @Nullable Output<String> workingDir;
 
         public Builder() {
     	      // Empty
@@ -414,223 +414,223 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder env(@Nullable Input<List<EnvVarArgs>> env) {
+        public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable List<EnvVarArgs> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder envFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
+        public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
         public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
-            this.envFrom = Input.ofNullable(envFrom);
+            this.envFrom = Output.ofNullable(envFrom);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder imagePullPolicy(@Nullable Input<String> imagePullPolicy) {
+        public Builder imagePullPolicy(@Nullable Output<String> imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
 
         public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
-            this.imagePullPolicy = Input.ofNullable(imagePullPolicy);
+            this.imagePullPolicy = Output.ofNullable(imagePullPolicy);
             return this;
         }
 
-        public Builder lifecycle(@Nullable Input<LifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Output<LifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
         public Builder lifecycle(@Nullable LifecycleArgs lifecycle) {
-            this.lifecycle = Input.ofNullable(lifecycle);
+            this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder livenessProbe(@Nullable Input<ProbeArgs> livenessProbe) {
+        public Builder livenessProbe(@Nullable Output<ProbeArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
         public Builder livenessProbe(@Nullable ProbeArgs livenessProbe) {
-            this.livenessProbe = Input.ofNullable(livenessProbe);
+            this.livenessProbe = Output.ofNullable(livenessProbe);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder readinessProbe(@Nullable Input<ProbeArgs> readinessProbe) {
+        public Builder readinessProbe(@Nullable Output<ProbeArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
         public Builder readinessProbe(@Nullable ProbeArgs readinessProbe) {
-            this.readinessProbe = Input.ofNullable(readinessProbe);
+            this.readinessProbe = Output.ofNullable(readinessProbe);
             return this;
         }
 
-        public Builder resources(@Nullable Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable ResourceRequirementsArgs resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder securityContext(@Nullable Input<SecurityContextArgs> securityContext) {
+        public Builder securityContext(@Nullable Output<SecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
         public Builder securityContext(@Nullable SecurityContextArgs securityContext) {
-            this.securityContext = Input.ofNullable(securityContext);
+            this.securityContext = Output.ofNullable(securityContext);
             return this;
         }
 
-        public Builder startupProbe(@Nullable Input<ProbeArgs> startupProbe) {
+        public Builder startupProbe(@Nullable Output<ProbeArgs> startupProbe) {
             this.startupProbe = startupProbe;
             return this;
         }
 
         public Builder startupProbe(@Nullable ProbeArgs startupProbe) {
-            this.startupProbe = Input.ofNullable(startupProbe);
+            this.startupProbe = Output.ofNullable(startupProbe);
             return this;
         }
 
-        public Builder stdin(@Nullable Input<Boolean> stdin) {
+        public Builder stdin(@Nullable Output<Boolean> stdin) {
             this.stdin = stdin;
             return this;
         }
 
         public Builder stdin(@Nullable Boolean stdin) {
-            this.stdin = Input.ofNullable(stdin);
+            this.stdin = Output.ofNullable(stdin);
             return this;
         }
 
-        public Builder stdinOnce(@Nullable Input<Boolean> stdinOnce) {
+        public Builder stdinOnce(@Nullable Output<Boolean> stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
 
         public Builder stdinOnce(@Nullable Boolean stdinOnce) {
-            this.stdinOnce = Input.ofNullable(stdinOnce);
+            this.stdinOnce = Output.ofNullable(stdinOnce);
             return this;
         }
 
-        public Builder terminationMessagePath(@Nullable Input<String> terminationMessagePath) {
+        public Builder terminationMessagePath(@Nullable Output<String> terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
 
         public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
-            this.terminationMessagePath = Input.ofNullable(terminationMessagePath);
+            this.terminationMessagePath = Output.ofNullable(terminationMessagePath);
             return this;
         }
 
-        public Builder terminationMessagePolicy(@Nullable Input<String> terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(@Nullable Output<String> terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
 
         public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
-            this.terminationMessagePolicy = Input.ofNullable(terminationMessagePolicy);
+            this.terminationMessagePolicy = Output.ofNullable(terminationMessagePolicy);
             return this;
         }
 
-        public Builder tty(@Nullable Input<Boolean> tty) {
+        public Builder tty(@Nullable Output<Boolean> tty) {
             this.tty = tty;
             return this;
         }
 
         public Builder tty(@Nullable Boolean tty) {
-            this.tty = Input.ofNullable(tty);
+            this.tty = Output.ofNullable(tty);
             return this;
         }
 
-        public Builder volumeDevices(@Nullable Input<List<VolumeDeviceArgs>> volumeDevices) {
+        public Builder volumeDevices(@Nullable Output<List<VolumeDeviceArgs>> volumeDevices) {
             this.volumeDevices = volumeDevices;
             return this;
         }
 
         public Builder volumeDevices(@Nullable List<VolumeDeviceArgs> volumeDevices) {
-            this.volumeDevices = Input.ofNullable(volumeDevices);
+            this.volumeDevices = Output.ofNullable(volumeDevices);
             return this;
         }
 
-        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Input.ofNullable(volumeMounts);
+            this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder workingDir(@Nullable Input<String> workingDir) {
+        public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
 
         public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Input.ofNullable(workingDir);
+            this.workingDir = Output.ofNullable(workingDir);
             return this;
         }
         public ContainerArgs build() {

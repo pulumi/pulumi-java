@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.AffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
@@ -39,10 +39,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDeadlineSeconds")
-      private final @Nullable Input<Integer> activeDeadlineSeconds;
+      private final @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Input<Integer> getActiveDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Input.empty() : this.activeDeadlineSeconds;
+    public Output<Integer> getActiveDeadlineSeconds() {
+        return this.activeDeadlineSeconds == null ? Output.empty() : this.activeDeadlineSeconds;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affinity")
-      private final @Nullable Input<AffinityArgs> affinity;
+      private final @Nullable Output<AffinityArgs> affinity;
 
-    public Input<AffinityArgs> getAffinity() {
-        return this.affinity == null ? Input.empty() : this.affinity;
+    public Output<AffinityArgs> getAffinity() {
+        return this.affinity == null ? Output.empty() : this.affinity;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automountServiceAccountToken")
-      private final @Nullable Input<Boolean> automountServiceAccountToken;
+      private final @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Input<Boolean> getAutomountServiceAccountToken() {
-        return this.automountServiceAccountToken == null ? Input.empty() : this.automountServiceAccountToken;
+    public Output<Boolean> getAutomountServiceAccountToken() {
+        return this.automountServiceAccountToken == null ? Output.empty() : this.automountServiceAccountToken;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers", required=true)
-      private final Input<List<ContainerArgs>> containers;
+      private final Output<List<ContainerArgs>> containers;
 
-    public Input<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> getContainers() {
         return this.containers;
     }
 
@@ -83,10 +83,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-      private final @Nullable Input<PodDNSConfigArgs> dnsConfig;
+      private final @Nullable Output<PodDNSConfigArgs> dnsConfig;
 
-    public Input<PodDNSConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
+    public Output<PodDNSConfigArgs> getDnsConfig() {
+        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsPolicy")
-      private final @Nullable Input<String> dnsPolicy;
+      private final @Nullable Output<String> dnsPolicy;
 
-    public Input<String> getDnsPolicy() {
-        return this.dnsPolicy == null ? Input.empty() : this.dnsPolicy;
+    public Output<String> getDnsPolicy() {
+        return this.dnsPolicy == null ? Output.empty() : this.dnsPolicy;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableServiceLinks")
-      private final @Nullable Input<Boolean> enableServiceLinks;
+      private final @Nullable Output<Boolean> enableServiceLinks;
 
-    public Input<Boolean> getEnableServiceLinks() {
-        return this.enableServiceLinks == null ? Input.empty() : this.enableServiceLinks;
+    public Output<Boolean> getEnableServiceLinks() {
+        return this.enableServiceLinks == null ? Output.empty() : this.enableServiceLinks;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralContainers")
-      private final @Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers;
+      private final @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
 
-    public Input<List<EphemeralContainerArgs>> getEphemeralContainers() {
-        return this.ephemeralContainers == null ? Input.empty() : this.ephemeralContainers;
+    public Output<List<EphemeralContainerArgs>> getEphemeralContainers() {
+        return this.ephemeralContainers == null ? Output.empty() : this.ephemeralContainers;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostAliases")
-      private final @Nullable Input<List<HostAliasArgs>> hostAliases;
+      private final @Nullable Output<List<HostAliasArgs>> hostAliases;
 
-    public Input<List<HostAliasArgs>> getHostAliases() {
-        return this.hostAliases == null ? Input.empty() : this.hostAliases;
+    public Output<List<HostAliasArgs>> getHostAliases() {
+        return this.hostAliases == null ? Output.empty() : this.hostAliases;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIPC")
-      private final @Nullable Input<Boolean> hostIPC;
+      private final @Nullable Output<Boolean> hostIPC;
 
-    public Input<Boolean> getHostIPC() {
-        return this.hostIPC == null ? Input.empty() : this.hostIPC;
+    public Output<Boolean> getHostIPC() {
+        return this.hostIPC == null ? Output.empty() : this.hostIPC;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNetwork")
-      private final @Nullable Input<Boolean> hostNetwork;
+      private final @Nullable Output<Boolean> hostNetwork;
 
-    public Input<Boolean> getHostNetwork() {
-        return this.hostNetwork == null ? Input.empty() : this.hostNetwork;
+    public Output<Boolean> getHostNetwork() {
+        return this.hostNetwork == null ? Output.empty() : this.hostNetwork;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPID")
-      private final @Nullable Input<Boolean> hostPID;
+      private final @Nullable Output<Boolean> hostPID;
 
-    public Input<Boolean> getHostPID() {
-        return this.hostPID == null ? Input.empty() : this.hostPID;
+    public Output<Boolean> getHostPID() {
+        return this.hostPID == null ? Output.empty() : this.hostPID;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullSecrets")
-      private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
+      private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Input<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
-        return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
+    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
+        return this.imagePullSecrets == null ? Output.empty() : this.imagePullSecrets;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initContainers")
-      private final @Nullable Input<List<ContainerArgs>> initContainers;
+      private final @Nullable Output<List<ContainerArgs>> initContainers;
 
-    public Input<List<ContainerArgs>> getInitContainers() {
-        return this.initContainers == null ? Input.empty() : this.initContainers;
+    public Output<List<ContainerArgs>> getInitContainers() {
+        return this.initContainers == null ? Output.empty() : this.initContainers;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName")
-      private final @Nullable Input<String> nodeName;
+      private final @Nullable Output<String> nodeName;
 
-    public Input<String> getNodeName() {
-        return this.nodeName == null ? Input.empty() : this.nodeName;
+    public Output<String> getNodeName() {
+        return this.nodeName == null ? Output.empty() : this.nodeName;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelector")
-      private final @Nullable Input<Map<String,String>> nodeSelector;
+      private final @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Input<Map<String,String>> getNodeSelector() {
-        return this.nodeSelector == null ? Input.empty() : this.nodeSelector;
+    public Output<Map<String,String>> getNodeSelector() {
+        return this.nodeSelector == null ? Output.empty() : this.nodeSelector;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="os")
-      private final @Nullable Input<PodOSArgs> os;
+      private final @Nullable Output<PodOSArgs> os;
 
-    public Input<PodOSArgs> getOs() {
-        return this.os == null ? Input.empty() : this.os;
+    public Output<PodOSArgs> getOs() {
+        return this.os == null ? Output.empty() : this.os;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overhead")
-      private final @Nullable Input<Map<String,String>> overhead;
+      private final @Nullable Output<Map<String,String>> overhead;
 
-    public Input<Map<String,String>> getOverhead() {
-        return this.overhead == null ? Input.empty() : this.overhead;
+    public Output<Map<String,String>> getOverhead() {
+        return this.overhead == null ? Output.empty() : this.overhead;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptionPolicy")
-      private final @Nullable Input<String> preemptionPolicy;
+      private final @Nullable Output<String> preemptionPolicy;
 
-    public Input<String> getPreemptionPolicy() {
-        return this.preemptionPolicy == null ? Input.empty() : this.preemptionPolicy;
+    public Output<String> getPreemptionPolicy() {
+        return this.preemptionPolicy == null ? Output.empty() : this.preemptionPolicy;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -280,10 +280,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priorityClassName")
-      private final @Nullable Input<String> priorityClassName;
+      private final @Nullable Output<String> priorityClassName;
 
-    public Input<String> getPriorityClassName() {
-        return this.priorityClassName == null ? Input.empty() : this.priorityClassName;
+    public Output<String> getPriorityClassName() {
+        return this.priorityClassName == null ? Output.empty() : this.priorityClassName;
     }
 
     /**
@@ -291,10 +291,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessGates")
-      private final @Nullable Input<List<PodReadinessGateArgs>> readinessGates;
+      private final @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
 
-    public Input<List<PodReadinessGateArgs>> getReadinessGates() {
-        return this.readinessGates == null ? Input.empty() : this.readinessGates;
+    public Output<List<PodReadinessGateArgs>> getReadinessGates() {
+        return this.readinessGates == null ? Output.empty() : this.readinessGates;
     }
 
     /**
@@ -307,10 +307,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartPolicy")
-      private final @Nullable Input<String> restartPolicy;
+      private final @Nullable Output<String> restartPolicy;
 
-    public Input<String> getRestartPolicy() {
-        return this.restartPolicy == null ? Input.empty() : this.restartPolicy;
+    public Output<String> getRestartPolicy() {
+        return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
     }
 
     /**
@@ -318,10 +318,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeClassName")
-      private final @Nullable Input<String> runtimeClassName;
+      private final @Nullable Output<String> runtimeClassName;
 
-    public Input<String> getRuntimeClassName() {
-        return this.runtimeClassName == null ? Input.empty() : this.runtimeClassName;
+    public Output<String> getRuntimeClassName() {
+        return this.runtimeClassName == null ? Output.empty() : this.runtimeClassName;
     }
 
     /**
@@ -329,10 +329,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulerName")
-      private final @Nullable Input<String> schedulerName;
+      private final @Nullable Output<String> schedulerName;
 
-    public Input<String> getSchedulerName() {
-        return this.schedulerName == null ? Input.empty() : this.schedulerName;
+    public Output<String> getSchedulerName() {
+        return this.schedulerName == null ? Output.empty() : this.schedulerName;
     }
 
     /**
@@ -340,10 +340,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityContext")
-      private final @Nullable Input<PodSecurityContextArgs> securityContext;
+      private final @Nullable Output<PodSecurityContextArgs> securityContext;
 
-    public Input<PodSecurityContextArgs> getSecurityContext() {
-        return this.securityContext == null ? Input.empty() : this.securityContext;
+    public Output<PodSecurityContextArgs> getSecurityContext() {
+        return this.securityContext == null ? Output.empty() : this.securityContext;
     }
 
     /**
@@ -351,10 +351,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -362,10 +362,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountName")
-      private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Output<String> serviceAccountName;
 
-    public Input<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
+    public Output<String> getServiceAccountName() {
+        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
     }
 
     /**
@@ -373,10 +373,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setHostnameAsFQDN")
-      private final @Nullable Input<Boolean> setHostnameAsFQDN;
+      private final @Nullable Output<Boolean> setHostnameAsFQDN;
 
-    public Input<Boolean> getSetHostnameAsFQDN() {
-        return this.setHostnameAsFQDN == null ? Input.empty() : this.setHostnameAsFQDN;
+    public Output<Boolean> getSetHostnameAsFQDN() {
+        return this.setHostnameAsFQDN == null ? Output.empty() : this.setHostnameAsFQDN;
     }
 
     /**
@@ -384,10 +384,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareProcessNamespace")
-      private final @Nullable Input<Boolean> shareProcessNamespace;
+      private final @Nullable Output<Boolean> shareProcessNamespace;
 
-    public Input<Boolean> getShareProcessNamespace() {
-        return this.shareProcessNamespace == null ? Input.empty() : this.shareProcessNamespace;
+    public Output<Boolean> getShareProcessNamespace() {
+        return this.shareProcessNamespace == null ? Output.empty() : this.shareProcessNamespace;
     }
 
     /**
@@ -395,10 +395,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-      private final @Nullable Input<String> subdomain;
+      private final @Nullable Output<String> subdomain;
 
-    public Input<String> getSubdomain() {
-        return this.subdomain == null ? Input.empty() : this.subdomain;
+    public Output<String> getSubdomain() {
+        return this.subdomain == null ? Output.empty() : this.subdomain;
     }
 
     /**
@@ -406,10 +406,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationGracePeriodSeconds")
-      private final @Nullable Input<Integer> terminationGracePeriodSeconds;
+      private final @Nullable Output<Integer> terminationGracePeriodSeconds;
 
-    public Input<Integer> getTerminationGracePeriodSeconds() {
-        return this.terminationGracePeriodSeconds == null ? Input.empty() : this.terminationGracePeriodSeconds;
+    public Output<Integer> getTerminationGracePeriodSeconds() {
+        return this.terminationGracePeriodSeconds == null ? Output.empty() : this.terminationGracePeriodSeconds;
     }
 
     /**
@@ -417,10 +417,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerations")
-      private final @Nullable Input<List<TolerationArgs>> tolerations;
+      private final @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Input<List<TolerationArgs>> getTolerations() {
-        return this.tolerations == null ? Input.empty() : this.tolerations;
+    public Output<List<TolerationArgs>> getTolerations() {
+        return this.tolerations == null ? Output.empty() : this.tolerations;
     }
 
     /**
@@ -428,10 +428,10 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologySpreadConstraints")
-      private final @Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
+      private final @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
 
-    public Input<List<TopologySpreadConstraintArgs>> getTopologySpreadConstraints() {
-        return this.topologySpreadConstraints == null ? Input.empty() : this.topologySpreadConstraints;
+    public Output<List<TopologySpreadConstraintArgs>> getTopologySpreadConstraints() {
+        return this.topologySpreadConstraints == null ? Output.empty() : this.topologySpreadConstraints;
     }
 
     /**
@@ -439,49 +439,49 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public PodSpecArgs(
-        @Nullable Input<Integer> activeDeadlineSeconds,
-        @Nullable Input<AffinityArgs> affinity,
-        @Nullable Input<Boolean> automountServiceAccountToken,
-        Input<List<ContainerArgs>> containers,
-        @Nullable Input<PodDNSConfigArgs> dnsConfig,
-        @Nullable Input<String> dnsPolicy,
-        @Nullable Input<Boolean> enableServiceLinks,
-        @Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers,
-        @Nullable Input<List<HostAliasArgs>> hostAliases,
-        @Nullable Input<Boolean> hostIPC,
-        @Nullable Input<Boolean> hostNetwork,
-        @Nullable Input<Boolean> hostPID,
-        @Nullable Input<String> hostname,
-        @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets,
-        @Nullable Input<List<ContainerArgs>> initContainers,
-        @Nullable Input<String> nodeName,
-        @Nullable Input<Map<String,String>> nodeSelector,
-        @Nullable Input<PodOSArgs> os,
-        @Nullable Input<Map<String,String>> overhead,
-        @Nullable Input<String> preemptionPolicy,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> priorityClassName,
-        @Nullable Input<List<PodReadinessGateArgs>> readinessGates,
-        @Nullable Input<String> restartPolicy,
-        @Nullable Input<String> runtimeClassName,
-        @Nullable Input<String> schedulerName,
-        @Nullable Input<PodSecurityContextArgs> securityContext,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> serviceAccountName,
-        @Nullable Input<Boolean> setHostnameAsFQDN,
-        @Nullable Input<Boolean> shareProcessNamespace,
-        @Nullable Input<String> subdomain,
-        @Nullable Input<Integer> terminationGracePeriodSeconds,
-        @Nullable Input<List<TolerationArgs>> tolerations,
-        @Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints,
-        @Nullable Input<List<VolumeArgs>> volumes) {
+        @Nullable Output<Integer> activeDeadlineSeconds,
+        @Nullable Output<AffinityArgs> affinity,
+        @Nullable Output<Boolean> automountServiceAccountToken,
+        Output<List<ContainerArgs>> containers,
+        @Nullable Output<PodDNSConfigArgs> dnsConfig,
+        @Nullable Output<String> dnsPolicy,
+        @Nullable Output<Boolean> enableServiceLinks,
+        @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers,
+        @Nullable Output<List<HostAliasArgs>> hostAliases,
+        @Nullable Output<Boolean> hostIPC,
+        @Nullable Output<Boolean> hostNetwork,
+        @Nullable Output<Boolean> hostPID,
+        @Nullable Output<String> hostname,
+        @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets,
+        @Nullable Output<List<ContainerArgs>> initContainers,
+        @Nullable Output<String> nodeName,
+        @Nullable Output<Map<String,String>> nodeSelector,
+        @Nullable Output<PodOSArgs> os,
+        @Nullable Output<Map<String,String>> overhead,
+        @Nullable Output<String> preemptionPolicy,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> priorityClassName,
+        @Nullable Output<List<PodReadinessGateArgs>> readinessGates,
+        @Nullable Output<String> restartPolicy,
+        @Nullable Output<String> runtimeClassName,
+        @Nullable Output<String> schedulerName,
+        @Nullable Output<PodSecurityContextArgs> securityContext,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> serviceAccountName,
+        @Nullable Output<Boolean> setHostnameAsFQDN,
+        @Nullable Output<Boolean> shareProcessNamespace,
+        @Nullable Output<String> subdomain,
+        @Nullable Output<Integer> terminationGracePeriodSeconds,
+        @Nullable Output<List<TolerationArgs>> tolerations,
+        @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints,
+        @Nullable Output<List<VolumeArgs>> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.affinity = affinity;
         this.automountServiceAccountToken = automountServiceAccountToken;
@@ -521,42 +521,42 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PodSpecArgs() {
-        this.activeDeadlineSeconds = Input.empty();
-        this.affinity = Input.empty();
-        this.automountServiceAccountToken = Input.empty();
-        this.containers = Input.empty();
-        this.dnsConfig = Input.empty();
-        this.dnsPolicy = Input.empty();
-        this.enableServiceLinks = Input.empty();
-        this.ephemeralContainers = Input.empty();
-        this.hostAliases = Input.empty();
-        this.hostIPC = Input.empty();
-        this.hostNetwork = Input.empty();
-        this.hostPID = Input.empty();
-        this.hostname = Input.empty();
-        this.imagePullSecrets = Input.empty();
-        this.initContainers = Input.empty();
-        this.nodeName = Input.empty();
-        this.nodeSelector = Input.empty();
-        this.os = Input.empty();
-        this.overhead = Input.empty();
-        this.preemptionPolicy = Input.empty();
-        this.priority = Input.empty();
-        this.priorityClassName = Input.empty();
-        this.readinessGates = Input.empty();
-        this.restartPolicy = Input.empty();
-        this.runtimeClassName = Input.empty();
-        this.schedulerName = Input.empty();
-        this.securityContext = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.serviceAccountName = Input.empty();
-        this.setHostnameAsFQDN = Input.empty();
-        this.shareProcessNamespace = Input.empty();
-        this.subdomain = Input.empty();
-        this.terminationGracePeriodSeconds = Input.empty();
-        this.tolerations = Input.empty();
-        this.topologySpreadConstraints = Input.empty();
-        this.volumes = Input.empty();
+        this.activeDeadlineSeconds = Output.empty();
+        this.affinity = Output.empty();
+        this.automountServiceAccountToken = Output.empty();
+        this.containers = Output.empty();
+        this.dnsConfig = Output.empty();
+        this.dnsPolicy = Output.empty();
+        this.enableServiceLinks = Output.empty();
+        this.ephemeralContainers = Output.empty();
+        this.hostAliases = Output.empty();
+        this.hostIPC = Output.empty();
+        this.hostNetwork = Output.empty();
+        this.hostPID = Output.empty();
+        this.hostname = Output.empty();
+        this.imagePullSecrets = Output.empty();
+        this.initContainers = Output.empty();
+        this.nodeName = Output.empty();
+        this.nodeSelector = Output.empty();
+        this.os = Output.empty();
+        this.overhead = Output.empty();
+        this.preemptionPolicy = Output.empty();
+        this.priority = Output.empty();
+        this.priorityClassName = Output.empty();
+        this.readinessGates = Output.empty();
+        this.restartPolicy = Output.empty();
+        this.runtimeClassName = Output.empty();
+        this.schedulerName = Output.empty();
+        this.securityContext = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.serviceAccountName = Output.empty();
+        this.setHostnameAsFQDN = Output.empty();
+        this.shareProcessNamespace = Output.empty();
+        this.subdomain = Output.empty();
+        this.terminationGracePeriodSeconds = Output.empty();
+        this.tolerations = Output.empty();
+        this.topologySpreadConstraints = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -568,42 +568,42 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> activeDeadlineSeconds;
-        private @Nullable Input<AffinityArgs> affinity;
-        private @Nullable Input<Boolean> automountServiceAccountToken;
-        private Input<List<ContainerArgs>> containers;
-        private @Nullable Input<PodDNSConfigArgs> dnsConfig;
-        private @Nullable Input<String> dnsPolicy;
-        private @Nullable Input<Boolean> enableServiceLinks;
-        private @Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers;
-        private @Nullable Input<List<HostAliasArgs>> hostAliases;
-        private @Nullable Input<Boolean> hostIPC;
-        private @Nullable Input<Boolean> hostNetwork;
-        private @Nullable Input<Boolean> hostPID;
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
-        private @Nullable Input<List<ContainerArgs>> initContainers;
-        private @Nullable Input<String> nodeName;
-        private @Nullable Input<Map<String,String>> nodeSelector;
-        private @Nullable Input<PodOSArgs> os;
-        private @Nullable Input<Map<String,String>> overhead;
-        private @Nullable Input<String> preemptionPolicy;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> priorityClassName;
-        private @Nullable Input<List<PodReadinessGateArgs>> readinessGates;
-        private @Nullable Input<String> restartPolicy;
-        private @Nullable Input<String> runtimeClassName;
-        private @Nullable Input<String> schedulerName;
-        private @Nullable Input<PodSecurityContextArgs> securityContext;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> serviceAccountName;
-        private @Nullable Input<Boolean> setHostnameAsFQDN;
-        private @Nullable Input<Boolean> shareProcessNamespace;
-        private @Nullable Input<String> subdomain;
-        private @Nullable Input<Integer> terminationGracePeriodSeconds;
-        private @Nullable Input<List<TolerationArgs>> tolerations;
-        private @Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
-        private @Nullable Input<List<VolumeArgs>> volumes;
+        private @Nullable Output<Integer> activeDeadlineSeconds;
+        private @Nullable Output<AffinityArgs> affinity;
+        private @Nullable Output<Boolean> automountServiceAccountToken;
+        private Output<List<ContainerArgs>> containers;
+        private @Nullable Output<PodDNSConfigArgs> dnsConfig;
+        private @Nullable Output<String> dnsPolicy;
+        private @Nullable Output<Boolean> enableServiceLinks;
+        private @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
+        private @Nullable Output<List<HostAliasArgs>> hostAliases;
+        private @Nullable Output<Boolean> hostIPC;
+        private @Nullable Output<Boolean> hostNetwork;
+        private @Nullable Output<Boolean> hostPID;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
+        private @Nullable Output<List<ContainerArgs>> initContainers;
+        private @Nullable Output<String> nodeName;
+        private @Nullable Output<Map<String,String>> nodeSelector;
+        private @Nullable Output<PodOSArgs> os;
+        private @Nullable Output<Map<String,String>> overhead;
+        private @Nullable Output<String> preemptionPolicy;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> priorityClassName;
+        private @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
+        private @Nullable Output<String> restartPolicy;
+        private @Nullable Output<String> runtimeClassName;
+        private @Nullable Output<String> schedulerName;
+        private @Nullable Output<PodSecurityContextArgs> securityContext;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> serviceAccountName;
+        private @Nullable Output<Boolean> setHostnameAsFQDN;
+        private @Nullable Output<Boolean> shareProcessNamespace;
+        private @Nullable Output<String> subdomain;
+        private @Nullable Output<Integer> terminationGracePeriodSeconds;
+        private @Nullable Output<List<TolerationArgs>> tolerations;
+        private @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
+        private @Nullable Output<List<VolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -649,363 +649,363 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder activeDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Output<Integer> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
         public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
+            this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder affinity(@Nullable Input<AffinityArgs> affinity) {
+        public Builder affinity(@Nullable Output<AffinityArgs> affinity) {
             this.affinity = affinity;
             return this;
         }
 
         public Builder affinity(@Nullable AffinityArgs affinity) {
-            this.affinity = Input.ofNullable(affinity);
+            this.affinity = Output.ofNullable(affinity);
             return this;
         }
 
-        public Builder automountServiceAccountToken(@Nullable Input<Boolean> automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
-            this.automountServiceAccountToken = Input.ofNullable(automountServiceAccountToken);
+            this.automountServiceAccountToken = Output.ofNullable(automountServiceAccountToken);
             return this;
         }
 
-        public Builder containers(Input<List<ContainerArgs>> containers) {
+        public Builder containers(Output<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
         public Builder containers(List<ContainerArgs> containers) {
-            this.containers = Input.of(Objects.requireNonNull(containers));
+            this.containers = Output.of(Objects.requireNonNull(containers));
             return this;
         }
 
-        public Builder dnsConfig(@Nullable Input<PodDNSConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<PodDNSConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
         public Builder dnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
-            this.dnsConfig = Input.ofNullable(dnsConfig);
+            this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder dnsPolicy(@Nullable Input<String> dnsPolicy) {
+        public Builder dnsPolicy(@Nullable Output<String> dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
 
         public Builder dnsPolicy(@Nullable String dnsPolicy) {
-            this.dnsPolicy = Input.ofNullable(dnsPolicy);
+            this.dnsPolicy = Output.ofNullable(dnsPolicy);
             return this;
         }
 
-        public Builder enableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Input.ofNullable(enableServiceLinks);
+            this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
             return this;
         }
 
-        public Builder ephemeralContainers(@Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers) {
+        public Builder ephemeralContainers(@Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
 
         public Builder ephemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
-            this.ephemeralContainers = Input.ofNullable(ephemeralContainers);
+            this.ephemeralContainers = Output.ofNullable(ephemeralContainers);
             return this;
         }
 
-        public Builder hostAliases(@Nullable Input<List<HostAliasArgs>> hostAliases) {
+        public Builder hostAliases(@Nullable Output<List<HostAliasArgs>> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
 
         public Builder hostAliases(@Nullable List<HostAliasArgs> hostAliases) {
-            this.hostAliases = Input.ofNullable(hostAliases);
+            this.hostAliases = Output.ofNullable(hostAliases);
             return this;
         }
 
-        public Builder hostIPC(@Nullable Input<Boolean> hostIPC) {
+        public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
         public Builder hostIPC(@Nullable Boolean hostIPC) {
-            this.hostIPC = Input.ofNullable(hostIPC);
+            this.hostIPC = Output.ofNullable(hostIPC);
             return this;
         }
 
-        public Builder hostNetwork(@Nullable Input<Boolean> hostNetwork) {
+        public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
-            this.hostNetwork = Input.ofNullable(hostNetwork);
+            this.hostNetwork = Output.ofNullable(hostNetwork);
             return this;
         }
 
-        public Builder hostPID(@Nullable Input<Boolean> hostPID) {
+        public Builder hostPID(@Nullable Output<Boolean> hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
         public Builder hostPID(@Nullable Boolean hostPID) {
-            this.hostPID = Input.ofNullable(hostPID);
+            this.hostPID = Output.ofNullable(hostPID);
             return this;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder imagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Input.ofNullable(imagePullSecrets);
+            this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
             return this;
         }
 
-        public Builder initContainers(@Nullable Input<List<ContainerArgs>> initContainers) {
+        public Builder initContainers(@Nullable Output<List<ContainerArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
         public Builder initContainers(@Nullable List<ContainerArgs> initContainers) {
-            this.initContainers = Input.ofNullable(initContainers);
+            this.initContainers = Output.ofNullable(initContainers);
             return this;
         }
 
-        public Builder nodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Input.ofNullable(nodeName);
+            this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
 
-        public Builder nodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
+        public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Input.ofNullable(nodeSelector);
+            this.nodeSelector = Output.ofNullable(nodeSelector);
             return this;
         }
 
-        public Builder os(@Nullable Input<PodOSArgs> os) {
+        public Builder os(@Nullable Output<PodOSArgs> os) {
             this.os = os;
             return this;
         }
 
         public Builder os(@Nullable PodOSArgs os) {
-            this.os = Input.ofNullable(os);
+            this.os = Output.ofNullable(os);
             return this;
         }
 
-        public Builder overhead(@Nullable Input<Map<String,String>> overhead) {
+        public Builder overhead(@Nullable Output<Map<String,String>> overhead) {
             this.overhead = overhead;
             return this;
         }
 
         public Builder overhead(@Nullable Map<String,String> overhead) {
-            this.overhead = Input.ofNullable(overhead);
+            this.overhead = Output.ofNullable(overhead);
             return this;
         }
 
-        public Builder preemptionPolicy(@Nullable Input<String> preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
-            this.preemptionPolicy = Input.ofNullable(preemptionPolicy);
+            this.preemptionPolicy = Output.ofNullable(preemptionPolicy);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder priorityClassName(@Nullable Input<String> priorityClassName) {
+        public Builder priorityClassName(@Nullable Output<String> priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
 
         public Builder priorityClassName(@Nullable String priorityClassName) {
-            this.priorityClassName = Input.ofNullable(priorityClassName);
+            this.priorityClassName = Output.ofNullable(priorityClassName);
             return this;
         }
 
-        public Builder readinessGates(@Nullable Input<List<PodReadinessGateArgs>> readinessGates) {
+        public Builder readinessGates(@Nullable Output<List<PodReadinessGateArgs>> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
 
         public Builder readinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
-            this.readinessGates = Input.ofNullable(readinessGates);
+            this.readinessGates = Output.ofNullable(readinessGates);
             return this;
         }
 
-        public Builder restartPolicy(@Nullable Input<String> restartPolicy) {
+        public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
         public Builder restartPolicy(@Nullable String restartPolicy) {
-            this.restartPolicy = Input.ofNullable(restartPolicy);
+            this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder runtimeClassName(@Nullable Input<String> runtimeClassName) {
+        public Builder runtimeClassName(@Nullable Output<String> runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
 
         public Builder runtimeClassName(@Nullable String runtimeClassName) {
-            this.runtimeClassName = Input.ofNullable(runtimeClassName);
+            this.runtimeClassName = Output.ofNullable(runtimeClassName);
             return this;
         }
 
-        public Builder schedulerName(@Nullable Input<String> schedulerName) {
+        public Builder schedulerName(@Nullable Output<String> schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
 
         public Builder schedulerName(@Nullable String schedulerName) {
-            this.schedulerName = Input.ofNullable(schedulerName);
+            this.schedulerName = Output.ofNullable(schedulerName);
             return this;
         }
 
-        public Builder securityContext(@Nullable Input<PodSecurityContextArgs> securityContext) {
+        public Builder securityContext(@Nullable Output<PodSecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
         public Builder securityContext(@Nullable PodSecurityContextArgs securityContext) {
-            this.securityContext = Input.ofNullable(securityContext);
+            this.securityContext = Output.ofNullable(securityContext);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Input.ofNullable(serviceAccountName);
+            this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder setHostnameAsFQDN(@Nullable Input<Boolean> setHostnameAsFQDN) {
+        public Builder setHostnameAsFQDN(@Nullable Output<Boolean> setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
 
         public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
-            this.setHostnameAsFQDN = Input.ofNullable(setHostnameAsFQDN);
+            this.setHostnameAsFQDN = Output.ofNullable(setHostnameAsFQDN);
             return this;
         }
 
-        public Builder shareProcessNamespace(@Nullable Input<Boolean> shareProcessNamespace) {
+        public Builder shareProcessNamespace(@Nullable Output<Boolean> shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
 
         public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
-            this.shareProcessNamespace = Input.ofNullable(shareProcessNamespace);
+            this.shareProcessNamespace = Output.ofNullable(shareProcessNamespace);
             return this;
         }
 
-        public Builder subdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
         public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Input.ofNullable(subdomain);
+            this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
 
-        public Builder terminationGracePeriodSeconds(@Nullable Input<Integer> terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Input.ofNullable(terminationGracePeriodSeconds);
+            this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
 
-        public Builder tolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
+        public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
         public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Input.ofNullable(tolerations);
+            this.tolerations = Output.ofNullable(tolerations);
             return this;
         }
 
-        public Builder topologySpreadConstraints(@Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
+        public Builder topologySpreadConstraints(@Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
 
         public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
-            this.topologySpreadConstraints = Input.ofNullable(topologySpreadConstraints);
+            this.topologySpreadConstraints = Output.ofNullable(topologySpreadConstraints);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public PodSpecArgs build() {

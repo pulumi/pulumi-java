@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricTargetArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="container", required=true)
-      private final Input<String> container;
+      private final Output<String> container;
 
-    public Input<String> getContainer() {
+    public Output<String> getContainer() {
         return this.container;
     }
 
@@ -34,9 +34,9 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -45,25 +45,25 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<MetricTargetArgs> target;
+      private final Output<MetricTargetArgs> target;
 
-    public Input<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> getTarget() {
         return this.target;
     }
 
     public ContainerResourceMetricSourceArgs(
-        Input<String> container,
-        Input<String> name,
-        Input<MetricTargetArgs> target) {
+        Output<String> container,
+        Output<String> name,
+        Output<MetricTargetArgs> target) {
         this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private ContainerResourceMetricSourceArgs() {
-        this.container = Input.empty();
-        this.name = Input.empty();
-        this.target = Input.empty();
+        this.container = Output.empty();
+        this.name = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> container;
-        private Input<String> name;
-        private Input<MetricTargetArgs> target;
+        private Output<String> container;
+        private Output<String> name;
+        private Output<MetricTargetArgs> target;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     	      this.target = defaults.target;
         }
 
-        public Builder container(Input<String> container) {
+        public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
         public Builder container(String container) {
-            this.container = Input.of(Objects.requireNonNull(container));
+            this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder target(Input<MetricTargetArgs> target) {
+        public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(MetricTargetArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public ContainerResourceMetricSourceArgs build() {

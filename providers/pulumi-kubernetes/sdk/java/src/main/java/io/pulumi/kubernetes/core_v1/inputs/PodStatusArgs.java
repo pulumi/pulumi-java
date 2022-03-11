@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStatusArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodConditionArgs;
@@ -27,10 +27,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<PodConditionArgs>> conditions;
+      private final @Nullable Output<List<PodConditionArgs>> conditions;
 
-    public Input<List<PodConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<PodConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerStatuses")
-      private final @Nullable Input<List<ContainerStatusArgs>> containerStatuses;
+      private final @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
 
-    public Input<List<ContainerStatusArgs>> getContainerStatuses() {
-        return this.containerStatuses == null ? Input.empty() : this.containerStatuses;
+    public Output<List<ContainerStatusArgs>> getContainerStatuses() {
+        return this.containerStatuses == null ? Output.empty() : this.containerStatuses;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralContainerStatuses")
-      private final @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses;
+      private final @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
 
-    public Input<List<ContainerStatusArgs>> getEphemeralContainerStatuses() {
-        return this.ephemeralContainerStatuses == null ? Input.empty() : this.ephemeralContainerStatuses;
+    public Output<List<ContainerStatusArgs>> getEphemeralContainerStatuses() {
+        return this.ephemeralContainerStatuses == null ? Output.empty() : this.ephemeralContainerStatuses;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIP")
-      private final @Nullable Input<String> hostIP;
+      private final @Nullable Output<String> hostIP;
 
-    public Input<String> getHostIP() {
-        return this.hostIP == null ? Input.empty() : this.hostIP;
+    public Output<String> getHostIP() {
+        return this.hostIP == null ? Output.empty() : this.hostIP;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initContainerStatuses")
-      private final @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses;
+      private final @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
 
-    public Input<List<ContainerStatusArgs>> getInitContainerStatuses() {
-        return this.initContainerStatuses == null ? Input.empty() : this.initContainerStatuses;
+    public Output<List<ContainerStatusArgs>> getInitContainerStatuses() {
+        return this.initContainerStatuses == null ? Output.empty() : this.initContainerStatuses;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nominatedNodeName")
-      private final @Nullable Input<String> nominatedNodeName;
+      private final @Nullable Output<String> nominatedNodeName;
 
-    public Input<String> getNominatedNodeName() {
-        return this.nominatedNodeName == null ? Input.empty() : this.nominatedNodeName;
+    public Output<String> getNominatedNodeName() {
+        return this.nominatedNodeName == null ? Output.empty() : this.nominatedNodeName;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phase")
-      private final @Nullable Input<String> phase;
+      private final @Nullable Output<String> phase;
 
-    public Input<String> getPhase() {
-        return this.phase == null ? Input.empty() : this.phase;
+    public Output<String> getPhase() {
+        return this.phase == null ? Output.empty() : this.phase;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIP")
-      private final @Nullable Input<String> podIP;
+      private final @Nullable Output<String> podIP;
 
-    public Input<String> getPodIP() {
-        return this.podIP == null ? Input.empty() : this.podIP;
+    public Output<String> getPodIP() {
+        return this.podIP == null ? Output.empty() : this.podIP;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIPs")
-      private final @Nullable Input<List<PodIPArgs>> podIPs;
+      private final @Nullable Output<List<PodIPArgs>> podIPs;
 
-    public Input<List<PodIPArgs>> getPodIPs() {
-        return this.podIPs == null ? Input.empty() : this.podIPs;
+    public Output<List<PodIPArgs>> getPodIPs() {
+        return this.podIPs == null ? Output.empty() : this.podIPs;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qosClass")
-      private final @Nullable Input<String> qosClass;
+      private final @Nullable Output<String> qosClass;
 
-    public Input<String> getQosClass() {
-        return this.qosClass == null ? Input.empty() : this.qosClass;
+    public Output<String> getQosClass() {
+        return this.qosClass == null ? Output.empty() : this.qosClass;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     /**
@@ -175,26 +175,26 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public PodStatusArgs(
-        @Nullable Input<List<PodConditionArgs>> conditions,
-        @Nullable Input<List<ContainerStatusArgs>> containerStatuses,
-        @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses,
-        @Nullable Input<String> hostIP,
-        @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses,
-        @Nullable Input<String> message,
-        @Nullable Input<String> nominatedNodeName,
-        @Nullable Input<String> phase,
-        @Nullable Input<String> podIP,
-        @Nullable Input<List<PodIPArgs>> podIPs,
-        @Nullable Input<String> qosClass,
-        @Nullable Input<String> reason,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<List<PodConditionArgs>> conditions,
+        @Nullable Output<List<ContainerStatusArgs>> containerStatuses,
+        @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses,
+        @Nullable Output<String> hostIP,
+        @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses,
+        @Nullable Output<String> message,
+        @Nullable Output<String> nominatedNodeName,
+        @Nullable Output<String> phase,
+        @Nullable Output<String> podIP,
+        @Nullable Output<List<PodIPArgs>> podIPs,
+        @Nullable Output<String> qosClass,
+        @Nullable Output<String> reason,
+        @Nullable Output<String> startTime) {
         this.conditions = conditions;
         this.containerStatuses = containerStatuses;
         this.ephemeralContainerStatuses = ephemeralContainerStatuses;
@@ -211,19 +211,19 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PodStatusArgs() {
-        this.conditions = Input.empty();
-        this.containerStatuses = Input.empty();
-        this.ephemeralContainerStatuses = Input.empty();
-        this.hostIP = Input.empty();
-        this.initContainerStatuses = Input.empty();
-        this.message = Input.empty();
-        this.nominatedNodeName = Input.empty();
-        this.phase = Input.empty();
-        this.podIP = Input.empty();
-        this.podIPs = Input.empty();
-        this.qosClass = Input.empty();
-        this.reason = Input.empty();
-        this.startTime = Input.empty();
+        this.conditions = Output.empty();
+        this.containerStatuses = Output.empty();
+        this.ephemeralContainerStatuses = Output.empty();
+        this.hostIP = Output.empty();
+        this.initContainerStatuses = Output.empty();
+        this.message = Output.empty();
+        this.nominatedNodeName = Output.empty();
+        this.phase = Output.empty();
+        this.podIP = Output.empty();
+        this.podIPs = Output.empty();
+        this.qosClass = Output.empty();
+        this.reason = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -235,19 +235,19 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PodConditionArgs>> conditions;
-        private @Nullable Input<List<ContainerStatusArgs>> containerStatuses;
-        private @Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses;
-        private @Nullable Input<String> hostIP;
-        private @Nullable Input<List<ContainerStatusArgs>> initContainerStatuses;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> nominatedNodeName;
-        private @Nullable Input<String> phase;
-        private @Nullable Input<String> podIP;
-        private @Nullable Input<List<PodIPArgs>> podIPs;
-        private @Nullable Input<String> qosClass;
-        private @Nullable Input<String> reason;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<List<PodConditionArgs>> conditions;
+        private @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
+        private @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
+        private @Nullable Output<String> hostIP;
+        private @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> nominatedNodeName;
+        private @Nullable Output<String> phase;
+        private @Nullable Output<String> podIP;
+        private @Nullable Output<List<PodIPArgs>> podIPs;
+        private @Nullable Output<String> qosClass;
+        private @Nullable Output<String> reason;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -270,133 +270,133 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder conditions(@Nullable Input<List<PodConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<PodConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<PodConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder containerStatuses(@Nullable Input<List<ContainerStatusArgs>> containerStatuses) {
+        public Builder containerStatuses(@Nullable Output<List<ContainerStatusArgs>> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
 
         public Builder containerStatuses(@Nullable List<ContainerStatusArgs> containerStatuses) {
-            this.containerStatuses = Input.ofNullable(containerStatuses);
+            this.containerStatuses = Output.ofNullable(containerStatuses);
             return this;
         }
 
-        public Builder ephemeralContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
+        public Builder ephemeralContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
 
         public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatusArgs> ephemeralContainerStatuses) {
-            this.ephemeralContainerStatuses = Input.ofNullable(ephemeralContainerStatuses);
+            this.ephemeralContainerStatuses = Output.ofNullable(ephemeralContainerStatuses);
             return this;
         }
 
-        public Builder hostIP(@Nullable Input<String> hostIP) {
+        public Builder hostIP(@Nullable Output<String> hostIP) {
             this.hostIP = hostIP;
             return this;
         }
 
         public Builder hostIP(@Nullable String hostIP) {
-            this.hostIP = Input.ofNullable(hostIP);
+            this.hostIP = Output.ofNullable(hostIP);
             return this;
         }
 
-        public Builder initContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> initContainerStatuses) {
+        public Builder initContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> initContainerStatuses) {
             this.initContainerStatuses = initContainerStatuses;
             return this;
         }
 
         public Builder initContainerStatuses(@Nullable List<ContainerStatusArgs> initContainerStatuses) {
-            this.initContainerStatuses = Input.ofNullable(initContainerStatuses);
+            this.initContainerStatuses = Output.ofNullable(initContainerStatuses);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder nominatedNodeName(@Nullable Input<String> nominatedNodeName) {
+        public Builder nominatedNodeName(@Nullable Output<String> nominatedNodeName) {
             this.nominatedNodeName = nominatedNodeName;
             return this;
         }
 
         public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
-            this.nominatedNodeName = Input.ofNullable(nominatedNodeName);
+            this.nominatedNodeName = Output.ofNullable(nominatedNodeName);
             return this;
         }
 
-        public Builder phase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
 
         public Builder phase(@Nullable String phase) {
-            this.phase = Input.ofNullable(phase);
+            this.phase = Output.ofNullable(phase);
             return this;
         }
 
-        public Builder podIP(@Nullable Input<String> podIP) {
+        public Builder podIP(@Nullable Output<String> podIP) {
             this.podIP = podIP;
             return this;
         }
 
         public Builder podIP(@Nullable String podIP) {
-            this.podIP = Input.ofNullable(podIP);
+            this.podIP = Output.ofNullable(podIP);
             return this;
         }
 
-        public Builder podIPs(@Nullable Input<List<PodIPArgs>> podIPs) {
+        public Builder podIPs(@Nullable Output<List<PodIPArgs>> podIPs) {
             this.podIPs = podIPs;
             return this;
         }
 
         public Builder podIPs(@Nullable List<PodIPArgs> podIPs) {
-            this.podIPs = Input.ofNullable(podIPs);
+            this.podIPs = Output.ofNullable(podIPs);
             return this;
         }
 
-        public Builder qosClass(@Nullable Input<String> qosClass) {
+        public Builder qosClass(@Nullable Output<String> qosClass) {
             this.qosClass = qosClass;
             return this;
         }
 
         public Builder qosClass(@Nullable String qosClass) {
-            this.qosClass = Input.ofNullable(qosClass);
+            this.qosClass = Output.ofNullable(qosClass);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public PodStatusArgs build() {

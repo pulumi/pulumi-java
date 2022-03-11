@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -45,25 +45,25 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public CrossVersionObjectReferenceArgs(
-        @Nullable Input<String> apiVersion,
-        Input<String> kind,
-        Input<String> name) {
+        @Nullable Output<String> apiVersion,
+        Output<String> kind,
+        Output<String> name) {
         this.apiVersion = apiVersion;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private CrossVersionObjectReferenceArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private Input<String> kind;
-        private Input<String> name;
+        private @Nullable Output<String> apiVersion;
+        private Output<String> kind;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public CrossVersionObjectReferenceArgs build() {

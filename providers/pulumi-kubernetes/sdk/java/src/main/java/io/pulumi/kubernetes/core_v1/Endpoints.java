@@ -3,7 +3,6 @@
 
 package io.pulumi.kubernetes.core_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,10 +126,10 @@ public class Endpoints extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoints(String name, @Nullable EndpointsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:core/v1:Endpoints", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:core/v1:Endpoints", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private Endpoints(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Endpoints(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:core/v1:Endpoints", name, null, makeResourceOptions(options, id));
     }
 
@@ -142,7 +141,7 @@ public class Endpoints extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -157,7 +156,7 @@ public class Endpoints extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Endpoints get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Endpoints get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Endpoints(name, id, options);
     }
 }

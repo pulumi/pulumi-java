@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class HelmReleaseSettingsArgs {
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
      * 
      */
-    private final @Nullable Input<String> driver;
+    private final @Nullable Output<String> driver;
     /**
      * The path to the helm plugins directory.
      * 
      */
-    private final @Nullable Input<String> pluginsPath;
+    private final @Nullable Output<String> pluginsPath;
     /**
      * The path to the registry config file.
      * 
      */
-    private final @Nullable Input<String> registryConfigPath;
+    private final @Nullable Output<String> registryConfigPath;
     /**
      * The path to the file containing cached repository indexes.
      * 
      */
-    private final @Nullable Input<String> repositoryCache;
+    private final @Nullable Output<String> repositoryCache;
     /**
      * The path to the file containing repository names and URLs.
      * 
      */
-    private final @Nullable Input<String> repositoryConfigPath;
+    private final @Nullable Output<String> repositoryConfigPath;
 
     @OutputCustomType.Constructor
     private HelmReleaseSettingsArgs(
-        @OutputCustomType.Parameter("driver") @Nullable Input<String> driver,
-        @OutputCustomType.Parameter("pluginsPath") @Nullable Input<String> pluginsPath,
-        @OutputCustomType.Parameter("registryConfigPath") @Nullable Input<String> registryConfigPath,
-        @OutputCustomType.Parameter("repositoryCache") @Nullable Input<String> repositoryCache,
-        @OutputCustomType.Parameter("repositoryConfigPath") @Nullable Input<String> repositoryConfigPath) {
+        @OutputCustomType.Parameter("driver") @Nullable Output<String> driver,
+        @OutputCustomType.Parameter("pluginsPath") @Nullable Output<String> pluginsPath,
+        @OutputCustomType.Parameter("registryConfigPath") @Nullable Output<String> registryConfigPath,
+        @OutputCustomType.Parameter("repositoryCache") @Nullable Output<String> repositoryCache,
+        @OutputCustomType.Parameter("repositoryConfigPath") @Nullable Output<String> repositoryConfigPath) {
         this.driver = driver;
         this.pluginsPath = pluginsPath;
         this.registryConfigPath = registryConfigPath;
@@ -55,35 +55,35 @@ public final class HelmReleaseSettingsArgs {
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
      * 
     */
-    public @Nullable Input<String> getDriver() {
+    public @Nullable Output<String> getDriver() {
         return this.driver;
     }
     /**
      * The path to the helm plugins directory.
      * 
     */
-    public @Nullable Input<String> getPluginsPath() {
+    public @Nullable Output<String> getPluginsPath() {
         return this.pluginsPath;
     }
     /**
      * The path to the registry config file.
      * 
     */
-    public @Nullable Input<String> getRegistryConfigPath() {
+    public @Nullable Output<String> getRegistryConfigPath() {
         return this.registryConfigPath;
     }
     /**
      * The path to the file containing cached repository indexes.
      * 
     */
-    public @Nullable Input<String> getRepositoryCache() {
+    public @Nullable Output<String> getRepositoryCache() {
         return this.repositoryCache;
     }
     /**
      * The path to the file containing repository names and URLs.
      * 
     */
-    public @Nullable Input<String> getRepositoryConfigPath() {
+    public @Nullable Output<String> getRepositoryConfigPath() {
         return this.repositoryConfigPath;
     }
 
@@ -96,11 +96,11 @@ public final class HelmReleaseSettingsArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> driver;
-        private @Nullable Input<String> pluginsPath;
-        private @Nullable Input<String> registryConfigPath;
-        private @Nullable Input<String> repositoryCache;
-        private @Nullable Input<String> repositoryConfigPath;
+        private @Nullable Output<String> driver;
+        private @Nullable Output<String> pluginsPath;
+        private @Nullable Output<String> registryConfigPath;
+        private @Nullable Output<String> repositoryCache;
+        private @Nullable Output<String> repositoryConfigPath;
 
         public Builder() {
     	      // Empty
@@ -115,27 +115,27 @@ public final class HelmReleaseSettingsArgs {
     	      this.repositoryConfigPath = defaults.repositoryConfigPath;
         }
 
-        public Builder driver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Output<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder pluginsPath(@Nullable Input<String> pluginsPath) {
+        public Builder pluginsPath(@Nullable Output<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
 
-        public Builder registryConfigPath(@Nullable Input<String> registryConfigPath) {
+        public Builder registryConfigPath(@Nullable Output<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
 
-        public Builder repositoryCache(@Nullable Input<String> repositoryCache) {
+        public Builder repositoryCache(@Nullable Output<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
 
-        public Builder repositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
+        public Builder repositoryConfigPath(@Nullable Output<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressServiceBackendArgs;
@@ -24,10 +24,10 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
+      private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
-    public Input<TypedLocalObjectReferenceArgs> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<TypedLocalObjectReferenceArgs> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<IngressServiceBackendArgs> service;
+      private final @Nullable Output<IngressServiceBackendArgs> service;
 
-    public Input<IngressServiceBackendArgs> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<IngressServiceBackendArgs> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public IngressBackendArgs(
-        @Nullable Input<TypedLocalObjectReferenceArgs> resource,
-        @Nullable Input<IngressServiceBackendArgs> service) {
+        @Nullable Output<TypedLocalObjectReferenceArgs> resource,
+        @Nullable Output<IngressServiceBackendArgs> service) {
         this.resource = resource;
         this.service = service;
     }
 
     private IngressBackendArgs() {
-        this.resource = Input.empty();
-        this.service = Input.empty();
+        this.resource = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TypedLocalObjectReferenceArgs> resource;
-        private @Nullable Input<IngressServiceBackendArgs> service;
+        private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
+        private @Nullable Output<IngressServiceBackendArgs> service;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder resource(@Nullable Input<TypedLocalObjectReferenceArgs> resource) {
+        public Builder resource(@Nullable Output<TypedLocalObjectReferenceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder service(@Nullable Input<IngressServiceBackendArgs> service) {
+        public Builder service(@Nullable Output<IngressServiceBackendArgs> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable IngressServiceBackendArgs service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public IngressBackendArgs build() {

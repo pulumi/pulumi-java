@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidr", required=true)
-      private final Input<String> cidr;
+      private final Output<String> cidr;
 
-    public Input<String> getCidr() {
+    public Output<String> getCidr() {
         return this.cidr;
     }
 
@@ -35,22 +35,22 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="except")
-      private final @Nullable Input<List<String>> except;
+      private final @Nullable Output<List<String>> except;
 
-    public Input<List<String>> getExcept() {
-        return this.except == null ? Input.empty() : this.except;
+    public Output<List<String>> getExcept() {
+        return this.except == null ? Output.empty() : this.except;
     }
 
     public IPBlockArgs(
-        Input<String> cidr,
-        @Nullable Input<List<String>> except) {
+        Output<String> cidr,
+        @Nullable Output<List<String>> except) {
         this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
         this.except = except;
     }
 
     private IPBlockArgs() {
-        this.cidr = Input.empty();
-        this.except = Input.empty();
+        this.cidr = Output.empty();
+        this.except = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cidr;
-        private @Nullable Input<List<String>> except;
+        private Output<String> cidr;
+        private @Nullable Output<List<String>> except;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.except = defaults.except;
         }
 
-        public Builder cidr(Input<String> cidr) {
+        public Builder cidr(Output<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Input.of(Objects.requireNonNull(cidr));
+            this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
 
-        public Builder except(@Nullable Input<List<String>> except) {
+        public Builder except(@Nullable Output<List<String>> except) {
             this.except = except;
             return this;
         }
 
         public Builder except(@Nullable List<String> except) {
-            this.except = Input.ofNullable(except);
+            this.except = Output.ofNullable(except);
             return this;
         }
         public IPBlockArgs build() {

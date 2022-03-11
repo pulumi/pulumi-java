@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodDNSConfigOptionArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameservers")
-      private final @Nullable Input<List<String>> nameservers;
+      private final @Nullable Output<List<String>> nameservers;
 
-    public Input<List<String>> getNameservers() {
-        return this.nameservers == null ? Input.empty() : this.nameservers;
+    public Output<List<String>> getNameservers() {
+        return this.nameservers == null ? Output.empty() : this.nameservers;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<PodDNSConfigOptionArgs>> options;
+      private final @Nullable Output<List<PodDNSConfigOptionArgs>> options;
 
-    public Input<List<PodDNSConfigOptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<PodDNSConfigOptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searches")
-      private final @Nullable Input<List<String>> searches;
+      private final @Nullable Output<List<String>> searches;
 
-    public Input<List<String>> getSearches() {
-        return this.searches == null ? Input.empty() : this.searches;
+    public Output<List<String>> getSearches() {
+        return this.searches == null ? Output.empty() : this.searches;
     }
 
     public PodDNSConfigArgs(
-        @Nullable Input<List<String>> nameservers,
-        @Nullable Input<List<PodDNSConfigOptionArgs>> options,
-        @Nullable Input<List<String>> searches) {
+        @Nullable Output<List<String>> nameservers,
+        @Nullable Output<List<PodDNSConfigOptionArgs>> options,
+        @Nullable Output<List<String>> searches) {
         this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;
     }
 
     private PodDNSConfigArgs() {
-        this.nameservers = Input.empty();
-        this.options = Input.empty();
-        this.searches = Input.empty();
+        this.nameservers = Output.empty();
+        this.options = Output.empty();
+        this.searches = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> nameservers;
-        private @Nullable Input<List<PodDNSConfigOptionArgs>> options;
-        private @Nullable Input<List<String>> searches;
+        private @Nullable Output<List<String>> nameservers;
+        private @Nullable Output<List<PodDNSConfigOptionArgs>> options;
+        private @Nullable Output<List<String>> searches;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.searches = defaults.searches;
         }
 
-        public Builder nameservers(@Nullable Input<List<String>> nameservers) {
+        public Builder nameservers(@Nullable Output<List<String>> nameservers) {
             this.nameservers = nameservers;
             return this;
         }
 
         public Builder nameservers(@Nullable List<String> nameservers) {
-            this.nameservers = Input.ofNullable(nameservers);
+            this.nameservers = Output.ofNullable(nameservers);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<PodDNSConfigOptionArgs>> options) {
+        public Builder options(@Nullable Output<List<PodDNSConfigOptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<PodDNSConfigOptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder searches(@Nullable Input<List<String>> searches) {
+        public Builder searches(@Nullable Output<List<String>> searches) {
             this.searches = searches;
             return this;
         }
 
         public Builder searches(@Nullable List<String> searches) {
-            this.searches = Input.ofNullable(searches);
+            this.searches = Output.ofNullable(searches);
             return this;
         }
         public PodDNSConfigArgs build() {

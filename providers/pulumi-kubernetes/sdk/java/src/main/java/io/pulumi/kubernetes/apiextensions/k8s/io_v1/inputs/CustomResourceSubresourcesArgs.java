@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<CustomResourceSubresourceScaleArgs> scale;
+      private final @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
-    public Input<CustomResourceSubresourceScaleArgs> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<CustomResourceSubresourceScaleArgs> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<JsonElement> status;
+      private final @Nullable Output<JsonElement> status;
 
-    public Input<JsonElement> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<JsonElement> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public CustomResourceSubresourcesArgs(
-        @Nullable Input<CustomResourceSubresourceScaleArgs> scale,
-        @Nullable Input<JsonElement> status) {
+        @Nullable Output<CustomResourceSubresourceScaleArgs> scale,
+        @Nullable Output<JsonElement> status) {
         this.scale = scale;
         this.status = status;
     }
 
     private CustomResourceSubresourcesArgs() {
-        this.scale = Input.empty();
-        this.status = Input.empty();
+        this.scale = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomResourceSubresourceScaleArgs> scale;
-        private @Nullable Input<JsonElement> status;
+        private @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
+        private @Nullable Output<JsonElement> status;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     	      this.status = defaults.status;
         }
 
-        public Builder scale(@Nullable Input<CustomResourceSubresourceScaleArgs> scale) {
+        public Builder scale(@Nullable Output<CustomResourceSubresourceScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable CustomResourceSubresourceScaleArgs scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
 
-        public Builder status(@Nullable Input<JsonElement> status) {
+        public Builder status(@Nullable Output<JsonElement> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable JsonElement status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public CustomResourceSubresourcesArgs build() {

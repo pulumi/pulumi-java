@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationConditionArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
+      private final @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
-    public Input<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    public PriorityLevelConfigurationStatusArgs(@Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions) {
+    public PriorityLevelConfigurationStatusArgs(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
         this.conditions = conditions;
     }
 
     private PriorityLevelConfigurationStatusArgs() {
-        this.conditions = Input.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
+        private @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder conditions(@Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<PriorityLevelConfigurationConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
         public PriorityLevelConfigurationStatusArgs build() {

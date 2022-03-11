@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -35,10 +35,10 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="server", required=true)
-      private final Input<String> server;
+      private final Output<String> server;
 
-    public Input<String> getServer() {
+    public Output<String> getServer() {
         return this.server;
     }
 
     public NFSVolumeSourceArgs(
-        Input<String> path,
-        @Nullable Input<Boolean> readOnly,
-        Input<String> server) {
+        Output<String> path,
+        @Nullable Output<Boolean> readOnly,
+        Output<String> server) {
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.readOnly = readOnly;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
     }
 
     private NFSVolumeSourceArgs() {
-        this.path = Input.empty();
-        this.readOnly = Input.empty();
-        this.server = Input.empty();
+        this.path = Output.empty();
+        this.readOnly = Output.empty();
+        this.server = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> path;
-        private @Nullable Input<Boolean> readOnly;
-        private Input<String> server;
+        private Output<String> path;
+        private @Nullable Output<Boolean> readOnly;
+        private Output<String> server;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.server = defaults.server;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder server(Input<String> server) {
+        public Builder server(Output<String> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
         public Builder server(String server) {
-            this.server = Input.of(Objects.requireNonNull(server));
+            this.server = Output.of(Objects.requireNonNull(server));
             return this;
         }
         public NFSVolumeSourceArgs build() {

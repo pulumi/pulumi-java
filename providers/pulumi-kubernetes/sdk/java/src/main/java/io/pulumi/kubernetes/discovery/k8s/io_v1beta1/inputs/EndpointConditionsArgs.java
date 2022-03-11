@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ready")
-      private final @Nullable Input<Boolean> ready;
+      private final @Nullable Output<Boolean> ready;
 
-    public Input<Boolean> getReady() {
-        return this.ready == null ? Input.empty() : this.ready;
+    public Output<Boolean> getReady() {
+        return this.ready == null ? Output.empty() : this.ready;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serving")
-      private final @Nullable Input<Boolean> serving;
+      private final @Nullable Output<Boolean> serving;
 
-    public Input<Boolean> getServing() {
-        return this.serving == null ? Input.empty() : this.serving;
+    public Output<Boolean> getServing() {
+        return this.serving == null ? Output.empty() : this.serving;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="terminating")
-      private final @Nullable Input<Boolean> terminating;
+      private final @Nullable Output<Boolean> terminating;
 
-    public Input<Boolean> getTerminating() {
-        return this.terminating == null ? Input.empty() : this.terminating;
+    public Output<Boolean> getTerminating() {
+        return this.terminating == null ? Output.empty() : this.terminating;
     }
 
     public EndpointConditionsArgs(
-        @Nullable Input<Boolean> ready,
-        @Nullable Input<Boolean> serving,
-        @Nullable Input<Boolean> terminating) {
+        @Nullable Output<Boolean> ready,
+        @Nullable Output<Boolean> serving,
+        @Nullable Output<Boolean> terminating) {
         this.ready = ready;
         this.serving = serving;
         this.terminating = terminating;
     }
 
     private EndpointConditionsArgs() {
-        this.ready = Input.empty();
-        this.serving = Input.empty();
-        this.terminating = Input.empty();
+        this.ready = Output.empty();
+        this.serving = Output.empty();
+        this.terminating = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> ready;
-        private @Nullable Input<Boolean> serving;
-        private @Nullable Input<Boolean> terminating;
+        private @Nullable Output<Boolean> ready;
+        private @Nullable Output<Boolean> serving;
+        private @Nullable Output<Boolean> terminating;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     	      this.terminating = defaults.terminating;
         }
 
-        public Builder ready(@Nullable Input<Boolean> ready) {
+        public Builder ready(@Nullable Output<Boolean> ready) {
             this.ready = ready;
             return this;
         }
 
         public Builder ready(@Nullable Boolean ready) {
-            this.ready = Input.ofNullable(ready);
+            this.ready = Output.ofNullable(ready);
             return this;
         }
 
-        public Builder serving(@Nullable Input<Boolean> serving) {
+        public Builder serving(@Nullable Output<Boolean> serving) {
             this.serving = serving;
             return this;
         }
 
         public Builder serving(@Nullable Boolean serving) {
-            this.serving = Input.ofNullable(serving);
+            this.serving = Output.ofNullable(serving);
             return this;
         }
 
-        public Builder terminating(@Nullable Input<Boolean> terminating) {
+        public Builder terminating(@Nullable Output<Boolean> terminating) {
             this.terminating = terminating;
             return this;
         }
 
         public Builder terminating(@Nullable Boolean terminating) {
-            this.terminating = Input.ofNullable(terminating);
+            this.terminating = Output.ofNullable(terminating);
             return this;
         }
         public EndpointConditionsArgs build() {

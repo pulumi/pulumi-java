@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -33,22 +33,22 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public GRPCActionArgs(
-        Input<Integer> port,
-        @Nullable Input<String> service) {
+        Output<Integer> port,
+        @Nullable Output<String> service) {
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
         this.service = service;
     }
 
     private GRPCActionArgs() {
-        this.port = Input.empty();
-        this.service = Input.empty();
+        this.port = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> port;
-        private @Nullable Input<String> service;
+        private Output<Integer> port;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public GRPCActionArgs build() {

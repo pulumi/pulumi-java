@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.QueuingConfigurationArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queuing")
-      private final @Nullable Input<QueuingConfigurationArgs> queuing;
+      private final @Nullable Output<QueuingConfigurationArgs> queuing;
 
-    public Input<QueuingConfigurationArgs> getQueuing() {
-        return this.queuing == null ? Input.empty() : this.queuing;
+    public Output<QueuingConfigurationArgs> getQueuing() {
+        return this.queuing == null ? Output.empty() : this.queuing;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public LimitResponseArgs(
-        @Nullable Input<QueuingConfigurationArgs> queuing,
-        Input<String> type) {
+        @Nullable Output<QueuingConfigurationArgs> queuing,
+        Output<String> type) {
         this.queuing = queuing;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private LimitResponseArgs() {
-        this.queuing = Input.empty();
-        this.type = Input.empty();
+        this.queuing = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<QueuingConfigurationArgs> queuing;
-        private Input<String> type;
+        private @Nullable Output<QueuingConfigurationArgs> queuing;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder queuing(@Nullable Input<QueuingConfigurationArgs> queuing) {
+        public Builder queuing(@Nullable Output<QueuingConfigurationArgs> queuing) {
             this.queuing = queuing;
             return this;
         }
 
         public Builder queuing(@Nullable QueuingConfigurationArgs queuing) {
-            this.queuing = Input.ofNullable(queuing);
+            this.queuing = Output.ofNullable(queuing);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public LimitResponseArgs build() {

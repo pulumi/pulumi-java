@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorTermArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -24,10 +24,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowVolumeExpansion")
-      private final @Nullable Input<Boolean> allowVolumeExpansion;
+      private final @Nullable Output<Boolean> allowVolumeExpansion;
 
-    public Input<Boolean> getAllowVolumeExpansion() {
-        return this.allowVolumeExpansion == null ? Input.empty() : this.allowVolumeExpansion;
+    public Output<Boolean> getAllowVolumeExpansion() {
+        return this.allowVolumeExpansion == null ? Output.empty() : this.allowVolumeExpansion;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedTopologies")
-      private final @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies;
+      private final @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
 
-    public Input<List<TopologySelectorTermArgs>> getAllowedTopologies() {
-        return this.allowedTopologies == null ? Input.empty() : this.allowedTopologies;
+    public Output<List<TopologySelectorTermArgs>> getAllowedTopologies() {
+        return this.allowedTopologies == null ? Output.empty() : this.allowedTopologies;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-      private final @Nullable Input<List<String>> mountOptions;
+      private final @Nullable Output<List<String>> mountOptions;
 
-    public Input<List<String>> getMountOptions() {
-        return this.mountOptions == null ? Input.empty() : this.mountOptions;
+    public Output<List<String>> getMountOptions() {
+        return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioner", required=true)
-      private final Input<String> provisioner;
+      private final Output<String> provisioner;
 
-    public Input<String> getProvisioner() {
+    public Output<String> getProvisioner() {
         return this.provisioner;
     }
 
@@ -112,10 +112,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reclaimPolicy")
-      private final @Nullable Input<String> reclaimPolicy;
+      private final @Nullable Output<String> reclaimPolicy;
 
-    public Input<String> getReclaimPolicy() {
-        return this.reclaimPolicy == null ? Input.empty() : this.reclaimPolicy;
+    public Output<String> getReclaimPolicy() {
+        return this.reclaimPolicy == null ? Output.empty() : this.reclaimPolicy;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeBindingMode")
-      private final @Nullable Input<String> volumeBindingMode;
+      private final @Nullable Output<String> volumeBindingMode;
 
-    public Input<String> getVolumeBindingMode() {
-        return this.volumeBindingMode == null ? Input.empty() : this.volumeBindingMode;
+    public Output<String> getVolumeBindingMode() {
+        return this.volumeBindingMode == null ? Output.empty() : this.volumeBindingMode;
     }
 
     public StorageClassArgs(
-        @Nullable Input<Boolean> allowVolumeExpansion,
-        @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies,
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<List<String>> mountOptions,
-        @Nullable Input<Map<String,String>> parameters,
-        Input<String> provisioner,
-        @Nullable Input<String> reclaimPolicy,
-        @Nullable Input<String> volumeBindingMode) {
+        @Nullable Output<Boolean> allowVolumeExpansion,
+        @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies,
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<List<String>> mountOptions,
+        @Nullable Output<Map<String,String>> parameters,
+        Output<String> provisioner,
+        @Nullable Output<String> reclaimPolicy,
+        @Nullable Output<String> volumeBindingMode) {
         this.allowVolumeExpansion = allowVolumeExpansion;
         this.allowedTopologies = allowedTopologies;
         this.apiVersion = apiVersion;
@@ -153,16 +153,16 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageClassArgs() {
-        this.allowVolumeExpansion = Input.empty();
-        this.allowedTopologies = Input.empty();
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.mountOptions = Input.empty();
-        this.parameters = Input.empty();
-        this.provisioner = Input.empty();
-        this.reclaimPolicy = Input.empty();
-        this.volumeBindingMode = Input.empty();
+        this.allowVolumeExpansion = Output.empty();
+        this.allowedTopologies = Output.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.mountOptions = Output.empty();
+        this.parameters = Output.empty();
+        this.provisioner = Output.empty();
+        this.reclaimPolicy = Output.empty();
+        this.volumeBindingMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowVolumeExpansion;
-        private @Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies;
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<List<String>> mountOptions;
-        private @Nullable Input<Map<String,String>> parameters;
-        private Input<String> provisioner;
-        private @Nullable Input<String> reclaimPolicy;
-        private @Nullable Input<String> volumeBindingMode;
+        private @Nullable Output<Boolean> allowVolumeExpansion;
+        private @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<List<String>> mountOptions;
+        private @Nullable Output<Map<String,String>> parameters;
+        private Output<String> provisioner;
+        private @Nullable Output<String> reclaimPolicy;
+        private @Nullable Output<String> volumeBindingMode;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeBindingMode = defaults.volumeBindingMode;
         }
 
-        public Builder allowVolumeExpansion(@Nullable Input<Boolean> allowVolumeExpansion) {
+        public Builder allowVolumeExpansion(@Nullable Output<Boolean> allowVolumeExpansion) {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
 
         public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
-            this.allowVolumeExpansion = Input.ofNullable(allowVolumeExpansion);
+            this.allowVolumeExpansion = Output.ofNullable(allowVolumeExpansion);
             return this;
         }
 
-        public Builder allowedTopologies(@Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies) {
+        public Builder allowedTopologies(@Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies) {
             this.allowedTopologies = allowedTopologies;
             return this;
         }
 
         public Builder allowedTopologies(@Nullable List<TopologySelectorTermArgs> allowedTopologies) {
-            this.allowedTopologies = Input.ofNullable(allowedTopologies);
+            this.allowedTopologies = Output.ofNullable(allowedTopologies);
             return this;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder mountOptions(@Nullable Input<List<String>> mountOptions) {
+        public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
         public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Input.ofNullable(mountOptions);
+            this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder provisioner(Input<String> provisioner) {
+        public Builder provisioner(Output<String> provisioner) {
             this.provisioner = Objects.requireNonNull(provisioner);
             return this;
         }
 
         public Builder provisioner(String provisioner) {
-            this.provisioner = Input.of(Objects.requireNonNull(provisioner));
+            this.provisioner = Output.of(Objects.requireNonNull(provisioner));
             return this;
         }
 
-        public Builder reclaimPolicy(@Nullable Input<String> reclaimPolicy) {
+        public Builder reclaimPolicy(@Nullable Output<String> reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
 
         public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
-            this.reclaimPolicy = Input.ofNullable(reclaimPolicy);
+            this.reclaimPolicy = Output.ofNullable(reclaimPolicy);
             return this;
         }
 
-        public Builder volumeBindingMode(@Nullable Input<String> volumeBindingMode) {
+        public Builder volumeBindingMode(@Nullable Output<String> volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }
 
         public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
-            this.volumeBindingMode = Input.ofNullable(volumeBindingMode);
+            this.volumeBindingMode = Output.ofNullable(volumeBindingMode);
             return this;
         }
         public StorageClassArgs build() {

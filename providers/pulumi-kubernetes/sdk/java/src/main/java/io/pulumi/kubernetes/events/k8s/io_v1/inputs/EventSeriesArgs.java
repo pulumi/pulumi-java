@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -34,22 +34,22 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastObservedTime", required=true)
-      private final Input<String> lastObservedTime;
+      private final Output<String> lastObservedTime;
 
-    public Input<String> getLastObservedTime() {
+    public Output<String> getLastObservedTime() {
         return this.lastObservedTime;
     }
 
     public EventSeriesArgs(
-        Input<Integer> count,
-        Input<String> lastObservedTime) {
+        Output<Integer> count,
+        Output<String> lastObservedTime) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.lastObservedTime = Objects.requireNonNull(lastObservedTime, "expected parameter 'lastObservedTime' to be non-null");
     }
 
     private EventSeriesArgs() {
-        this.count = Input.empty();
-        this.lastObservedTime = Input.empty();
+        this.count = Output.empty();
+        this.lastObservedTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<String> lastObservedTime;
+        private Output<Integer> count;
+        private Output<String> lastObservedTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastObservedTime = defaults.lastObservedTime;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder lastObservedTime(Input<String> lastObservedTime) {
+        public Builder lastObservedTime(Output<String> lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
 
         public Builder lastObservedTime(String lastObservedTime) {
-            this.lastObservedTime = Input.of(Objects.requireNonNull(lastObservedTime));
+            this.lastObservedTime = Output.of(Objects.requireNonNull(lastObservedTime));
             return this;
         }
         public EventSeriesArgs build() {

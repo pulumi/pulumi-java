@@ -4,7 +4,6 @@
 package io.pulumi.kubernetes.helm.sh_v3;
 
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -556,10 +555,10 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Release(String name, ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private Release(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Release(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:helm.sh/v3:Release", name, null, makeResourceOptions(options, id));
     }
 
@@ -570,7 +569,7 @@ public class Release extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -585,7 +584,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Release get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Release get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Release(name, id, options);
     }
 }

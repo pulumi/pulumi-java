@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames")
-      private final @Nullable Input<List<String>> hostnames;
+      private final @Nullable Output<List<String>> hostnames;
 
-    public Input<List<String>> getHostnames() {
-        return this.hostnames == null ? Input.empty() : this.hostnames;
+    public Output<List<String>> getHostnames() {
+        return this.hostnames == null ? Output.empty() : this.hostnames;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     public HostAliasArgs(
-        @Nullable Input<List<String>> hostnames,
-        @Nullable Input<String> ip) {
+        @Nullable Output<List<String>> hostnames,
+        @Nullable Output<String> ip) {
         this.hostnames = hostnames;
         this.ip = ip;
     }
 
     private HostAliasArgs() {
-        this.hostnames = Input.empty();
-        this.ip = Input.empty();
+        this.hostnames = Output.empty();
+        this.ip = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> hostnames;
-        private @Nullable Input<String> ip;
+        private @Nullable Output<List<String>> hostnames;
+        private @Nullable Output<String> ip;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ip = defaults.ip;
         }
 
-        public Builder hostnames(@Nullable Input<List<String>> hostnames) {
+        public Builder hostnames(@Nullable Output<List<String>> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
         public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Input.ofNullable(hostnames);
+            this.hostnames = Output.ofNullable(hostnames);
             return this;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
         public HostAliasArgs build() {

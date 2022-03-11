@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DaemonSetUpdateStrategyArgs;
@@ -26,10 +26,10 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReadySeconds")
-      private final @Nullable Input<Integer> minReadySeconds;
+      private final @Nullable Output<Integer> minReadySeconds;
 
-    public Input<Integer> getMinReadySeconds() {
-        return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
+    public Output<Integer> getMinReadySeconds() {
+        return this.minReadySeconds == null ? Output.empty() : this.minReadySeconds;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionHistoryLimit")
-      private final @Nullable Input<Integer> revisionHistoryLimit;
+      private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Input<Integer> getRevisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
+    public Output<Integer> getRevisionHistoryLimit() {
+        return this.revisionHistoryLimit == null ? Output.empty() : this.revisionHistoryLimit;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<PodTemplateSpecArgs> template;
+      private final Output<PodTemplateSpecArgs> template;
 
-    public Input<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> getTemplate() {
         return this.template;
     }
 
@@ -70,10 +70,10 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateGeneration")
-      private final @Nullable Input<Integer> templateGeneration;
+      private final @Nullable Output<Integer> templateGeneration;
 
-    public Input<Integer> getTemplateGeneration() {
-        return this.templateGeneration == null ? Input.empty() : this.templateGeneration;
+    public Output<Integer> getTemplateGeneration() {
+        return this.templateGeneration == null ? Output.empty() : this.templateGeneration;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateStrategy")
-      private final @Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy;
+      private final @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy;
 
-    public Input<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {
-        return this.updateStrategy == null ? Input.empty() : this.updateStrategy;
+    public Output<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {
+        return this.updateStrategy == null ? Output.empty() : this.updateStrategy;
     }
 
     public DaemonSetSpecArgs(
-        @Nullable Input<Integer> minReadySeconds,
-        @Nullable Input<Integer> revisionHistoryLimit,
-        @Nullable Input<LabelSelectorArgs> selector,
-        Input<PodTemplateSpecArgs> template,
-        @Nullable Input<Integer> templateGeneration,
-        @Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy) {
+        @Nullable Output<Integer> minReadySeconds,
+        @Nullable Output<Integer> revisionHistoryLimit,
+        @Nullable Output<LabelSelectorArgs> selector,
+        Output<PodTemplateSpecArgs> template,
+        @Nullable Output<Integer> templateGeneration,
+        @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy) {
         this.minReadySeconds = minReadySeconds;
         this.revisionHistoryLimit = revisionHistoryLimit;
         this.selector = selector;
@@ -103,12 +103,12 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaemonSetSpecArgs() {
-        this.minReadySeconds = Input.empty();
-        this.revisionHistoryLimit = Input.empty();
-        this.selector = Input.empty();
-        this.template = Input.empty();
-        this.templateGeneration = Input.empty();
-        this.updateStrategy = Input.empty();
+        this.minReadySeconds = Output.empty();
+        this.revisionHistoryLimit = Output.empty();
+        this.selector = Output.empty();
+        this.template = Output.empty();
+        this.templateGeneration = Output.empty();
+        this.updateStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minReadySeconds;
-        private @Nullable Input<Integer> revisionHistoryLimit;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private Input<PodTemplateSpecArgs> template;
-        private @Nullable Input<Integer> templateGeneration;
-        private @Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy;
+        private @Nullable Output<Integer> minReadySeconds;
+        private @Nullable Output<Integer> revisionHistoryLimit;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private Output<PodTemplateSpecArgs> template;
+        private @Nullable Output<Integer> templateGeneration;
+        private @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateStrategy = defaults.updateStrategy;
         }
 
-        public Builder minReadySeconds(@Nullable Input<Integer> minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Input.ofNullable(minReadySeconds);
+            this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
 
-        public Builder revisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Input.ofNullable(revisionHistoryLimit);
+            this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder template(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(PodTemplateSpecArgs template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder templateGeneration(@Nullable Input<Integer> templateGeneration) {
+        public Builder templateGeneration(@Nullable Output<Integer> templateGeneration) {
             this.templateGeneration = templateGeneration;
             return this;
         }
 
         public Builder templateGeneration(@Nullable Integer templateGeneration) {
-            this.templateGeneration = Input.ofNullable(templateGeneration);
+            this.templateGeneration = Output.ofNullable(templateGeneration);
             return this;
         }
 
-        public Builder updateStrategy(@Nullable Input<DaemonSetUpdateStrategyArgs> updateStrategy) {
+        public Builder updateStrategy(@Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
 
         public Builder updateStrategy(@Nullable DaemonSetUpdateStrategyArgs updateStrategy) {
-            this.updateStrategy = Input.ofNullable(updateStrategy);
+            this.updateStrategy = Output.ofNullable(updateStrategy);
             return this;
         }
         public DaemonSetSpecArgs build() {

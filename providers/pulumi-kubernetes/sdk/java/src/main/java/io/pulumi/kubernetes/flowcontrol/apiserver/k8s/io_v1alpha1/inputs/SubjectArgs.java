@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.GroupSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ServiceAccountSubjectArgs;
@@ -22,10 +22,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     @InputImport(name="group")
-      private final @Nullable Input<GroupSubjectArgs> group;
+      private final @Nullable Output<GroupSubjectArgs> group;
 
-    public Input<GroupSubjectArgs> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<GroupSubjectArgs> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -33,31 +33,31 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<ServiceAccountSubjectArgs> serviceAccount;
+      private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
-    public Input<ServiceAccountSubjectArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<ServiceAccountSubjectArgs> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     @InputImport(name="user")
-      private final @Nullable Input<UserSubjectArgs> user;
+      private final @Nullable Output<UserSubjectArgs> user;
 
-    public Input<UserSubjectArgs> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<UserSubjectArgs> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public SubjectArgs(
-        @Nullable Input<GroupSubjectArgs> group,
-        Input<String> kind,
-        @Nullable Input<ServiceAccountSubjectArgs> serviceAccount,
-        @Nullable Input<UserSubjectArgs> user) {
+        @Nullable Output<GroupSubjectArgs> group,
+        Output<String> kind,
+        @Nullable Output<ServiceAccountSubjectArgs> serviceAccount,
+        @Nullable Output<UserSubjectArgs> user) {
         this.group = group;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.serviceAccount = serviceAccount;
@@ -65,10 +65,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectArgs() {
-        this.group = Input.empty();
-        this.kind = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.user = Input.empty();
+        this.group = Output.empty();
+        this.kind = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GroupSubjectArgs> group;
-        private Input<String> kind;
-        private @Nullable Input<ServiceAccountSubjectArgs> serviceAccount;
-        private @Nullable Input<UserSubjectArgs> user;
+        private @Nullable Output<GroupSubjectArgs> group;
+        private Output<String> kind;
+        private @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
+        private @Nullable Output<UserSubjectArgs> user;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder group(@Nullable Input<GroupSubjectArgs> group) {
+        public Builder group(@Nullable Output<GroupSubjectArgs> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable GroupSubjectArgs group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<ServiceAccountSubjectArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<ServiceAccountSubjectArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder user(@Nullable Input<UserSubjectArgs> user) {
+        public Builder user(@Nullable Output<UserSubjectArgs> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable UserSubjectArgs user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public SubjectArgs build() {

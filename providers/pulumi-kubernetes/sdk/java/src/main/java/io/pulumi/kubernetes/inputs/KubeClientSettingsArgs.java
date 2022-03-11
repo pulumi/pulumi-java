@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.Utilities;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="burst")
-      private final @Nullable Input<Integer> burst;
+      private final @Nullable Output<Integer> burst;
 
-    public Input<Integer> getBurst() {
-        return this.burst == null ? Input.empty() : this.burst;
+    public Output<Integer> getBurst() {
+        return this.burst == null ? Output.empty() : this.burst;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="qps")
-      private final @Nullable Input<Double> qps;
+      private final @Nullable Output<Double> qps;
 
-    public Input<Double> getQps() {
-        return this.qps == null ? Input.empty() : this.qps;
+    public Output<Double> getQps() {
+        return this.qps == null ? Output.empty() : this.qps;
     }
 
     public KubeClientSettingsArgs(
-        @Nullable Input<Integer> burst,
-        @Nullable Input<Double> qps) {
-        this.burst = burst == null ? Input.ofNullable(Utilities.getEnvInteger("PULUMI_K8S_CLIENT_BURST").orElse(null)) : burst;
-        this.qps = qps == null ? Input.ofNullable(Utilities.getEnvDouble("PULUMI_K8S_CLIENT_QPS").orElse(null)) : qps;
+        @Nullable Output<Integer> burst,
+        @Nullable Output<Double> qps) {
+        this.burst = burst == null ? Output.ofNullable(Utilities.getEnvInteger("PULUMI_K8S_CLIENT_BURST").orElse(null)) : burst;
+        this.qps = qps == null ? Output.ofNullable(Utilities.getEnvDouble("PULUMI_K8S_CLIENT_QPS").orElse(null)) : qps;
     }
 
     private KubeClientSettingsArgs() {
-        this.burst = Input.empty();
-        this.qps = Input.empty();
+        this.burst = Output.empty();
+        this.qps = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> burst;
-        private @Nullable Input<Double> qps;
+        private @Nullable Output<Integer> burst;
+        private @Nullable Output<Double> qps;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.qps = defaults.qps;
         }
 
-        public Builder burst(@Nullable Input<Integer> burst) {
+        public Builder burst(@Nullable Output<Integer> burst) {
             this.burst = burst;
             return this;
         }
 
         public Builder burst(@Nullable Integer burst) {
-            this.burst = Input.ofNullable(burst);
+            this.burst = Output.ofNullable(burst);
             return this;
         }
 
-        public Builder qps(@Nullable Input<Double> qps) {
+        public Builder qps(@Nullable Output<Double> qps) {
             this.qps = qps;
             return this;
         }
 
         public Builder qps(@Nullable Double qps) {
-            this.qps = Input.ofNullable(qps);
+            this.qps = Output.ofNullable(qps);
             return this;
         }
         public KubeClientSettingsArgs build() {

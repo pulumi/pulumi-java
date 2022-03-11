@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="podAffinityTerm", required=true)
-      private final Input<PodAffinityTermArgs> podAffinityTerm;
+      private final Output<PodAffinityTermArgs> podAffinityTerm;
 
-    public Input<PodAffinityTermArgs> getPodAffinityTerm() {
+    public Output<PodAffinityTermArgs> getPodAffinityTerm() {
         return this.podAffinityTerm;
     }
 
@@ -34,22 +34,22 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public WeightedPodAffinityTermArgs(
-        Input<PodAffinityTermArgs> podAffinityTerm,
-        Input<Integer> weight) {
+        Output<PodAffinityTermArgs> podAffinityTerm,
+        Output<Integer> weight) {
         this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm, "expected parameter 'podAffinityTerm' to be non-null");
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private WeightedPodAffinityTermArgs() {
-        this.podAffinityTerm = Input.empty();
-        this.weight = Input.empty();
+        this.podAffinityTerm = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<PodAffinityTermArgs> podAffinityTerm;
-        private Input<Integer> weight;
+        private Output<PodAffinityTermArgs> podAffinityTerm;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     	      this.weight = defaults.weight;
         }
 
-        public Builder podAffinityTerm(Input<PodAffinityTermArgs> podAffinityTerm) {
+        public Builder podAffinityTerm(Output<PodAffinityTermArgs> podAffinityTerm) {
             this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm);
             return this;
         }
 
         public Builder podAffinityTerm(PodAffinityTermArgs podAffinityTerm) {
-            this.podAffinityTerm = Input.of(Objects.requireNonNull(podAffinityTerm));
+            this.podAffinityTerm = Output.of(Objects.requireNonNull(podAffinityTerm));
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public WeightedPodAffinityTermArgs build() {

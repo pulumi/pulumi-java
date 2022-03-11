@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,9 +35,9 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -46,10 +46,10 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public ServiceReferenceArgs(
-        Input<String> name,
-        Input<String> namespace,
-        @Nullable Input<String> path,
-        @Nullable Input<Integer> port) {
+        Output<String> name,
+        Output<String> namespace,
+        @Nullable Output<String> path,
+        @Nullable Output<Integer> port) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
         this.path = path;
@@ -75,10 +75,10 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceReferenceArgs() {
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.path = Input.empty();
-        this.port = Input.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.path = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> namespace;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Integer> port;
+        private Output<String> name;
+        private Output<String> namespace;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.port = defaults.port;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public ServiceReferenceArgs build() {

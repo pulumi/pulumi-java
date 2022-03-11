@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
@@ -25,10 +25,10 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<NetworkPolicyPortArgs>> ports;
+      private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Input<List<NetworkPolicyPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<NetworkPolicyPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="to")
-      private final @Nullable Input<List<NetworkPolicyPeerArgs>> to;
+      private final @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
-    public Input<List<NetworkPolicyPeerArgs>> getTo() {
-        return this.to == null ? Input.empty() : this.to;
+    public Output<List<NetworkPolicyPeerArgs>> getTo() {
+        return this.to == null ? Output.empty() : this.to;
     }
 
     public NetworkPolicyEgressRuleArgs(
-        @Nullable Input<List<NetworkPolicyPortArgs>> ports,
-        @Nullable Input<List<NetworkPolicyPeerArgs>> to) {
+        @Nullable Output<List<NetworkPolicyPortArgs>> ports,
+        @Nullable Output<List<NetworkPolicyPeerArgs>> to) {
         this.ports = ports;
         this.to = to;
     }
 
     private NetworkPolicyEgressRuleArgs() {
-        this.ports = Input.empty();
-        this.to = Input.empty();
+        this.ports = Output.empty();
+        this.to = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkPolicyPortArgs>> ports;
-        private @Nullable Input<List<NetworkPolicyPeerArgs>> to;
+        private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
+        private @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
     	      this.to = defaults.to;
         }
 
-        public Builder ports(@Nullable Input<List<NetworkPolicyPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<NetworkPolicyPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder to(@Nullable Input<List<NetworkPolicyPeerArgs>> to) {
+        public Builder to(@Nullable Output<List<NetworkPolicyPeerArgs>> to) {
             this.to = to;
             return this;
         }
 
         public Builder to(@Nullable List<NetworkPolicyPeerArgs> to) {
-            this.to = Input.ofNullable(to);
+            this.to = Output.ofNullable(to);
             return this;
         }
         public NetworkPolicyEgressRuleArgs build() {

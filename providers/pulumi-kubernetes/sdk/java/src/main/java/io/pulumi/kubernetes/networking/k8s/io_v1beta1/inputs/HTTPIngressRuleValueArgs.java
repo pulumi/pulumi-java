@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.HTTPIngressPathArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="paths", required=true)
-      private final Input<List<HTTPIngressPathArgs>> paths;
+      private final Output<List<HTTPIngressPathArgs>> paths;
 
-    public Input<List<HTTPIngressPathArgs>> getPaths() {
+    public Output<List<HTTPIngressPathArgs>> getPaths() {
         return this.paths;
     }
 
-    public HTTPIngressRuleValueArgs(Input<List<HTTPIngressPathArgs>> paths) {
+    public HTTPIngressRuleValueArgs(Output<List<HTTPIngressPathArgs>> paths) {
         this.paths = Objects.requireNonNull(paths, "expected parameter 'paths' to be non-null");
     }
 
     private HTTPIngressRuleValueArgs() {
-        this.paths = Input.empty();
+        this.paths = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<HTTPIngressPathArgs>> paths;
+        private Output<List<HTTPIngressPathArgs>> paths;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
     	      this.paths = defaults.paths;
         }
 
-        public Builder paths(Input<List<HTTPIngressPathArgs>> paths) {
+        public Builder paths(Output<List<HTTPIngressPathArgs>> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
         public Builder paths(List<HTTPIngressPathArgs> paths) {
-            this.paths = Input.of(Objects.requireNonNull(paths));
+            this.paths = Output.of(Objects.requireNonNull(paths));
             return this;
         }
         public HTTPIngressRuleValueArgs build() {

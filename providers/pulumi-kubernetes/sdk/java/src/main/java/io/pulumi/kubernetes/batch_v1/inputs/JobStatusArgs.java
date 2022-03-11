@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.batch_v1.inputs.JobConditionArgs;
 import io.pulumi.kubernetes.batch_v1.inputs.UncountedTerminatedPodsArgs;
@@ -27,10 +27,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Integer> active;
+      private final @Nullable Output<Integer> active;
 
-    public Input<Integer> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Integer> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completedIndexes")
-      private final @Nullable Input<String> completedIndexes;
+      private final @Nullable Output<String> completedIndexes;
 
-    public Input<String> getCompletedIndexes() {
-        return this.completedIndexes == null ? Input.empty() : this.completedIndexes;
+    public Output<String> getCompletedIndexes() {
+        return this.completedIndexes == null ? Output.empty() : this.completedIndexes;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-      private final @Nullable Input<String> completionTime;
+      private final @Nullable Output<String> completionTime;
 
-    public Input<String> getCompletionTime() {
-        return this.completionTime == null ? Input.empty() : this.completionTime;
+    public Output<String> getCompletionTime() {
+        return this.completionTime == null ? Output.empty() : this.completionTime;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<JobConditionArgs>> conditions;
+      private final @Nullable Output<List<JobConditionArgs>> conditions;
 
-    public Input<List<JobConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<JobConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failed")
-      private final @Nullable Input<Integer> failed;
+      private final @Nullable Output<Integer> failed;
 
-    public Input<Integer> getFailed() {
-        return this.failed == null ? Input.empty() : this.failed;
+    public Output<Integer> getFailed() {
+        return this.failed == null ? Output.empty() : this.failed;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ready")
-      private final @Nullable Input<Integer> ready;
+      private final @Nullable Output<Integer> ready;
 
-    public Input<Integer> getReady() {
-        return this.ready == null ? Input.empty() : this.ready;
+    public Output<Integer> getReady() {
+        return this.ready == null ? Output.empty() : this.ready;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="succeeded")
-      private final @Nullable Input<Integer> succeeded;
+      private final @Nullable Output<Integer> succeeded;
 
-    public Input<Integer> getSucceeded() {
-        return this.succeeded == null ? Input.empty() : this.succeeded;
+    public Output<Integer> getSucceeded() {
+        return this.succeeded == null ? Output.empty() : this.succeeded;
     }
 
     /**
@@ -122,22 +122,22 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uncountedTerminatedPods")
-      private final @Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
+      private final @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
 
-    public Input<UncountedTerminatedPodsArgs> getUncountedTerminatedPods() {
-        return this.uncountedTerminatedPods == null ? Input.empty() : this.uncountedTerminatedPods;
+    public Output<UncountedTerminatedPodsArgs> getUncountedTerminatedPods() {
+        return this.uncountedTerminatedPods == null ? Output.empty() : this.uncountedTerminatedPods;
     }
 
     public JobStatusArgs(
-        @Nullable Input<Integer> active,
-        @Nullable Input<String> completedIndexes,
-        @Nullable Input<String> completionTime,
-        @Nullable Input<List<JobConditionArgs>> conditions,
-        @Nullable Input<Integer> failed,
-        @Nullable Input<Integer> ready,
-        @Nullable Input<String> startTime,
-        @Nullable Input<Integer> succeeded,
-        @Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
+        @Nullable Output<Integer> active,
+        @Nullable Output<String> completedIndexes,
+        @Nullable Output<String> completionTime,
+        @Nullable Output<List<JobConditionArgs>> conditions,
+        @Nullable Output<Integer> failed,
+        @Nullable Output<Integer> ready,
+        @Nullable Output<String> startTime,
+        @Nullable Output<Integer> succeeded,
+        @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
         this.active = active;
         this.completedIndexes = completedIndexes;
         this.completionTime = completionTime;
@@ -150,15 +150,15 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStatusArgs() {
-        this.active = Input.empty();
-        this.completedIndexes = Input.empty();
-        this.completionTime = Input.empty();
-        this.conditions = Input.empty();
-        this.failed = Input.empty();
-        this.ready = Input.empty();
-        this.startTime = Input.empty();
-        this.succeeded = Input.empty();
-        this.uncountedTerminatedPods = Input.empty();
+        this.active = Output.empty();
+        this.completedIndexes = Output.empty();
+        this.completionTime = Output.empty();
+        this.conditions = Output.empty();
+        this.failed = Output.empty();
+        this.ready = Output.empty();
+        this.startTime = Output.empty();
+        this.succeeded = Output.empty();
+        this.uncountedTerminatedPods = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,15 +170,15 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> active;
-        private @Nullable Input<String> completedIndexes;
-        private @Nullable Input<String> completionTime;
-        private @Nullable Input<List<JobConditionArgs>> conditions;
-        private @Nullable Input<Integer> failed;
-        private @Nullable Input<Integer> ready;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<Integer> succeeded;
-        private @Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
+        private @Nullable Output<Integer> active;
+        private @Nullable Output<String> completedIndexes;
+        private @Nullable Output<String> completionTime;
+        private @Nullable Output<List<JobConditionArgs>> conditions;
+        private @Nullable Output<Integer> failed;
+        private @Nullable Output<Integer> ready;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<Integer> succeeded;
+        private @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
 
         public Builder() {
     	      // Empty
@@ -197,93 +197,93 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uncountedTerminatedPods = defaults.uncountedTerminatedPods;
         }
 
-        public Builder active(@Nullable Input<Integer> active) {
+        public Builder active(@Nullable Output<Integer> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Integer active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder completedIndexes(@Nullable Input<String> completedIndexes) {
+        public Builder completedIndexes(@Nullable Output<String> completedIndexes) {
             this.completedIndexes = completedIndexes;
             return this;
         }
 
         public Builder completedIndexes(@Nullable String completedIndexes) {
-            this.completedIndexes = Input.ofNullable(completedIndexes);
+            this.completedIndexes = Output.ofNullable(completedIndexes);
             return this;
         }
 
-        public Builder completionTime(@Nullable Input<String> completionTime) {
+        public Builder completionTime(@Nullable Output<String> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
         public Builder completionTime(@Nullable String completionTime) {
-            this.completionTime = Input.ofNullable(completionTime);
+            this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<JobConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<JobConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<JobConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder failed(@Nullable Input<Integer> failed) {
+        public Builder failed(@Nullable Output<Integer> failed) {
             this.failed = failed;
             return this;
         }
 
         public Builder failed(@Nullable Integer failed) {
-            this.failed = Input.ofNullable(failed);
+            this.failed = Output.ofNullable(failed);
             return this;
         }
 
-        public Builder ready(@Nullable Input<Integer> ready) {
+        public Builder ready(@Nullable Output<Integer> ready) {
             this.ready = ready;
             return this;
         }
 
         public Builder ready(@Nullable Integer ready) {
-            this.ready = Input.ofNullable(ready);
+            this.ready = Output.ofNullable(ready);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder succeeded(@Nullable Input<Integer> succeeded) {
+        public Builder succeeded(@Nullable Output<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
         public Builder succeeded(@Nullable Integer succeeded) {
-            this.succeeded = Input.ofNullable(succeeded);
+            this.succeeded = Output.ofNullable(succeeded);
             return this;
         }
 
-        public Builder uncountedTerminatedPods(@Nullable Input<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
+        public Builder uncountedTerminatedPods(@Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }
 
         public Builder uncountedTerminatedPods(@Nullable UncountedTerminatedPodsArgs uncountedTerminatedPods) {
-            this.uncountedTerminatedPods = Input.ofNullable(uncountedTerminatedPods);
+            this.uncountedTerminatedPods = Output.ofNullable(uncountedTerminatedPods);
             return this;
         }
         public JobStatusArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceColumnDefinitionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceConversionArgs;
@@ -31,10 +31,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="additionalPrinterColumns")
-      private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+      private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Input<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
-        return this.additionalPrinterColumns == null ? Input.empty() : this.additionalPrinterColumns;
+    public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
+        return this.additionalPrinterColumns == null ? Output.empty() : this.additionalPrinterColumns;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conversion")
-      private final @Nullable Input<CustomResourceConversionArgs> conversion;
+      private final @Nullable Output<CustomResourceConversionArgs> conversion;
 
-    public Input<CustomResourceConversionArgs> getConversion() {
-        return this.conversion == null ? Input.empty() : this.conversion;
+    public Output<CustomResourceConversionArgs> getConversion() {
+        return this.conversion == null ? Output.empty() : this.conversion;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="group", required=true)
-      private final Input<String> group;
+      private final Output<String> group;
 
-    public Input<String> getGroup() {
+    public Output<String> getGroup() {
         return this.group;
     }
 
@@ -64,9 +64,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="names", required=true)
-      private final Input<CustomResourceDefinitionNamesArgs> names;
+      private final Output<CustomResourceDefinitionNamesArgs> names;
 
-    public Input<CustomResourceDefinitionNamesArgs> getNames() {
+    public Output<CustomResourceDefinitionNamesArgs> getNames() {
         return this.names;
     }
 
@@ -75,10 +75,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="preserveUnknownFields")
-      private final @Nullable Input<Boolean> preserveUnknownFields;
+      private final @Nullable Output<Boolean> preserveUnknownFields;
 
-    public Input<Boolean> getPreserveUnknownFields() {
-        return this.preserveUnknownFields == null ? Input.empty() : this.preserveUnknownFields;
+    public Output<Boolean> getPreserveUnknownFields() {
+        return this.preserveUnknownFields == null ? Output.empty() : this.preserveUnknownFields;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -97,10 +97,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subresources")
-      private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
+      private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Input<CustomResourceSubresourcesArgs> getSubresources() {
-        return this.subresources == null ? Input.empty() : this.subresources;
+    public Output<CustomResourceSubresourcesArgs> getSubresources() {
+        return this.subresources == null ? Output.empty() : this.subresources;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validation")
-      private final @Nullable Input<CustomResourceValidationArgs> validation;
+      private final @Nullable Output<CustomResourceValidationArgs> validation;
 
-    public Input<CustomResourceValidationArgs> getValidation() {
-        return this.validation == null ? Input.empty() : this.validation;
+    public Output<CustomResourceValidationArgs> getValidation() {
+        return this.validation == null ? Output.empty() : this.validation;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -130,23 +130,23 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versions")
-      private final @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions;
+      private final @Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
-    public Input<List<CustomResourceDefinitionVersionArgs>> getVersions() {
-        return this.versions == null ? Input.empty() : this.versions;
+    public Output<List<CustomResourceDefinitionVersionArgs>> getVersions() {
+        return this.versions == null ? Output.empty() : this.versions;
     }
 
     public CustomResourceDefinitionSpecArgs(
-        @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns,
-        @Nullable Input<CustomResourceConversionArgs> conversion,
-        Input<String> group,
-        Input<CustomResourceDefinitionNamesArgs> names,
-        @Nullable Input<Boolean> preserveUnknownFields,
-        Input<String> scope,
-        @Nullable Input<CustomResourceSubresourcesArgs> subresources,
-        @Nullable Input<CustomResourceValidationArgs> validation,
-        @Nullable Input<String> version,
-        @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns,
+        @Nullable Output<CustomResourceConversionArgs> conversion,
+        Output<String> group,
+        Output<CustomResourceDefinitionNamesArgs> names,
+        @Nullable Output<Boolean> preserveUnknownFields,
+        Output<String> scope,
+        @Nullable Output<CustomResourceSubresourcesArgs> subresources,
+        @Nullable Output<CustomResourceValidationArgs> validation,
+        @Nullable Output<String> version,
+        @Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.conversion = conversion;
         this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
@@ -160,16 +160,16 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     }
 
     private CustomResourceDefinitionSpecArgs() {
-        this.additionalPrinterColumns = Input.empty();
-        this.conversion = Input.empty();
-        this.group = Input.empty();
-        this.names = Input.empty();
-        this.preserveUnknownFields = Input.empty();
-        this.scope = Input.empty();
-        this.subresources = Input.empty();
-        this.validation = Input.empty();
-        this.version = Input.empty();
-        this.versions = Input.empty();
+        this.additionalPrinterColumns = Output.empty();
+        this.conversion = Output.empty();
+        this.group = Output.empty();
+        this.names = Output.empty();
+        this.preserveUnknownFields = Output.empty();
+        this.scope = Output.empty();
+        this.subresources = Output.empty();
+        this.validation = Output.empty();
+        this.version = Output.empty();
+        this.versions = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,16 +181,16 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
-        private @Nullable Input<CustomResourceConversionArgs> conversion;
-        private Input<String> group;
-        private Input<CustomResourceDefinitionNamesArgs> names;
-        private @Nullable Input<Boolean> preserveUnknownFields;
-        private Input<String> scope;
-        private @Nullable Input<CustomResourceSubresourcesArgs> subresources;
-        private @Nullable Input<CustomResourceValidationArgs> validation;
-        private @Nullable Input<String> version;
-        private @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions;
+        private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+        private @Nullable Output<CustomResourceConversionArgs> conversion;
+        private Output<String> group;
+        private Output<CustomResourceDefinitionNamesArgs> names;
+        private @Nullable Output<Boolean> preserveUnknownFields;
+        private Output<String> scope;
+        private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
+        private @Nullable Output<CustomResourceValidationArgs> validation;
+        private @Nullable Output<String> version;
+        private @Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
         public Builder() {
     	      // Empty
@@ -210,103 +210,103 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     	      this.versions = defaults.versions;
         }
 
-        public Builder additionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
         public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
-            this.additionalPrinterColumns = Input.ofNullable(additionalPrinterColumns);
+            this.additionalPrinterColumns = Output.ofNullable(additionalPrinterColumns);
             return this;
         }
 
-        public Builder conversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
+        public Builder conversion(@Nullable Output<CustomResourceConversionArgs> conversion) {
             this.conversion = conversion;
             return this;
         }
 
         public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
-            this.conversion = Input.ofNullable(conversion);
+            this.conversion = Output.ofNullable(conversion);
             return this;
         }
 
-        public Builder group(Input<String> group) {
+        public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
         public Builder group(String group) {
-            this.group = Input.of(Objects.requireNonNull(group));
+            this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder names(Input<CustomResourceDefinitionNamesArgs> names) {
+        public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
         public Builder names(CustomResourceDefinitionNamesArgs names) {
-            this.names = Input.of(Objects.requireNonNull(names));
+            this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder preserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
-            this.preserveUnknownFields = Input.ofNullable(preserveUnknownFields);
+            this.preserveUnknownFields = Output.ofNullable(preserveUnknownFields);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder subresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
+        public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
 
         public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
-            this.subresources = Input.ofNullable(subresources);
+            this.subresources = Output.ofNullable(subresources);
             return this;
         }
 
-        public Builder validation(@Nullable Input<CustomResourceValidationArgs> validation) {
+        public Builder validation(@Nullable Output<CustomResourceValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
         public Builder validation(@Nullable CustomResourceValidationArgs validation) {
-            this.validation = Input.ofNullable(validation);
+            this.validation = Output.ofNullable(validation);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder versions(@Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        public Builder versions(@Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
 
         public Builder versions(@Nullable List<CustomResourceDefinitionVersionArgs> versions) {
-            this.versions = Input.ofNullable(versions);
+            this.versions = Output.ofNullable(versions);
             return this;
         }
         public CustomResourceDefinitionSpecArgs build() {
