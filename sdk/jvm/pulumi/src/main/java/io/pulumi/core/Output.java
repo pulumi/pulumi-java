@@ -28,14 +28,6 @@ import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 public interface Output<T> extends InputOutput<T, Output<T>> {
 
     /**
-     * Convert @see {@link Output<T>} to @see {@link Input<T>}
-     *
-     * @return an {@link Input<T>} , converted from {@link Output<T>}
-     */
-    @Deprecated
-    Input<T> toInput();
-
-    /**
      * Transforms the data of this @see {@link Output<T>} with the provided {@code func}.
      * The result remains an @see {@link Output<T>} so that dependent resources
      * can be properly tracked.
@@ -85,14 +77,6 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
         return apply(t -> Output.of(func.apply(t)));
-    }
-
-    /**
-     * @see Output#apply(Function) for more details.
-     */
-    @Deprecated
-    default <U> Output<U> applyInput(Function<T, Input<U>> func) {
-        return apply(t -> func.apply(t).toOutput());
     }
 
     @CanIgnoreReturnValue
@@ -149,27 +133,6 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     /**
-     * Combines all the @see {@link io.pulumi.core.Input<T>} values in {@code inputs} into a single @see {@link Output}
-     * with an @see {@link java.util.List<T>} containing all their underlying values.
-     * <p>
-     * If any of the {@link io.pulumi.core.Input<T>}s are not known, the final result will be not known.
-     * Similarly, if any of the {@link io.pulumi.core.Input<T>}s are secrets, then the final result will be a secret.
-     */
-    @Deprecated
-    @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
-    static <T> Output<List<T>> allInputs(Input<T>... inputs) {
-        return allInputs(List.of(inputs));
-    }
-
-    /**
-     * @see Output#allInputs(Input[]) for more details.
-     */
-    @Deprecated
-    static <T> Output<List<T>> allInputs(Iterable<Input<T>> inputs) {
-        return allInputs(Lists.newArrayList(inputs));
-    }
-
-    /**
      * Combines all the @see {@link Output<T>} values in {@code outputs}
      * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
      * containing all their underlying values.
@@ -209,16 +172,6 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     @Deprecated
     static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
         return all(Lists.newArrayList(outputs));
-    }
-
-    @Deprecated
-    private static <T> Output<List<T>> allInputs(List<Input<T>> inputs) {
-        return new OutputDefault<>(
-                allHelperAsync(inputs
-                        .stream()
-                        .map(input -> Internal.of(input).getDataAsync())
-                        .collect(Collectors.toList()))
-        );
     }
 
     private static <T> Output<List<T>> all(List<Output<T>> outputs) {

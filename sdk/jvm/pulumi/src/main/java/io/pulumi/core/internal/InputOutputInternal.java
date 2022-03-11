@@ -1,7 +1,6 @@
 package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Input;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
@@ -20,9 +19,6 @@ import java.util.concurrent.CompletableFuture;
 public abstract class InputOutputInternal<T, IO extends InputOutput<T, IO> & Copyable<IO>>
         implements InputOutput<T, IO> {
 
-    @InternalUse
-    @Deprecated
-    public static final Input<Tuples.Tuple0> TupleZeroIn = Input.of(Tuples.Tuple0.Empty);
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
 
