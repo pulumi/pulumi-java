@@ -104,13 +104,6 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
-      ###
-      - name: Build provider JVM SDK
-        run: |
-          make install_sdk
-          make provider.aws.build && make provider.aws.install
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -122,16 +115,14 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: ensure pulumi language jvm installed
-        run: |
-          make bin/pulumi-language-jvm
       - name: run example aws-java-webserver
         run: |
+          make install_sdk
+          make provider.aws.build && make provider.aws.install
+          make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-java-webserver &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
@@ -176,22 +167,16 @@ jobs:
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v2
+      - name: run example azure-java-appservice-sql
         run: |
           make install_sdk
           make provider.azure-native.build && make provider.azure-native.install
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: ensure pulumi language jvm installed
-        run: |
           make bin/pulumi-language-jvm
-      - name: run example azure-java-appservice-sql
-        run: |
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi preview;
@@ -232,28 +217,20 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v2
+      - name: run example gcp-java-gke-hello-world
         run: |
           make install_sdk
           make provider.gcp.build && make provider.gcp.install &&
           make provider.kubernetes.build && make provider.kubernetes.install
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: ensure pulumi language jvm installed
-        run: |
           make bin/pulumi-language-jvm
-      - name: run example gcp-java-gke-hello-world
-        run: |
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
@@ -293,26 +270,18 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
-        run: |
-          make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: ensure pulumi language jvm installed
-        run: |
-          make bin/pulumi-language-jvm
       - name: run example minimal
         run: |
+          make install_sdk
+          make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi config set minimal:name foo
             pulumi config set minimal:secret bar
@@ -354,16 +323,9 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
-        run: |
-          make install_sdk &&
-          make provider.aws.build && make provider.aws.install &&
-          make provider.aws-native.build && make provider.aws-native.install
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -375,16 +337,15 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: ensure pulumi language jvm installed
-        run: |
-          make bin/pulumi-language-jvm
       - name: run example aws-native-java-s3-folder
         run: |
+          make install_sdk &&
+          make provider.aws.build && make provider.aws.install &&
+          make provider.aws-native.build && make provider.aws-native.install
+          make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
@@ -424,27 +385,19 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v2
+      - name: run example azure-java-static-website
         run: |
           make install_sdk &&
           make provider.azure-native.build && make provider.azure-native.install
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: ensure pulumi language jvm installed
-        run: |
           make bin/pulumi-language-jvm
-      - name: run example azure-java-static-website
-        run: |
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
@@ -484,27 +437,19 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
       ###
-      - name: Build provider JVM SDK
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v2
+      - name: run example random
         run: |
           make install_sdk &&
           make provider.random.build && make provider.random.install
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: ensure pulumi language jvm installed
-        run: |
           make bin/pulumi-language-jvm
-      - name: run example random
-        run: |
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
             ./gradlew install
-            pulumi destroy -s dev --yes;
-            pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
