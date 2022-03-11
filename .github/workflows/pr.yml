@@ -101,6 +101,7 @@ jobs:
       - name: Run tests
         run: |
           make bin/pulumi-language-jvm && cp bin/pulumi-language-jvm ~/.pulumi/bin/
+          export PATH="$PATH:~/.pulumi/bin/"
           for provider in `ls tests/examples/*/ -d`; do
             bash -c  "cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
           done;
