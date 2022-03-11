@@ -1,0 +1,29 @@
+builds:
+- binary: pulumi-language-jvm
+  dir: pkg
+  main: cmd/pulumi-language-jvm/main.go
+  env:
+  - CGO_ENABLED=0
+  - GO111MODULE=on
+  goos:
+    - darwin
+    - windows
+    - linux
+  goarch:
+    - amd64
+    - arm64
+
+archives:
+- name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
+  format_overrides:
+    - goos: windows
+      format: zip
+
+snapshot:
+  name_template: "{{ .Tag }}-SNAPSHOT"
+
+changelog:
+  skip: true
+
+checksum:
+  name_template: 'checksums.txt'
