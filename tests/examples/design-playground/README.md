@@ -37,7 +37,30 @@ clear. Perhaps useful for mock testing. Skipping conserves code size.
 We should remove `Input<T>` and leave `Output<T>`. TBD - expand the
 section here.
 
+To lift a value do `Output.of()`.
+
+    int x = 1;
+    Output<Integer> y = Output.of(x);
+
+https://github.com/pulumi/pulumi-java/issues/28
+
+This also removes the need from `toOutput` conversions, it "just
+works":
+
+https://github.com/pulumi/pulumi-java/issues/139
+
 ## Output
+
+### Combinator Naming
+
+
+Cribbing names from CompletableFuture vs using names more like Pulumi.
+https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html
+
+We cannot call everything `apply()` because generic erasure considers
+these variations "same" and does not compile on Java.
+
+https://github.com/pulumi/pulumi-java/issues/142
 
 ### Catching Exceptions
 
@@ -68,7 +91,86 @@ state for this context. How can propagate Context explicitly or
 otherwise, allowing more than one instance of a stack operation to
 proceed simultaneously within the same JVM? TODO elaborate options.
 
+## Optionals
+
+https://github.com/pulumi/pulumi-java/issues/25
+
+Should we use `java.lang.Optional` in codegen / resource providers or
+should we use null?
+
+We currently use it in a few places in providers:
+
+- Output types:
+
+    GetAnalyzerResult result;
+    Optional<String> arn = result.getArn();
+
+- Input args types but not builders:
+
+    CertificateAuthorityCrlConfiguration config:
+    Optional<Integer> expirationDays = config.getExpirationInDays();
+
+- Config
+
+    Optional<string> accessKey = config.accessKey();
+
+We do not use Optional in buiders.
+
+CDK does not use it: in input nor output positions.
+
+Situations with `Optional<Optional<X>>` or `List<Optional<X>>` do not
+arise in our providers.
+
+Optional also has a quirk: `Optional.of(null)` always throws.
+
+## Unions
+
+https://github.com/pulumi/pulumi-java/issues/29
+
+The schema implies anonymous union types, which Java does not support.
+
+Current situation is incomplete/incorrect and a bit anonying:
+
+- Either<A,B> type is used for N=2 unions
+- Object is used for N>2 unions
+
+We should definitely consider:
+
+- Builder overloads for every union element with auto-promotion
+
+- How to rerpesent proeprties of the union type in args and result types?
+
+  - Either<A,B> + extend that for N=3,4,5?
+  - Use any existing libraries or stdlib types that do that?
+  - Just use Object?
+
+It would be interesting to find how CDK deals with these.
 
 ## Function Calls
 
 TODO elaborate.
+
+
+## Deployment APIs
+
+https://github.com/pulumi/pulumi-java/issues/27
+
+The Deployment object is the global state where everything related to
+the current operation is accessible. This seems to be a C#-ism. In Go
+we have `pulumi.Context`. TBD details here - can we call it Context,
+can we reduce the number of classes.
+
+
+## Stack API
+
+TODO
+
+
+## Resoure and Invoke Options
+
+Make it easy to use default resource and invoke options e.g.:
+
+https://github.com/pulumi/pulumi-java/issues/226
+
+
+Are there builders for Resource options?
