@@ -53,36 +53,22 @@ jobs:
         run: make build_go
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
+      ###
       - name: Build pulumi-random JVM SDK
-        run: make provider.random.build
-      - name: Install pulumi-random JVM SDK to a local Maven repo
-        run: make provider.random.install
-      - name: Build pulumi-azure-native JVM SDK
-        run: make provider.azure-native.build
-      - name: Install pulumi-azure-native JVM SDK to a local Maven repo
-        run: make provider.azure-native.install
-      - name: Build pulumi-google-native JVM SDK
-        run: make provider.google-native.build
-      - name: Install pulumi-google-native JVM SDK to a local Maven repo
-        run: make provider.google-native.install
-      - name: Build pulumi-aws JVM SDK
-        run: make provider.aws.build
-      - name: Install pulumi-aws JVM SDK to a local Maven repo
-        run: make provider.aws.install
-      - name: Build pulumi-aws-native JVM SDK
-        run: make provider.aws-native.build
-      - name: Install pulumi-aws-native JVM SDK to a local Maven repo
-        run: make provider.aws-native.install
-      - name: Build pulumi-kubernetes JVM SDK
-        run: make provider.kubernetes.build
-      - name: Install pulumi-kubernetes JVM SDK to a local Maven repo
-        run: make provider.kubernetes.install
-      - name: Build pulumi-docker JVM SDK
-        run: make provider.docker.build
-      - name: Install pulumi-docker JVM SDK to a local Maven repo
-        run: make provider.docker.install
+        run: |
+          make provider.random.install &
+          make provider.azure-native.install &
+          make provider.google-native.install &
+          wait;
+          make provider.gcp.install &
+          make provider.aws.install &
+          make provider.aws-native.install &
+          wait;
+          make provider.kubernetes.install &
+          make provider.docker.install &
+          wait;
       - name: Integration tests
-        run: make integration_tests
+          make integration_tests
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Setup Python
