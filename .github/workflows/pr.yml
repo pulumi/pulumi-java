@@ -63,7 +63,7 @@ jobs:
           make provider.aws.build && make provider.aws.install &&
           make provider.aws-native.build && make provider.aws-native.install &&
           make provider.kubernetes.build && make provider.kubernetes.install &&
-          make provider.docker.build && make provider.docker.install &&
+          make provider.docker.build && make provider.docker.install
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
